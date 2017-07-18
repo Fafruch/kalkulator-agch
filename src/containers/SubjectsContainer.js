@@ -1,0 +1,21 @@
+/**
+ * Created by Fafruch on 18/07/2017.
+ */
+
+import React from 'react'
+import PropTypes from 'prop-types'
+import SubjectListContainer from '../containers/SubjectListContainer'
+import AddSubjectContainer from '../containers/AddSubjectContainer'
+
+const SubjectsContainer = ({ subjectsType }) => (
+  <div>
+    <h2>{subjectsType === 'Główne' ? 'Przedmioty główne' : 'Języki'} </h2>
+    <SubjectListContainer subjectsType={subjectsType} />
+    <AddSubjectContainer subjectsType={subjectsType} />
+  </div>
+)
+SubjectsContainer.propTypes = {
+  subjectsType: PropTypes.string.isRequired
+}
+
+export default SubjectsContainer
