@@ -1,1 +1,1 @@
-# kalkulator-agh
+# Kalkulator AGH
