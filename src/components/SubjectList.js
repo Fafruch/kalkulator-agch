@@ -7,10 +7,13 @@ import PropTypes from 'prop-types'
 import Subject from './Subject'
 
 const SubjectList = ({ subjects, onChange, onToggleClick, onDelete, subjectsType }) => (
-  <ul>
+  <ul className='list-unstyled'>
     {subjects.map(subject =>
       subject.type === subjectsType ?
-        <li key={subject.id}> {/* tylko dla iteracji, react tego potrzebuje */}
+        <li
+          key={subject.id} // tylko dla iteracji, react tego potrzebuje
+          className={subject.active ? 'subject-active' : 'subject-not-active'}
+        >
           <Subject
             id={subject.id}
             name={subject.name}

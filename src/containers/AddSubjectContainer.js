@@ -9,7 +9,10 @@ import { addSubject } from '../actions'
 import { primarySubjects } from '../constants/SubjectTypes'
 
 let AddSubjectContainer = ({ dispatch, subjectsType }) => (
-  <button onClick={() => dispatch(addSubject(subjectsType))}>
+  <button
+    onClick={() => dispatch(addSubject(subjectsType))}
+    className={subjectsType === primarySubjects ? 'btn btn-outline-danger' : 'btn btn-outline-success'}
+  >
     Dodaj {subjectsType === primarySubjects ? 'przedmiot główny' : 'język'}
   </button>
 )

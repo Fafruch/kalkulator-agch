@@ -19,7 +19,7 @@ let Subject = ({ id, name, elementaryScore, advancedScore,
   }
 
   return (
-    <table>
+    <table className='table'>
       <tbody>
         <tr>
           <th>ID</th>
@@ -39,6 +39,7 @@ let Subject = ({ id, name, elementaryScore, advancedScore,
               list={subjectsType}
               ref={node => { formInput.name = node }}
               onChange={() => onChange(id, formInput.name.value, elementaryScore, advancedScore)}
+              className={active ? 'subject-active' : 'subject-not-active'}
             />
 
             {subjectsType === primarySubjects

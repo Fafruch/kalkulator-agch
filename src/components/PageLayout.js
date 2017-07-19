@@ -8,7 +8,7 @@ import Footer from '../components/Footer'
 import { primarySubjects, lingualSubjects } from '../constants/SubjectTypes'
 
 const PageLayout = () => (
-  <div>
+  <div className='container'>
     <Header />
     <SubjectsContainer subjectsType={primarySubjects} />
     <SubjectsContainer subjectsType={lingualSubjects} />
