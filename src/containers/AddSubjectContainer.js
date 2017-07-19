@@ -3,13 +3,14 @@
  */
 
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { addSubject } from '../actions'
-import PropTypes from 'prop-types'
+import { primarySubjects } from '../constants/SubjectTypes'
 
 let AddSubjectContainer = ({ dispatch, subjectsType }) => (
   <button onClick={() => dispatch(addSubject(subjectsType))}>
-    Dodaj {subjectsType === 'Główne' ? 'przedmiot główny' : 'język'}
+    Dodaj {subjectsType === primarySubjects ? 'przedmiot główny' : 'język'}
   </button>
 )
 AddSubjectContainer.propTypes = {

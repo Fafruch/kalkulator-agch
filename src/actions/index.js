@@ -1,13 +1,15 @@
+import { ADD_SUBJECT, REMOVE_SUBJECT, TOGGLE_SUBJECT, UPDATE_SUBJECT } from '../constants/ActionTypes'
+
 let nextSubjectId = 0
 
 export const addSubject = (subjectsType) => ({
-  type: 'ADD_SUBJECT',
+  type: ADD_SUBJECT,
   id: nextSubjectId++,
   subjectsType
 })
 
 export const updateSubject = (id, name, elementaryScore, advancedScore) => ({
-  type: 'UPDATE_SUBJECT',
+  type: UPDATE_SUBJECT,
   id,
   name,
   elementaryScore,
@@ -15,11 +17,11 @@ export const updateSubject = (id, name, elementaryScore, advancedScore) => ({
 })
 
 export const removeSubject = (id) => ({
-  type: 'REMOVE_SUBJECT',
+  type: REMOVE_SUBJECT,
   id
 })
 
 export const toggleSubject = (id) => ({
-  type: 'TOGGLE_SUBJECT',
+  type: TOGGLE_SUBJECT,
   id
 })

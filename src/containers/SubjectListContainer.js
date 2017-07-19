@@ -3,11 +3,11 @@
  */
 
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import SubjectList from '../components/SubjectList'
 import { removeSubject, toggleSubject, updateSubject } from '../actions'
-import PropTypes from 'prop-types'
 
 let SubjectListContainer = ({ subjectsType }) => (
   <SubjectList subjectsType={subjectsType} />

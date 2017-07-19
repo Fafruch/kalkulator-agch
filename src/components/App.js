@@ -1,6 +1,6 @@
 import React from 'react'
-import { Provider } from 'react-redux'
 import PropTypes from 'prop-types'
+import { Provider } from 'react-redux'
 import PageLayout from './PageLayout'
 
 class App extends React.Component {

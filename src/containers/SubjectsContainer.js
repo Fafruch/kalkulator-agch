@@ -6,10 +6,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import SubjectListContainer from '../containers/SubjectListContainer'
 import AddSubjectContainer from '../containers/AddSubjectContainer'
+import { primarySubjects } from '../constants/SubjectTypes'
 
 const SubjectsContainer = ({ subjectsType }) => (
   <div>
-    <h2>{subjectsType === 'Główne' ? 'Przedmioty główne' : 'Języki'} </h2>
+    <h2>{subjectsType === primarySubjects ? 'Przedmioty główne' : 'Języki'} </h2>
     <SubjectListContainer subjectsType={subjectsType} />
     <AddSubjectContainer subjectsType={subjectsType} />
   </div>
