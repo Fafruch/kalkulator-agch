@@ -5,29 +5,32 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Subject from './Subject'
+import { CSSTransitionGroup } from 'react-transition-group'
 
 const SubjectList = ({ subjects, onChange, onToggleClick, onDelete, subjectsType }) => (
   <ul className='list-unstyled'>
-    {subjects.map(subject =>
-      subject.type === subjectsType ?
-        <li
-          key={subject.id} // tylko dla iteracji, react tego potrzebuje
-          className={subject.active ? 'subject-active' : 'subject-not-active'}
-        >
-          <Subject
-            id={subject.id}
-            name={subject.name}
-            elementaryScore={subject.elementaryScore}
-            advancedScore={subject.advancedScore}
-            active={subject.active}
-            onChange={onChange}
-            onToggleClick={onToggleClick}
-            onDelete={onDelete}
-            subjectsType={subjectsType}
-          />
-        </li>
-        : null
-    )}
+    <CSSTransitionGroup transitionName='subject' transitionEnterTimeout={300} transitionLeaveTimeout={300}>
+      {subjects.map(subject =>
+        subject.type === subjectsType ?
+          <li
+            key={subject.id} // tylko dla iteracji, react tego potrzebuje
+            className={subject.active ? 'subject-active' : 'subject-not-active'}
+          >
+            <Subject
+              id={subject.id}
+              name={subject.name}
+              elementaryScore={subject.elementaryScore}
+              advancedScore={subject.advancedScore}
+              active={subject.active}
+              onChange={onChange}
+              onToggleClick={onToggleClick}
+              onDelete={onDelete}
+              subjectsType={subjectsType}
+            />
+          </li>
+          : null
+      )}
+    </CSSTransitionGroup>
   </ul>
 )
 

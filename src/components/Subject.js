@@ -19,7 +19,7 @@ let Subject = ({ id, name, elementaryScore, advancedScore,
   }
 
   return (
-    <table className='table'>
+    <table className='table mb-0'>
       <tbody>
         <tr>
           <th>ID</th>

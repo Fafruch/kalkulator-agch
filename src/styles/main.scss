@@ -23,38 +23,3 @@ body {
 #root {
   height: 100%;
 }
-
-.subject-icon {
-  height: 32px;
-  width: 32px;
-}
-
-.subject-active {
-  background: white;
-}
-
-.subject-not-active {
-  background: lightgray;
-}
-
-.example-enter {
-  opacity: 0.01;
-  width: 0px;
-}
-
-.example-enter.example-enter-active {
-  opacity: 1;
-  width: 100px;
-  transition: 700ms;
-}
-
-.example-leave {
-  opacity: 1;
-  width: 100px;
-}
-
-.example-leave.example-leave-active {
-  opacity: 0.01;
-  width: 0px;
-  transition: 700ms;
-}

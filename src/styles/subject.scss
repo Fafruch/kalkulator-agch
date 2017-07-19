@@ -1,0 +1,41 @@
+$table-row-height: 106px;
+$subject-transition-enter-time: 300ms;
+$subject-transition-leave-time: 300ms;
+
+.subject-icon {
+  height: 32px;
+  width: 32px;
+}
+
+.subject-active {
+  background: white;
+  transition: $subject-transition-enter-time;
+}
+
+.subject-not-active {
+  background: lightgray;
+  transition: $subject-transition-leave-time;
+}
+
+
+.subject-enter {
+  height: 0;
+  opacity: 0.01;
+}
+
+.subject-enter.subject-enter-active {
+  height: $table-row-height;
+  opacity: 1;
+  transition: height $subject-transition-enter-time ease, opacity $subject-transition-enter-time ease-in;
+}
+
+.subject-leave {
+  height: $table-row-height;
+  opacity: 1;
+}
+
+.subject-leave.subject-leave-active {
+  height: 0px;
+  opacity: 0.01;
+  transition: height $subject-transition-leave-time ease, opacity 200ms;
+}
