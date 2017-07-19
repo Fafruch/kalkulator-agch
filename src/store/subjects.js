@@ -1,7 +1,3 @@
-/**
- * Created by Fafruch on 14/07/2017.
- */
-
 const subjects = (state = [], action) => {
   switch (action.type) {
     case 'ADD_SUBJECT':

@@ -1,6 +1,3 @@
-/**
- * Created by Fafruch on 18/07/2017.
- */
 import React from 'react'
 import Header from '../components/Header'
 import Introduction from '../components/Introduction'

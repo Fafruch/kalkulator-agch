@@ -1,7 +1,3 @@
-/**
- * Created by Fafruch on 19/07/2017.
- */
-
 import React from 'react'
 
 const Introduction = () => (
