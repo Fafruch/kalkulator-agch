@@ -13,8 +13,8 @@ $subject-transition-leave-time: 300ms;
 }
 
 .subject-not-active {
-  background: lightgray;
   transition: $subject-transition-leave-time;
+  opacity: 0.33;
 }
 
 

@@ -9,7 +9,7 @@ import AddSubjectContainer from '../containers/AddSubjectContainer'
 import { primarySubjects } from '../constants/SubjectTypes'
 
 const SubjectsContainer = ({ subjectsType }) => (
-  <div className='mb-5'>
+  <div className='mt-5 mb-5'>
     <h2>{subjectsType === primarySubjects ? 'Przedmioty główne' : 'Języki'} </h2>
     <SubjectListContainer subjectsType={subjectsType} />
     <AddSubjectContainer subjectsType={subjectsType} />
