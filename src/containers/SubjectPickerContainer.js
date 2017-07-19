@@ -10,8 +10,8 @@ SubjectPickerContainer.propTypes = {
   subjectsType: PropTypes.string.isRequired
 }
 
-function mapStateToProps (state) {
-  return { subjects: state.subjects }
+function mapStateToProps (state, ownProps) {
+  return { subjects: state.subjects.filter(subject => subject.active && (subject.type === ownProps.subjectsType)) }
 }
 
 SubjectPickerContainer = connect(mapStateToProps)(SubjectPicker)
