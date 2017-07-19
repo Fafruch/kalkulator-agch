@@ -1,4 +1,13 @@
 .footer {
-  font-size: 0.75rem;
-  text-align: right;
+  height: 2.5rem;
+  background: #eeeeee;
+  text-align: center;
+  font-size: 0.66rem;
+}
+
+.footer a {
+  color: darkred;
+}
+.footer a:hover {
+  color: #3f0013;
 }
