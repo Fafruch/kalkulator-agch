@@ -7,9 +7,9 @@ const MaxScore = ({ maxPrimaryScore, maxLingualScore }) => {
   maxScore = maxPrimaryScore + maxLingualScore
   return (
     <div>
-      <h5>
-        Twój wynik wynosi <b>{maxScore}</b> pkt.
-      </h5>
+      <h3>
+        <small> Twój wynik wynosi&nbsp;</small> <b> {maxScore} </b> <small>&nbsp;pkt.</small>
+      </h3>
       <br />
       <FormulasInfo />
     </div>
