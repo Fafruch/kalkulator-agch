@@ -2,6 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import createStore from './store/createStore'
 import './styles/main.scss'
+import { loadState, saveState } from './utils/localStorage'
+
+// Load store from localStorage
+// ------------------------------------
+window.__INITIAL_STATE__ = loadState()
 
 // Store Initialization
 // ------------------------------------
@@ -52,6 +57,10 @@ if (__DEV__) {
     )
   }
 }
+
+ // Save state to localStorage when unloading page
+// ------------------------------------
+window.onbeforeunload = () => saveState(store.getState())
 
 // Let's Go!
 // ------------------------------------

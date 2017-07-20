@@ -40,7 +40,7 @@ const Calculator = ({ subjects }) => {
 
 Calculator.propTypes = {
   subjects: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     type: PropTypes.string,
     elementaryScore: PropTypes.number.isRequired,

@@ -6,8 +6,8 @@ import PrimarySubjectsDatalist from './PrimarySubjectsDatalist'
 import LingualSubjectsDatalist from './LingualSubjectsDatalist'
 import { primarySubjects } from '../../constants/SubjectTypes'
 
-let Subject = ({ id, name, elementaryScore, advancedScore,
-                 active, onChange, onToggleClick, onDelete, subjectsType }) => {
+let Subject = ({ id, name, elementaryScore, advancedScore, active,
+                 onChange, onToggleClick, onDelete, subjectsType, iterator }) => {
   let formInput = {
     name,
     elementaryScore,
@@ -27,13 +27,14 @@ let Subject = ({ id, name, elementaryScore, advancedScore,
         </tr>
         <tr>
           <td>
-            {id}
+            {iterator}
           </td>
           <td>
             <input
               type='text'
               list={subjectsType}
               ref={node => { formInput.name = node }}
+              defaultValue={name}
               onChange={() => onChange(id, formInput.name.value, elementaryScore, advancedScore)}
               className={active ? 'subject-active subject-input-field' : 'subject-not-active subject-input-field'}
             />
@@ -46,7 +47,7 @@ let Subject = ({ id, name, elementaryScore, advancedScore,
           <td>
             <input
               type='range'
-              defaultValue='0'
+              defaultValue={elementaryScore}
               min='0'
               max='100'
               ref={node => { formInput.elementaryScore = node }}
@@ -58,7 +59,7 @@ let Subject = ({ id, name, elementaryScore, advancedScore,
           <td>
             <input
               type='range'
-              defaultValue='0'
+              defaultValue={advancedScore}
               min='0'
               max='100'
               ref={node => { formInput.advancedScore = node }}
@@ -87,7 +88,7 @@ let Subject = ({ id, name, elementaryScore, advancedScore,
 }
 
 Subject.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   elementaryScore: PropTypes.number.isRequired,
   advancedScore: PropTypes.number.isRequired,
@@ -95,7 +96,8 @@ Subject.propTypes = {
   onChange: PropTypes.func.isRequired,
   onToggleClick: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
-  subjectsType: PropTypes.string.isRequired
+  subjectsType: PropTypes.string.isRequired,
+  iterator: PropTypes.number.isRequired
 }
 
 export default Subject
