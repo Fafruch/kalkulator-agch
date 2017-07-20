@@ -32,7 +32,6 @@ const createStore = (initialState = {}) => {
     )
   )
   store.asyncReducers = {}
-
   // To unsubscribe, invoke `store.unsubscribeHistory()` anytime
 
   if (module.hot) {

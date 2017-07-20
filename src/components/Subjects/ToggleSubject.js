@@ -10,7 +10,7 @@ const ToggleSubject = ({ id, active, onToggleClick }) => (
   />
 )
 ToggleSubject.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   active: PropTypes.bool.isRequired,
   onToggleClick: PropTypes.func.isRequired
 }
