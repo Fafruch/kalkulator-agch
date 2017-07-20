@@ -1,13 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import FormulasInfo from './FormulasInfo'
 
 const MaxScore = ({ maxPrimaryScore, maxLingualScore }) => {
   let maxScore
   maxScore = maxPrimaryScore + maxLingualScore
   return (
-    <h5>
-      Twój wynik wynosi <b>{maxScore}</b> pkt.
-    </h5>
+    <div>
+      <h5>
+        Twój wynik wynosi <b>{maxScore}</b> pkt.
+      </h5>
+      <br />
+      <FormulasInfo />
+    </div>
   )
 }
 MaxScore.propTypes = {
