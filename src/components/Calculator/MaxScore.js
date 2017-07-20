@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import FormulasInfo from './FormulasInfo'
 
 const MaxScore = ({ maxPrimaryScore, maxLingualScore }) => {
   let maxScore
@@ -11,7 +10,6 @@ const MaxScore = ({ maxPrimaryScore, maxLingualScore }) => {
         <small> Twój wynik wynosi&nbsp;</small> <b> {maxScore} </b> <small>&nbsp;pkt.</small>
       </h3>
       <br />
-      <FormulasInfo />
     </div>
   )
 }
