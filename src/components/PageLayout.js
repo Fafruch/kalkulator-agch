@@ -13,11 +13,7 @@ const PageLayout = () => (
       <Introduction />
       <SubjectsContainer subjectsType={primarySubjects} />
       <SubjectsContainer subjectsType={lingualSubjects} />
-      <div className='m-4'>
-        <h3>Wynik</h3>
-        <hr />
         <CalculatorContainer />
-      </div>
     </div>
     <div>
       <Footer />

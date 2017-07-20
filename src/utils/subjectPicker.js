@@ -24,7 +24,7 @@ const subjectPickerUtil = (subjects, subjectsType) => {
     let maxScoreObj = pointsCalculator(maxScoreSubject.elementaryScore, maxScoreSubject.advancedScore)
 
     // Przechodze przez tablice przediotow w poszukiwaniu najbardziej wartosciowego
-    subjects.forEach((subject) => {
+    subjectsArray.forEach((subject) => {
       let currentScoreObj = pointsCalculator(subject.elementaryScore, subject.advancedScore)
 
       if (currentScoreObj.computedScore > maxScoreObj.computedScore) {

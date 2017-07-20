@@ -1,34 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const MaxScore = ({ maxPrimaryScoreWrapper, maxLingualScoreWrapper }) => {
+const MaxScore = ({ maxPrimaryScore, maxLingualScore }) => {
   let maxScore
-  let maxPrimaryScore
-  let maxLingualScore
 
-  if (maxPrimaryScoreWrapper === null) {
-    maxPrimaryScore = 0
+  if (maxPrimaryScore === 0 && maxLingualScore === 0) {
+    return (
+      <div>
+        Dodaj przedmiot żeby zobaczyć wynik!
+      </div>
+    )
   } else {
-    maxPrimaryScore = maxPrimaryScoreWrapper.computedScore
+    maxScore = maxPrimaryScore + maxLingualScore
+    return (
+      <h5>
+        Twój wynik wynosi <b>{maxScore}</b> pkt.
+      </h5>
+    )
   }
-
-  if (maxLingualScoreWrapper === null) {
-    maxLingualScore = 0
-  } else {
-    maxLingualScore = maxLingualScoreWrapper.computedScore
-  }
-
-  maxScore = maxPrimaryScore + maxLingualScore
-
-  return (
-    <h5>
-      Twój wynik wynosi <b>{maxScore}</b> punktów.
-    </h5>
-  )
 }
 MaxScore.propTypes = {
-  maxPrimaryScoreWrapper: PropTypes.any.isRequired,
-  maxLingualScoreWrapper: PropTypes.any.isRequired
+  maxPrimaryScore: PropTypes.number.isRequired,
+  maxLingualScore: PropTypes.number.isRequired
 }
 
 export default MaxScore

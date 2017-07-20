@@ -4,7 +4,7 @@ const Introduction = () => (
   <div className='m-4'>
     <hr />
     <h4>
-      Kalkulator AGH policzy za Ciebie ile otrzymasz punktów podczas rekrutacji.
+      Kalkulator AGH policzy za Ciebie ile otrzymasz punktów podczas rekrutacji
     </h4>
     <br />
     <p>
@@ -12,7 +12,7 @@ const Introduction = () => (
       <br />
       2. Dodaj języki zdane na maturze
       <br />
-      3. Sprawdź wynik. :)
+      3. Sprawdź wynik!
       <br />
     </p>
     <hr />

@@ -8,9 +8,25 @@ import { primarySubjects, lingualSubjects } from '../constants/SubjectTypes'
 const Calculator = ({ subjects }) => {
   let maxPrimaryScoreWrapper = subjectPicker(subjects, primarySubjects)
   let maxLingualScoreWrapper = subjectPicker(subjects, lingualSubjects)
+  let maxPrimaryScore
+  let maxLingualScore
+
+  if (maxPrimaryScoreWrapper === null) {
+    maxPrimaryScore = 0
+  } else {
+    maxPrimaryScore = maxPrimaryScoreWrapper.computedScore
+  }
+
+  if (maxLingualScoreWrapper === null) {
+    maxLingualScore = 0
+  } else {
+    maxLingualScore = maxLingualScoreWrapper.computedScore
+  }
 
   return (
-    <div>
+    <div className='m-4'>
+      <h3>Wynik</h3>
+      <hr />
       <BestSubject
         maxScoreWrapper={maxPrimaryScoreWrapper}
         subjectType={primarySubjects} />
@@ -18,8 +34,8 @@ const Calculator = ({ subjects }) => {
         maxScoreWrapper={maxLingualScoreWrapper}
         subjectType={lingualSubjects} />
       <MaxScore
-        maxPrimaryScoreWrapper={maxPrimaryScoreWrapper}
-        maxLingualScoreWrapper={maxLingualScoreWrapper} />
+        maxPrimaryScore={maxPrimaryScore}
+        maxLingualScore={maxLingualScore} />
     </div>
   )
 }
