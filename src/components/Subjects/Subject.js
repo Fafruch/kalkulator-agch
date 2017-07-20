@@ -4,7 +4,7 @@ import ToggleSubject from './ToggleSubject'
 import DeleteSubject from './DeleteSubject'
 import PrimarySubjectsDatalist from './PrimarySubjectsDatalist'
 import LingualSubjectsDatalist from './LingualSubjectsDatalist'
-import { primarySubjects } from '../constants/SubjectTypes'
+import { primarySubjects } from '../../constants/SubjectTypes'
 
 let Subject = ({ id, name, elementaryScore, advancedScore,
                  active, onChange, onToggleClick, onDelete, subjectsType }) => {
@@ -35,14 +35,13 @@ let Subject = ({ id, name, elementaryScore, advancedScore,
               list={subjectsType}
               ref={node => { formInput.name = node }}
               onChange={() => onChange(id, formInput.name.value, elementaryScore, advancedScore)}
-              className={active ? 'subject-active' : 'subject-not-active'}
+              className={active ? 'subject-active subject-input-field' : 'subject-not-active subject-input-field'}
             />
 
             {subjectsType === primarySubjects
               ? <PrimarySubjectsDatalist subjectsType={subjectsType} />
               : <LingualSubjectsDatalist subjectsType={subjectsType} />
             }
-
           </td>
           <td>
             <input
@@ -55,17 +54,6 @@ let Subject = ({ id, name, elementaryScore, advancedScore,
             />
 
             &nbsp; {elementaryScore === 0 ? 'Brak' : elementaryScore + '%'}
-
-            {/* // trzeba polaczyc jakos, zeby dzialalo
-            <input
-              type='text'
-              value={elementaryScore}
-              ref={node => { formInput.elementaryScore = node }}
-              onChange={() => onChange(id, name, type, parseInt(formInput.elementaryScore.value, 10), advancedScore)}
-              style={{width: 20}}
-            >
-            </input>
-            */}
           </td>
           <td>
             <input
@@ -78,17 +66,6 @@ let Subject = ({ id, name, elementaryScore, advancedScore,
             />
 
             &nbsp; {advancedScore === 0 ? 'Brak' : advancedScore + '%'}
-
-            {/* // tu tez
-            <input
-              type='text'
-              value={advancedScore}
-              ref={node => { formInput.elementaryScore = node }}
-              onChange={() => onChange(id, name, type, elementaryScore, parseInt(formInput.advancedScore.value, 10))}
-              style={{width: 20}}
-            >
-            </input>
-            */}
           </td>
           <td>
             <ToggleSubject

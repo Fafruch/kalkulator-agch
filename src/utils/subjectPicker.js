@@ -6,10 +6,8 @@ const subjectPickerUtil = (subjects, subjectsType) => {
   // Filtruje przedmioty do danych przez subjectsType i aktywnych
   let subjectsArray = subjects.filter(subject => subject.active && (subject.type === subjectsType))
 
-  if (subjectsArray.length === 0) {
-    return null
-  } else {
-
+  if (subjectsArray.length === 0) return null
+  else {
     let maxScoreWrapper = {
       subject: null,
       computedScore: null,
@@ -36,11 +34,8 @@ const subjectPickerUtil = (subjects, subjectsType) => {
     // Przepisuje do wrappera przedmiot, jego punkty oraz wzor zgodnie z ktorym zostal wyliczony maksymalny wynik
     maxScoreWrapper.subject = maxScoreSubject
 
-    if (subjectsType === primarySubjects) {
-      maxScoreWrapper.computedScore = maxScoreObj.computedScore * 4
-    } else {
-      maxScoreWrapper.computedScore = maxScoreObj.computedScore
-    }
+    if (subjectsType === primarySubjects) maxScoreWrapper.computedScore = maxScoreObj.computedScore * 4
+    else maxScoreWrapper.computedScore = maxScoreObj.computedScore
 
     maxScoreWrapper.formula = maxScoreObj.formula
 

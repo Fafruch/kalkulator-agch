@@ -1,11 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { primarySubjects } from '../constants/SubjectTypes'
+import { primarySubjects } from '../../constants/SubjectTypes'
 
 const BestSubject = ({ maxScoreWrapper, subjectType }) => {
-  if (maxScoreWrapper === null) {
-    return null
-  } else {
+  if (maxScoreWrapper === null) return null
+  else {
     return (
       <div>
         <p>

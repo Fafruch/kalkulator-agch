@@ -16,6 +16,9 @@ $subject-transition-leave-time: 300ms;
   transition: $subject-transition-leave-time;
   opacity: 0.33;
 }
+.subject-input-field {
+  padding-left: 0.25rem;
+}
 
 
 .subject-enter {
@@ -35,7 +38,7 @@ $subject-transition-leave-time: 300ms;
 }
 
 .subject-leave.subject-leave-active {
-  height: 0px;
+  height: 0;
   opacity: 0.01;
   transition: height $subject-transition-leave-time ease, opacity 200ms;
 }
