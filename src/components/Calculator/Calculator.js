@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 import BestSubject from './BestSubject'
 import MaxScore from './MaxScore'
-import subjectPicker from '/utils/subjectPicker'
-import { PRIMARY_SUBJECTS, LINGUAL_SUBJECTS } from '/constants/SubjectTypes'
+import subjectPicker from '../../utils/subjectPicker'
+import { PRIMARY_SUBJECTS, LINGUAL_SUBJECTS } from '../../constants/SubjectTypes'
 
 const Calculator = ({ subjects }) => {
   const maxPrimaryScoreWrapper = subjectPicker(subjects, PRIMARY_SUBJECTS)

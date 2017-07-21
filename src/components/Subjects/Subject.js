@@ -5,7 +5,7 @@ import ToggleSubject from './ToggleSubject'
 import DeleteSubject from './DeleteSubject'
 import PrimarySubjectsDatalist from './PrimarySubjectsDatalist'
 import LingualSubjectsDatalist from './LingualSubjectsDatalist'
-import { PRIMARY_SUBJECTS } from '/constants/SubjectTypes'
+import { PRIMARY_SUBJECTS } from '../../constants/SubjectTypes'
 
 const Subject = ({ id, name, elementaryScore, advancedScore, active,
                  onChange, onToggleClick, onDelete, subjectsType, iterator }) => {
