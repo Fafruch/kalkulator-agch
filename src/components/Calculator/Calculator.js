@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 import BestSubject from './BestSubject'
 import MaxScore from './MaxScore'
-import subjectPicker from '../../utils/subjectPicker'
-import { PRIMARY_SUBJECTS, LINGUAL_SUBJECTS } from '../../constants/SubjectTypes'
+import subjectPicker from '/utils/subjectPicker'
+import { PRIMARY_SUBJECTS, LINGUAL_SUBJECTS } from '/constants/SubjectTypes'
 
 const Calculator = ({ subjects }) => {
   const maxPrimaryScoreWrapper = subjectPicker(subjects, PRIMARY_SUBJECTS)
@@ -12,31 +12,32 @@ const Calculator = ({ subjects }) => {
   let maxPrimaryScore
   let maxLingualScore
 
-  if (maxPrimaryScoreWrapper === null) maxPrimaryScore = 0
+  if (!maxPrimaryScoreWrapper) maxPrimaryScore = 0
   else maxPrimaryScore = maxPrimaryScoreWrapper.computedScore
 
-  if (maxLingualScoreWrapper === null) maxLingualScore = 0
+  if (!maxLingualScoreWrapper) maxLingualScore = 0
   else maxLingualScore = maxLingualScoreWrapper.computedScore
 
-  if (maxPrimaryScoreWrapper === null && maxLingualScoreWrapper === null) return null
-  else {
-    return (
-      <div className='m-4'>
-        <h3>Wynik</h3>
-        <hr />
-        <BestSubject
-          maxScoreWrapper={maxPrimaryScoreWrapper}
-          subjectType={PRIMARY_SUBJECTS} />
-        <BestSubject
-          maxScoreWrapper={maxLingualScoreWrapper}
-          subjectType={LINGUAL_SUBJECTS} />
-        <br />
-        <MaxScore
-          maxPrimaryScore={maxPrimaryScore}
-          maxLingualScore={maxLingualScore} />
-      </div>
-    )
-  }
+  if (!maxPrimaryScoreWrapper && maxLingualScoreWrapper) return null
+  return (
+    <div className='m-4'>
+      <h3>Wynik</h3>
+      <hr />
+      <BestSubject
+        maxScoreWrapper={maxPrimaryScoreWrapper}
+        subjectType={PRIMARY_SUBJECTS}
+      />
+      <BestSubject
+        maxScoreWrapper={maxLingualScoreWrapper}
+        subjectType={LINGUAL_SUBJECTS}
+      />
+      <br />
+      <MaxScore
+        maxPrimaryScore={maxPrimaryScore}
+        maxLingualScore={maxLingualScore}
+      />
+    </div>
+  )
 }
 
 Calculator.propTypes = {

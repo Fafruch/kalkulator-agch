@@ -5,7 +5,7 @@ import ToggleSubject from './ToggleSubject'
 import DeleteSubject from './DeleteSubject'
 import PrimarySubjectsDatalist from './PrimarySubjectsDatalist'
 import LingualSubjectsDatalist from './LingualSubjectsDatalist'
-import { PRIMARY_SUBJECTS } from '../../constants/SubjectTypes'
+import { PRIMARY_SUBJECTS } from '/constants/SubjectTypes'
 
 const Subject = ({ id, name, elementaryScore, advancedScore, active,
                  onChange, onToggleClick, onDelete, subjectsType, iterator }) => {
@@ -55,7 +55,7 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
               onChange={() => onChange(id, name, +formInput.elementaryScore.value, advancedScore)}
             />
 
-            &nbsp; {elementaryScore === 0 ? 'Brak' : elementaryScore + '%'}
+            &nbsp; {!elementaryScore ? 'Brak' : elementaryScore + '%'}
           </td>
           <td>
             <input
@@ -67,7 +67,7 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
               onChange={() => onChange(id, name, elementaryScore, +formInput.advancedScore.value)}
             />
 
-            &nbsp; {advancedScore === 0 ? 'Brak' : advancedScore + '%'}
+            &nbsp; {!advancedScore ? 'Brak' : advancedScore + '%'}
           </td>
           <td>
             <ToggleSubject

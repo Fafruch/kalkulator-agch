@@ -5,14 +5,13 @@ import { CSSTransitionGroup } from 'react-transition-group'
 import Subject from './Subject'
 
 const SubjectList = ({ subjects, onChange, onToggleClick, onDelete, subjectsType }) => {
-  let i = 1
   return (
     <ul className='list-unstyled'>
       <CSSTransitionGroup transitionName='subject' transitionEnterTimeout={300} transitionLeaveTimeout={300}>
-        {subjects.map(subject =>
-          subject.type === subjectsType ?
-            <li
-              key={subject.id} // tylko dla iteracji, react tego potrzebuje
+        {subjects.map((subject, i) =>
+          subject.type === subjectsType
+            ? <li
+              key={subject.id}
               className={subject.active ? 'subject-active' : 'subject-not-active'}
             >
               <Subject
@@ -21,7 +20,7 @@ const SubjectList = ({ subjects, onChange, onToggleClick, onDelete, subjectsType
                 onToggleClick={onToggleClick}
                 onDelete={onDelete}
                 subjectsType={subjectsType}
-                iterator={i++}
+                iterator={i + 1}
               />
             </li>
             : null
