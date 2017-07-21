@@ -1,5 +1,5 @@
 import pointsCalculator from './pointsCalculator'
-import { primarySubjects } from '../constants/SubjectTypes'
+import { PRIMARY_SUBJECTS } from '../constants/SubjectTypes'
 
 const subjectPickerUtil = (subjects, subjectsType) => {
 
@@ -34,7 +34,7 @@ const subjectPickerUtil = (subjects, subjectsType) => {
     // Przepisuje do wrappera przedmiot, jego punkty oraz wzor zgodnie z ktorym zostal wyliczony maksymalny wynik
     maxScoreWrapper.subject = maxScoreSubject
 
-    if (subjectsType === primarySubjects) maxScoreWrapper.computedScore = maxScoreObj.computedScore * 4
+    if (subjectsType === PRIMARY_SUBJECTS) maxScoreWrapper.computedScore = maxScoreObj.computedScore * 4
     else maxScoreWrapper.computedScore = maxScoreObj.computedScore
 
     maxScoreWrapper.formula = maxScoreObj.formula

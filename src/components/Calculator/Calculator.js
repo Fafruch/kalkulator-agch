@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 import BestSubject from './BestSubject'
 import MaxScore from './MaxScore'
 import subjectPicker from '../../utils/subjectPicker'
-import { primarySubjects, lingualSubjects } from '../../constants/SubjectTypes'
+import { PRIMARY_SUBJECTS, LINGUAL_SUBJECTS } from '../../constants/SubjectTypes'
 
 const Calculator = ({ subjects }) => {
-  let maxPrimaryScoreWrapper = subjectPicker(subjects, primarySubjects)
-  let maxLingualScoreWrapper = subjectPicker(subjects, lingualSubjects)
+  let maxPrimaryScoreWrapper = subjectPicker(subjects, PRIMARY_SUBJECTS)
+  let maxLingualScoreWrapper = subjectPicker(subjects, LINGUAL_SUBJECTS)
   let maxPrimaryScore
   let maxLingualScore
 
@@ -26,10 +26,10 @@ const Calculator = ({ subjects }) => {
         <hr />
         <BestSubject
           maxScoreWrapper={maxPrimaryScoreWrapper}
-          subjectType={primarySubjects} />
+          subjectType={PRIMARY_SUBJECTS} />
         <BestSubject
           maxScoreWrapper={maxLingualScoreWrapper}
-          subjectType={lingualSubjects} />
+          subjectType={LINGUAL_SUBJECTS} />
         <br />
         <MaxScore
           maxPrimaryScore={maxPrimaryScore}

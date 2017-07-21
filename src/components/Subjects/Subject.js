@@ -5,7 +5,7 @@ import ToggleSubject from './ToggleSubject'
 import DeleteSubject from './DeleteSubject'
 import PrimarySubjectsDatalist from './PrimarySubjectsDatalist'
 import LingualSubjectsDatalist from './LingualSubjectsDatalist'
-import { primarySubjects } from '../../constants/SubjectTypes'
+import { PRIMARY_SUBJECTS } from '../../constants/SubjectTypes'
 
 let Subject = ({ id, name, elementaryScore, advancedScore, active,
                  onChange, onToggleClick, onDelete, subjectsType, iterator }) => {
@@ -24,7 +24,7 @@ let Subject = ({ id, name, elementaryScore, advancedScore, active,
           <th>Wynik z matury podstawowej</th>
           <th>Wynik z matury rozszerzonej</th>
           <th>{/* {active ? 'Nie bierz pod uwagę': 'Bierz pod uwagę'} */}</th>
-          <th>{/* Usuń {subjectsType === primarySubjects ? 'przedmiot' : 'język'} */}</th>
+          <th>{/* Usuń {subjectsType === PRIMARY_SUBJECTS ? 'przedmiot' : 'język'} */}</th>
         </tr>
         <tr>
           <td>
@@ -40,7 +40,7 @@ let Subject = ({ id, name, elementaryScore, advancedScore, active,
               className={active ? 'subject-active subject-input-field' : 'subject-not-active subject-input-field'}
             />
 
-            {subjectsType === primarySubjects
+            {subjectsType === PRIMARY_SUBJECTS
               ? <PrimarySubjectsDatalist subjectsType={subjectsType} />
               : <LingualSubjectsDatalist subjectsType={subjectsType} />
             }

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { primarySubjects } from '../../constants/SubjectTypes'
+import { PRIMARY_SUBJECTS } from '../../constants/SubjectTypes'
 
 const BestSubject = ({ maxScoreWrapper, subjectType }) => {
   if (maxScoreWrapper === null) return null
@@ -9,7 +9,7 @@ const BestSubject = ({ maxScoreWrapper, subjectType }) => {
     return (
       <div>
         <p>
-          Maksymalny wynik dla {subjectType === primarySubjects ? 'przedmiotu głównego' : 'języka'} to
+          Maksymalny wynik dla {subjectType === PRIMARY_SUBJECTS ? 'przedmiotu głównego' : 'języka'} to
           &nbsp;<b>{maxScoreWrapper.computedScore}</b> pkt. dla przedmiotu
           &nbsp;<b>{maxScoreWrapper.subject.name === '' ? 'bez nazwy' : maxScoreWrapper.subject.name}</b>
           &nbsp;obliczony zgodnie z formułą

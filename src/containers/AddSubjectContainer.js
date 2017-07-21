@@ -4,14 +4,14 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import { addSubject } from '../actions'
-import { primarySubjects } from '../constants/SubjectTypes'
+import { PRIMARY_SUBJECTS } from '../constants/SubjectTypes'
 
 let AddSubjectContainer = ({ subjectsType, onAdd }) => (
   <button
     onClick={() => onAdd(subjectsType)}
-    className={subjectsType === primarySubjects ? 'btn btn-outline-danger' : 'btn btn-outline-success'}
+    className={subjectsType === PRIMARY_SUBJECTS ? 'btn btn-outline-danger' : 'btn btn-outline-success'}
   >
-    Dodaj {subjectsType === primarySubjects ? 'przedmiot główny' : 'język'}
+    Dodaj {subjectsType === PRIMARY_SUBJECTS ? 'przedmiot główny' : 'język'}
   </button>
 )
 AddSubjectContainer.propTypes = {
