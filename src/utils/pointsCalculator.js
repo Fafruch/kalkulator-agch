@@ -7,14 +7,12 @@ const pointsCalculator = (elementaryScore, advancedScore) => {
   const scoreA = elementaryScore + advancedScore
   let scoreB = 0
 
-  if (advancedScore !== 0) {
-    if (advancedScore <= 30) {
-      scoreB = advancedScore
-    } else if (advancedScore <= 80) {
-      scoreB = advancedScore + (2 * (advancedScore - 30))
-    } else {
-      scoreB = advancedScore + 100
-    }
+  if (advancedScore <= 30) {
+    scoreB = advancedScore
+  } else if (advancedScore <= 80) {
+    scoreB = advancedScore + (2 * (advancedScore - 30))
+  } else {
+    scoreB = advancedScore + 100
   }
 
   if (scoreA > scoreB) {
