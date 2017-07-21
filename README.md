@@ -20,5 +20,4 @@ Dodatkowo wykorzystuje:
 * [React Transition Group](https://github.com/reactjs/react-transition-group/tree/v1-stable)
 * [uuid](https://github.com/kelektiv/node-uuid)
 
-Stan aplikacji zapisywany jest w window.localStorage na podstawie 
-https://egghead.io/lessons/javascript-redux-persisting-the-state-to-the-local-storage, ale zapisuje stan tylko przy opuszczaniu strony.
+Stan aplikacji zapisywany jest w window.localStorage przy opuszczaniu strony.
