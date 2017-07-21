@@ -4,9 +4,9 @@ const subjects = (state = [], action) => {
       return [
         ...state,
         {
-          id: action.id,
+          id: action.payload.id,
           name: '',
-          type: action.subjectsType,
+          type: action.payload.subjectsType,
           elementaryScore: 0,
           advancedScore: 0,
           active: true
@@ -14,7 +14,7 @@ const subjects = (state = [], action) => {
       ]
     case 'TOGGLE_SUBJECT':
       return state.map(
-        subject => (subject.id === action.id) ? {
+        subject => (subject.id === action.payload.id) ? {
           ...subject,
           active: !subject.active
         }
@@ -22,16 +22,16 @@ const subjects = (state = [], action) => {
       )
     case 'REMOVE_SUBJECT':
       return state.filter(
-        subject => subject.id !== action.id
+        subject => subject.id !== action.payload.id
       )
     case 'UPDATE_SUBJECT':
       return state.map(
-        subject => (subject.id === action.id) ? {
-          id: action.id,
-          name: action.name,
+        subject => (subject.id === action.payload.id) ? {
+          id: action.payload.id,
+          name: action.payload.name,
           type: subject.type,
-          elementaryScore: action.elementaryScore,
-          advancedScore: action.advancedScore,
+          elementaryScore: action.payload.elementaryScore,
+          advancedScore: action.payload.advancedScore,
           active: subject.active
         }
         : subject
