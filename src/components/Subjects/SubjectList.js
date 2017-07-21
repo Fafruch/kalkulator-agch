@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Subject from './Subject'
 import { CSSTransitionGroup } from 'react-transition-group'
+
+import Subject from './Subject'
 
 const SubjectList = ({ subjects, onChange, onToggleClick, onDelete, subjectsType }) => {
   let i = 1

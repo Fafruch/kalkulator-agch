@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import ToggleSubject from './ToggleSubject'
 import DeleteSubject from './DeleteSubject'
 import PrimarySubjectsDatalist from './PrimarySubjectsDatalist'

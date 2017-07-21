@@ -15,11 +15,7 @@ const subjects = (state = [], action) => {
     case 'TOGGLE_SUBJECT':
       return state.map(
         subject => (subject.id === action.id) ? {
-          id: subject.id,
-          name: subject.name,
-          type: subject.type,
-          elementaryScore: subject.elementaryScore,
-          advancedScore: subject.advancedScore,
+          ...subject,
           active: !subject.active
         }
         : subject

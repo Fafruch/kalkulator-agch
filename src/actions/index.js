@@ -1,4 +1,5 @@
 import { v4 } from 'uuid'
+
 import { ADD_SUBJECT, REMOVE_SUBJECT, TOGGLE_SUBJECT, UPDATE_SUBJECT } from '../constants/ActionTypes'
 
 export const addSubject = (subjectsType) => ({

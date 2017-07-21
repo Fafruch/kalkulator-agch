@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import SubjectListContainer from '../containers/SubjectListContainer'
 import AddSubjectContainer from '../containers/AddSubjectContainer'
 import { primarySubjects } from '../constants/SubjectTypes'

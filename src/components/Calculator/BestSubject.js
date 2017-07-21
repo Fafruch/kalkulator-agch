@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import { primarySubjects } from '../../constants/SubjectTypes'
 
 const BestSubject = ({ maxScoreWrapper, subjectType }) => {

@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+
 import subjects from './subjects'
 
 export const makeRootReducer = (asyncReducers) => {

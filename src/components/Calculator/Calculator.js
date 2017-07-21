@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import BestSubject from './BestSubject'
 import MaxScore from './MaxScore'
 import subjectPicker from '../../utils/subjectPicker'
