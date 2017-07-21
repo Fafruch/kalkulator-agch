@@ -16,11 +16,7 @@ const SubjectList = ({ subjects, onChange, onToggleClick, onDelete, subjectsType
               className={subject.active ? 'subject-active' : 'subject-not-active'}
             >
               <Subject
-                id={subject.id}
-                name={subject.name}
-                elementaryScore={subject.elementaryScore}
-                advancedScore={subject.advancedScore}
-                active={subject.active}
+                {...subject}
                 onChange={onChange}
                 onToggleClick={onToggleClick}
                 onDelete={onDelete}
