@@ -8,7 +8,7 @@ const subjectPickerUtil = (subjects, subjectsType) => {
 
   if (subjectsArray.length === 0) return null
   else {
-    let maxScoreWrapper = {
+    const maxScoreWrapper = {
       subject: null,
       computedScore: null,
       formula: null

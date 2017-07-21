@@ -1,10 +1,10 @@
 const pointsCalculator = (elementaryScore, advancedScore) => {
-  let scoreObj = {
+  const scoreObj = {
     computedScore: null,
     formula: null
   }
 
-  let scoreA = elementaryScore + advancedScore
+  const scoreA = elementaryScore + advancedScore
   let scoreB = 0
 
   if (advancedScore !== 0) {

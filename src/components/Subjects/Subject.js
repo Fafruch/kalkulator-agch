@@ -7,9 +7,9 @@ import PrimarySubjectsDatalist from './PrimarySubjectsDatalist'
 import LingualSubjectsDatalist from './LingualSubjectsDatalist'
 import { PRIMARY_SUBJECTS } from '../../constants/SubjectTypes'
 
-let Subject = ({ id, name, elementaryScore, advancedScore, active,
+const Subject = ({ id, name, elementaryScore, advancedScore, active,
                  onChange, onToggleClick, onDelete, subjectsType, iterator }) => {
-  let formInput = {
+  const formInput = {
     name,
     elementaryScore,
     advancedScore
@@ -52,7 +52,7 @@ let Subject = ({ id, name, elementaryScore, advancedScore, active,
               min='0'
               max='100'
               ref={node => { formInput.elementaryScore = node }}
-              onChange={() => onChange(id, name, parseInt(formInput.elementaryScore.value, 10), advancedScore)}
+              onChange={() => onChange(id, name, +formInput.elementaryScore.value, advancedScore)}
             />
 
             &nbsp; {elementaryScore === 0 ? 'Brak' : elementaryScore + '%'}
@@ -64,7 +64,7 @@ let Subject = ({ id, name, elementaryScore, advancedScore, active,
               min='0'
               max='100'
               ref={node => { formInput.advancedScore = node }}
-              onChange={() => onChange(id, name, elementaryScore, parseInt(formInput.advancedScore.value, 10))}
+              onChange={() => onChange(id, name, elementaryScore, +formInput.advancedScore.value)}
             />
 
             &nbsp; {advancedScore === 0 ? 'Brak' : advancedScore + '%'}

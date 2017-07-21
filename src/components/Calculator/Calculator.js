@@ -7,8 +7,8 @@ import subjectPicker from '../../utils/subjectPicker'
 import { PRIMARY_SUBJECTS, LINGUAL_SUBJECTS } from '../../constants/SubjectTypes'
 
 const Calculator = ({ subjects }) => {
-  let maxPrimaryScoreWrapper = subjectPicker(subjects, PRIMARY_SUBJECTS)
-  let maxLingualScoreWrapper = subjectPicker(subjects, LINGUAL_SUBJECTS)
+  const maxPrimaryScoreWrapper = subjectPicker(subjects, PRIMARY_SUBJECTS)
+  const maxLingualScoreWrapper = subjectPicker(subjects, LINGUAL_SUBJECTS)
   let maxPrimaryScore
   let maxLingualScore
 
