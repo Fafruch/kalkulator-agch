@@ -13,17 +13,15 @@ SubjectListContainer.propTypes = {
   subjectsType: PropTypes.string.isRequired
 }
 
-function mapStateToProps (state) {
-  return { subjects: state.subjects }
-}
+const mapStateToProps = (state) => ({
+  subjects: state.subjects
+})
 
-function mapDispatchToProps (dispatch) {
-  return {
-    onChange: bindActionCreators(updateSubject, dispatch),
-    onToggleClick: bindActionCreators(toggleSubject, dispatch),
-    onDelete: bindActionCreators(removeSubject, dispatch)
-  }
-}
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+  onChange: updateSubject,
+  onToggleClick: toggleSubject,
+  onDelete: removeSubject,
+}, dispatch)
 
 SubjectListContainer = connect(mapStateToProps, mapDispatchToProps)(SubjectList)
 
