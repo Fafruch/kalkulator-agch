@@ -1,6 +1,8 @@
+import { ADD_SUBJECT, TOGGLE_SUBJECT, REMOVE_SUBJECT, UPDATE_SUBJECT } from '../constants/ActionTypes'
+
 const subjects = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_SUBJECT':
+    case ADD_SUBJECT:
       return [
         ...state,
         {
@@ -12,7 +14,7 @@ const subjects = (state = [], action) => {
           active: true
         }
       ]
-    case 'TOGGLE_SUBJECT':
+    case TOGGLE_SUBJECT:
       return state.map(
         subject => (subject.id === action.payload.id) ? {
           ...subject,
@@ -20,21 +22,20 @@ const subjects = (state = [], action) => {
         }
         : subject
       )
-    case 'REMOVE_SUBJECT':
+    case REMOVE_SUBJECT:
       return state.filter(
         subject => subject.id !== action.payload.id
       )
-    case 'UPDATE_SUBJECT':
+    case UPDATE_SUBJECT:
       return state.map(
-        subject => (subject.id === action.payload.id) ? {
-          id: action.payload.id,
-          name: action.payload.name,
-          type: subject.type,
-          elementaryScore: action.payload.elementaryScore,
-          advancedScore: action.payload.advancedScore,
-          active: subject.active
-        }
-        : subject
+        subject => (subject.id === action.payload.id)
+          ? {
+            ...subject,
+            name: action.payload.name,
+            elementaryScore: action.payload.elementaryScore,
+            advancedScore: action.payload.advancedScore
+          }
+          : subject
       )
     default:
       return state

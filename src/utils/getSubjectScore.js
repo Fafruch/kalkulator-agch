@@ -1,7 +1,9 @@
-const pointsCalculator = (elementaryScore, advancedScore) => {
+import { PRIMARY_SUBJECTS } from '../constants/SubjectTypes'
+
+const getSubjectScore = ({ elementaryScore, advancedScore, type }) => {
   const scoreObj = {
-    computedScore: null,
-    formula: null
+    computedScore: 0,
+    formula: ''
   }
 
   const scoreA = elementaryScore + advancedScore
@@ -26,7 +28,9 @@ const pointsCalculator = (elementaryScore, advancedScore) => {
     scoreObj.formula = 'B'
   }
 
+  if (type === PRIMARY_SUBJECTS) scoreObj.computedScore *= 4
+
   return scoreObj
 }
 
-export default pointsCalculator
+export default getSubjectScore

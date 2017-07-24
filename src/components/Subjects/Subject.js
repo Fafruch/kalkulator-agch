@@ -55,7 +55,7 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
               onChange={() => onChange(id, name, +formInput.elementaryScore.value, advancedScore)}
             />
 
-            &nbsp; {!elementaryScore ? 'Brak' : elementaryScore + '%'}
+            &nbsp; {elementaryScore ? `${elementaryScore}%` : 'Brak' }
           </td>
           <td>
             <input
@@ -67,7 +67,7 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
               onChange={() => onChange(id, name, elementaryScore, +formInput.advancedScore.value)}
             />
 
-            &nbsp; {!advancedScore ? 'Brak' : advancedScore + '%'}
+            &nbsp; {advancedScore ? `${advancedScore}%` : 'Brak' }
           </td>
           <td>
             <ToggleSubject
