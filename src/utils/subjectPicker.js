@@ -9,7 +9,7 @@ const subjectPicker = (subjects, subjectsType) => {
     isEmpty: false
   }
 
-  const subjectsArray = subjects.filter(subject => subject.active && (subject.type === subjectsType))
+  const subjectsArray = subjects.filter(subject => subject.active)
 
   if (!subjectsArray.length) {
     maxScoreWrapper = { ...maxScoreWrapper, isEmpty: true }
@@ -17,7 +17,7 @@ const subjectPicker = (subjects, subjectsType) => {
   }
 
   return subjectsArray.reduce((currentMaxWrapper, subject) => {
-    const currentScoreObj = getSubjectScore(subject)
+    const currentScoreObj = getSubjectScore(subject, subjectsType)
 
     return (currentScoreObj.computedScore > currentMaxWrapper.computedScore)
       ? { subject, ...currentScoreObj, isEmpty: false }

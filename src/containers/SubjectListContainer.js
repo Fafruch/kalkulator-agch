@@ -4,8 +4,8 @@ import { bindActionCreators } from 'redux'
 import SubjectList from '../components/Subjects/SubjectList'
 import { removeSubject, toggleSubject, updateSubject } from '../actions'
 
-const mapStateToProps = (state) => ({
-  subjects: state.subjects
+const mapStateToProps = (state, ownProps) => ({
+  subjects: state.subjects[ownProps.subjectsType]
 })
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({

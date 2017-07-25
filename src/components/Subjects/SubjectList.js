@@ -9,21 +9,19 @@ const SubjectList = ({ subjects, onChange, onToggleClick, onDelete, subjectsType
     <ul className='list-unstyled'>
       <CSSTransitionGroup transitionName='subject' transitionEnterTimeout={300} transitionLeaveTimeout={300}>
         {subjects.map((subject, i) =>
-          subject.type === subjectsType
-            ? <li
-              key={subject.id}
-              className={subject.active ? 'subject-active' : 'subject-not-active'}
-            >
-              <Subject
-                {...subject}
-                onChange={onChange}
-                onToggleClick={onToggleClick}
-                onDelete={onDelete}
-                subjectsType={subjectsType}
-                iterator={i + 1}
-              />
-            </li>
-            : null
+          <li
+            key={subject.id}
+            className={subject.active ? 'subject-active' : 'subject-not-active'}
+          >
+            <Subject
+              {...subject}
+              onChange={onChange}
+              onToggleClick={onToggleClick}
+              onDelete={onDelete}
+              subjectsType={subjectsType}
+              iterator={i + 1}
+            />
+          </li>
         )}
       </CSSTransitionGroup>
     </ul>

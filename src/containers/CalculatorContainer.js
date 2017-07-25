@@ -5,8 +5,8 @@ import subjectPicker from '../utils/subjectPicker'
 import { PRIMARY_SUBJECTS, LINGUAL_SUBJECTS } from '../constants/SubjectTypes'
 
 const mapStateToProps = (state) => ({
-  maxPrimaryScoreWrapper: subjectPicker(state.subjects, PRIMARY_SUBJECTS),
-  maxLingualScoreWrapper: subjectPicker(state.subjects, LINGUAL_SUBJECTS)
+  maxPrimaryScoreWrapper: subjectPicker(state.subjects[PRIMARY_SUBJECTS], PRIMARY_SUBJECTS),
+  maxLingualScoreWrapper: subjectPicker(state.subjects[LINGUAL_SUBJECTS], LINGUAL_SUBJECTS)
 })
 
 const CalculatorContainer = connect(mapStateToProps)(Calculator)

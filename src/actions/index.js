@@ -10,26 +10,29 @@ export const addSubject = (subjectsType) => ({
   }
 })
 
-export const updateSubject = (id, name, elementaryScore, advancedScore) => ({
+export const updateSubject = (id, name, elementaryScore, advancedScore, subjectsType) => ({
   type: UPDATE_SUBJECT,
   payload: {
     id,
     name,
     elementaryScore,
-    advancedScore
+    advancedScore,
+    subjectsType
   }
 })
 
-export const removeSubject = (id) => ({
+export const removeSubject = (id, subjectsType) => ({
   type: REMOVE_SUBJECT,
   payload: {
-    id
+    id,
+    subjectsType
   }
 })
 
-export const toggleSubject = (id) => ({
+export const toggleSubject = (id, subjectsType) => ({
   type: TOGGLE_SUBJECT,
   payload: {
-    id
+    id,
+    subjectsType
   }
 })

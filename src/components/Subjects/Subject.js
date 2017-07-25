@@ -36,7 +36,7 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
               list={subjectsType}
               ref={node => { formInput.name = node }}
               defaultValue={name}
-              onChange={() => onChange(id, formInput.name.value, elementaryScore, advancedScore)}
+              onChange={() => onChange(id, formInput.name.value, elementaryScore, advancedScore, subjectsType)}
               className={active ? 'subject-active subject-input-field' : 'subject-not-active subject-input-field'}
             />
 
@@ -52,7 +52,7 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
               min='0'
               max='100'
               ref={node => { formInput.elementaryScore = node }}
-              onChange={() => onChange(id, name, +formInput.elementaryScore.value, advancedScore)}
+              onChange={() => onChange(id, name, +formInput.elementaryScore.value, advancedScore, subjectsType)}
             />
 
             &nbsp; {elementaryScore ? `${elementaryScore}%` : 'Brak' }
@@ -64,7 +64,7 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
               min='0'
               max='100'
               ref={node => { formInput.advancedScore = node }}
-              onChange={() => onChange(id, name, elementaryScore, +formInput.advancedScore.value)}
+              onChange={() => onChange(id, name, elementaryScore, +formInput.advancedScore.value, subjectsType)}
             />
 
             &nbsp; {advancedScore ? `${advancedScore}%` : 'Brak' }
@@ -73,12 +73,14 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
             <ToggleSubject
               id={id}
               active={active}
+              subjectsType={subjectsType}
               onToggleClick={onToggleClick}
             />
           </td>
           <td>
             <DeleteSubject
               id={id}
+              subjectsType={subjectsType}
               onDelete={onDelete}
             />
           </td>
