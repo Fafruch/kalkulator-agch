@@ -3,33 +3,27 @@ import PropTypes from 'prop-types'
 
 import BestSubject from './BestSubject'
 import MaxScore from './MaxScore'
-import subjectPicker from '../../utils/subjectPicker'
 import { PRIMARY_SUBJECTS, LINGUAL_SUBJECTS } from '../../constants/SubjectTypes'
 
-const Calculator = ({ subjects }) => {
-  const maxPrimaryScoreWrapper = subjectPicker(subjects, PRIMARY_SUBJECTS)
+const Calculator = ({ maxPrimaryScoreWrapper, maxLingualScoreWrapper }) => {
   const maxPrimaryScore = maxPrimaryScoreWrapper.computedScore
-
-  const maxLingualScoreWrapper = subjectPicker(subjects, LINGUAL_SUBJECTS)
   const maxLingualScore = maxLingualScoreWrapper.computedScore
 
-  if (!maxPrimaryScoreWrapper.subject && !maxLingualScoreWrapper.subject) return null
+  if (maxPrimaryScoreWrapper.isEmpty && maxLingualScoreWrapper.isEmpty) return null
   return (
     <div className='m-4'>
       <h3>Wynik</h3>
       <hr />
-      {maxPrimaryScore
-      ? <BestSubject
+      {!!maxPrimaryScore &&
+      <BestSubject
         maxScoreWrapper={maxPrimaryScoreWrapper}
         subjectType={PRIMARY_SUBJECTS}
-      />
-      : null}
-      {maxLingualScore
-      ? <BestSubject
+      />}
+      {!!maxLingualScore &&
+      <BestSubject
         maxScoreWrapper={maxLingualScoreWrapper}
         subjectType={LINGUAL_SUBJECTS}
-      />
-      : null}
+      />}
       <br />
       <MaxScore
         maxPrimaryScore={maxPrimaryScore}
@@ -40,14 +34,32 @@ const Calculator = ({ subjects }) => {
 }
 
 Calculator.propTypes = {
-  subjects: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    type: PropTypes.string,
-    elementaryScore: PropTypes.number.isRequired,
-    advancedScore: PropTypes.number.isRequired,
-    active: PropTypes.bool.isRequired
-  }).isRequired).isRequired
+  maxPrimaryScoreWrapper: PropTypes.shape({
+    subject: PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      type: PropTypes.string,
+      elementaryScore: PropTypes.number,
+      advancedScore: PropTypes.number,
+      active: PropTypes.bool
+    }).isRequired,
+    computedScore: PropTypes.number.isRequired,
+    formula: PropTypes.string.isRequired,
+    isEmpty: PropTypes.bool.isRequired
+  }).isRequired,
+  maxLingualScoreWrapper: PropTypes.shape({
+    subject: PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      type: PropTypes.string,
+      elementaryScore: PropTypes.number,
+      advancedScore: PropTypes.number,
+      active: PropTypes.bool
+    }).isRequired,
+    computedScore: PropTypes.number.isRequired,
+    formula: PropTypes.string.isRequired,
+    isEmpty: PropTypes.bool.isRequired
+  }).isRequired
 }
 
 export default Calculator
