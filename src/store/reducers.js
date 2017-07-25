@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 
-import subjects from './subjects'
+import subjects from './reducers/subjects'
 
 export const makeRootReducer = (asyncReducers) => {
   return combineReducers({

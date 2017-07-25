@@ -1,19 +1,14 @@
-import getSubjectScore from './getSubjectScore'
+import getSubjectScore from '../../utils/getSubjectScore'
 
 const subjectPicker = (subjects, subjectsType) => {
 
-  let maxScoreWrapper = {
+  const subjectsArray = subjects.filter(subject => subject.active)
+
+  const maxScoreWrapper = {
     subject: {},
     computedScore: 0,
     formula: '',
-    isEmpty: false
-  }
-
-  const subjectsArray = subjects.filter(subject => subject.active)
-
-  if (!subjectsArray.length) {
-    maxScoreWrapper = { ...maxScoreWrapper, isEmpty: true }
-    return maxScoreWrapper
+    isEmpty: !subjectsArray.length
   }
 
   return subjectsArray.reduce((currentMaxWrapper, subject) => {

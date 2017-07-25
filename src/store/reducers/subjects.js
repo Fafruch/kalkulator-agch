@@ -1,4 +1,4 @@
-import { ADD_SUBJECT, TOGGLE_SUBJECT, REMOVE_SUBJECT, UPDATE_SUBJECT } from '../constants/ActionTypes'
+import { ADD_SUBJECT, TOGGLE_SUBJECT, REMOVE_SUBJECT, UPDATE_SUBJECT } from '../../constants/ActionTypes'
 
 const subjects = (state = { primary: [], lingual: [] }, action) => {
   switch (action.type) {

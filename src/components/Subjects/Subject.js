@@ -3,9 +3,7 @@ import PropTypes from 'prop-types'
 
 import ToggleSubject from './ToggleSubject'
 import DeleteSubject from './DeleteSubject'
-import PrimarySubjectsDatalist from './PrimarySubjectsDatalist'
-import LingualSubjectsDatalist from './LingualSubjectsDatalist'
-import { PRIMARY_SUBJECTS } from '../../constants/SubjectTypes'
+import Datalist from './Datalist'
 
 const Subject = ({ id, name, elementaryScore, advancedScore, active,
                  onChange, onToggleClick, onDelete, subjectsType, iterator }) => {
@@ -40,10 +38,7 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
               className={active ? 'subject-active subject-input-field' : 'subject-not-active subject-input-field'}
             />
 
-            {subjectsType === PRIMARY_SUBJECTS
-              ? <PrimarySubjectsDatalist subjectsType={subjectsType} />
-              : <LingualSubjectsDatalist subjectsType={subjectsType} />
-            }
+            <Datalist subjectsType={subjectsType} />
           </td>
           <td>
             <input

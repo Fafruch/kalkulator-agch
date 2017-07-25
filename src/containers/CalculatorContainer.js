@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 
 import Calculator from '../components/Calculator/Calculator'
-import subjectPicker from '../utils/subjectPicker'
+import subjectPicker from '../store/selectors/subjectPicker'
 import { PRIMARY_SUBJECTS, LINGUAL_SUBJECTS } from '../constants/SubjectTypes'
 
 const mapStateToProps = (state) => ({
