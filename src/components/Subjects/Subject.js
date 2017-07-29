@@ -8,10 +8,12 @@ import { primarySubjects } from '../../constants/SubjectTypes'
 
 let Subject = ({ id, name, elementaryScore, advancedScore, active,
                  onChange, onToggleClick, onDelete, subjectsType, iterator }) => {
-  let formInput = {
+  const formInput = {
     name,
-    elementaryScore,
-    advancedScore
+    elementaryScoreRange: elementaryScore,
+    elementaryScoreText: elementaryScore,
+    advancedScoreRange: advancedScore,
+    advancedScoreText: advancedScore
   }
 
   return (
@@ -36,7 +38,7 @@ let Subject = ({ id, name, elementaryScore, advancedScore, active,
               ref={node => { formInput.name = node }}
               defaultValue={name}
               onChange={() => onChange(id, formInput.name.value, elementaryScore, advancedScore)}
-              className={active ? 'subject-active subject-input-field' : 'subject-not-active subject-input-field'}
+              className={active ? 'subject-active subject-input-name' : 'subject-not-active subject-input-name'}
             />
 
             {subjectsType === primarySubjects
@@ -47,26 +49,52 @@ let Subject = ({ id, name, elementaryScore, advancedScore, active,
           <td>
             <input
               type='range'
-              defaultValue={elementaryScore}
+              value={elementaryScore}
               min='0'
               max='100'
-              ref={node => { formInput.elementaryScore = node }}
-              onChange={() => onChange(id, name, parseInt(formInput.elementaryScore.value, 10), advancedScore)}
+              ref={node => { formInput.elementaryScoreRange = node }}
+              onChange={() => onChange(id, name, +formInput.elementaryScoreRange.value, advancedScore, subjectsType)}
+              className='subject-input-range'
             />
-
-            &nbsp; {elementaryScore === 0 ? 'Brak' : elementaryScore + '%'}
+            <input
+              type='text'
+              value={elementaryScore}
+              ref={node => { formInput.elementaryScoreText = node }}
+              onChange={() => {
+                if (!isNaN(formInput.elementaryScoreText.value)) {
+                  onChange(id, name, +formInput.elementaryScoreText.value > 100
+                    ? 100
+                    : +formInput.elementaryScoreText.value, advancedScore)
+                }
+              }}
+              className='subject-input-text'
+            />
+            %
           </td>
           <td>
             <input
               type='range'
-              defaultValue={advancedScore}
+              value={advancedScore}
               min='0'
               max='100'
-              ref={node => { formInput.advancedScore = node }}
-              onChange={() => onChange(id, name, elementaryScore, parseInt(formInput.advancedScore.value, 10))}
+              ref={node => { formInput.advancedScoreRange = node }}
+              onChange={() => onChange(id, name, elementaryScore, +formInput.advancedScoreRange.value, subjectsType)}
+              className='subject-input-range'
             />
-
-            &nbsp; {advancedScore === 0 ? 'Brak' : advancedScore + '%'}
+            <input
+              type='text'
+              value={advancedScore}
+              ref={node => { formInput.advancedScoreText = node }}
+              onChange={() => {
+                if (!isNaN(formInput.advancedScoreText.value)) {
+                  onChange(id, name, elementaryScore, +formInput.advancedScoreText.value > 100
+                    ? 100
+                    : +formInput.advancedScoreText.value)
+                }
+              }}
+              className='subject-input-text'
+            />
+            %
           </td>
           <td>
             <ToggleSubject

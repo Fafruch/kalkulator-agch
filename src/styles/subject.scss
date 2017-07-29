@@ -16,8 +16,17 @@ $subject-transition-leave-time: 300ms;
   transition: $subject-transition-leave-time;
   opacity: 0.33;
 }
-.subject-input-field {
-  padding-left: 0.25rem;
+
+.subject-input-name {
+  padding-left: 0.3rem;
+}
+
+.subject-input-text {
+  margin-left: 0.4rem;
+  margin-right: 0.1rem;
+  padding-right: 0.3rem;
+  width: 2.4rem;
+  text-align: right;
 }
 
 
