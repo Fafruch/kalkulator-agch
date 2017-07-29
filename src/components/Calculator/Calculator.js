@@ -38,7 +38,6 @@ Calculator.propTypes = {
     subject: PropTypes.shape({
       id: PropTypes.string,
       name: PropTypes.string,
-      type: PropTypes.string,
       elementaryScore: PropTypes.number,
       advancedScore: PropTypes.number,
       active: PropTypes.bool
@@ -51,7 +50,6 @@ Calculator.propTypes = {
     subject: PropTypes.shape({
       id: PropTypes.string,
       name: PropTypes.string,
-      type: PropTypes.string,
       elementaryScore: PropTypes.number,
       advancedScore: PropTypes.number,
       active: PropTypes.bool

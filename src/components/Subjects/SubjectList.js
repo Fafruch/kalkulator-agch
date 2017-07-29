@@ -32,7 +32,6 @@ SubjectList.propTypes = {
   subjects: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    type: PropTypes.string,
     elementaryScore: PropTypes.number.isRequired,
     advancedScore: PropTypes.number.isRequired,
     active: PropTypes.bool.isRequired

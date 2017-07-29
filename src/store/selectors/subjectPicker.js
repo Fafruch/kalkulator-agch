@@ -15,7 +15,7 @@ const subjectPicker = (subjects, subjectsType) => {
     const currentScoreObj = getSubjectScore(subject, subjectsType)
 
     return (currentScoreObj.computedScore > currentMaxWrapper.computedScore)
-      ? { subject, ...currentScoreObj, isEmpty: false }
+      ? { ...currentMaxWrapper, subject, ...currentScoreObj }
       : currentMaxWrapper
   }, maxScoreWrapper)
 }
