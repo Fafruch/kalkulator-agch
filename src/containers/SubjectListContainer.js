@@ -1,29 +1,19 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+
 import SubjectList from '../components/Subjects/SubjectList'
 import { removeSubject, toggleSubject, updateSubject } from '../actions'
 
-let SubjectListContainer = ({ subjectsType }) => (
-  <SubjectList subjectsType={subjectsType} />
-)
-SubjectListContainer.propTypes = {
-  subjectsType: PropTypes.string.isRequired
-}
+const mapStateToProps = (state, ownProps) => ({
+  subjects: state.subjects[ownProps.subjectsType]
+})
 
-function mapStateToProps (state) {
-  return { subjects: state.subjects }
-}
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+  onChange: updateSubject,
+  onToggleClick: toggleSubject,
+  onDelete: removeSubject,
+}, dispatch)
 
-function mapDispatchToProps (dispatch) {
-  return {
-    onChange: bindActionCreators(updateSubject, dispatch),
-    onToggleClick: bindActionCreators(toggleSubject, dispatch),
-    onDelete: bindActionCreators(removeSubject, dispatch)
-  }
-}
-
-SubjectListContainer = connect(mapStateToProps, mapDispatchToProps)(SubjectList)
+const SubjectListContainer = connect(mapStateToProps, mapDispatchToProps)(SubjectList)
 
 export default SubjectListContainer

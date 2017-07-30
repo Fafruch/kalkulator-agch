@@ -6,7 +6,7 @@ const Header = () => (
       src='agh_logo.jpg'
       alt='Logo AGH'
     />
-    <h1>Kalkulator </h1>
+    <h1>Kalkulator</h1>
   </div>
 )
 

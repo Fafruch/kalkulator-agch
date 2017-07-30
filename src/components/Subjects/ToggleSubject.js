@@ -1,17 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const ToggleSubject = ({ id, active, onToggleClick }) => (
+const ToggleSubject = ({ id, active, subjectsType, onToggleClick }) => (
   <img
     src={active ? 'https://png.icons8.com/toggle-on/win10/96' : 'https://png.icons8.com/toggle-off/win10/96'}
     alt={active ? 'Nie bierz pod uwagę przedmiotu' : 'Bierz przedmiot pod uwagę'}
-    onClick={() => onToggleClick(id)}
+    onClick={() => onToggleClick(id, subjectsType)}
     className='subject-icon'
   />
 )
 ToggleSubject.propTypes = {
   id: PropTypes.string.isRequired,
   active: PropTypes.bool.isRequired,
+  subjectsType: PropTypes.string.isRequired,
   onToggleClick: PropTypes.func.isRequired
 }
 
