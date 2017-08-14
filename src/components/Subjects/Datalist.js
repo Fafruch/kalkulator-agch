@@ -13,6 +13,19 @@ const Datalist = ({ subjectsType }) => {
         <option value='Geografia' />
         <option value='Informatyka' />
         <option value='Matematyka' />
+
+        <option value='Filozofia' />
+        <option value='Historia' />
+        <option value='Historia sztuki' />
+        <option value='Wiedza o społeczeństwie' />
+        <option value='Język polski' />
+
+        <option value='Język angielski' />
+        <option value='Język francuski' />
+        <option value='Język hiszpański' />
+        <option value='Język niemiecki' />
+        <option value='Język rosyjski' />
+        <option value='Język włoski' />
       </datalist>
     )
   }

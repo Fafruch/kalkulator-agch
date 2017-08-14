@@ -59,9 +59,13 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
               ref={node => { formInput.elementaryScoreText = node }}
               onChange={() => {
                 if (!isNaN(formInput.elementaryScoreText.value)) {
-                  onChange(id, name, +formInput.elementaryScoreText.value > 100
-                    ? 100
-                    : +formInput.elementaryScoreText.value, advancedScore)
+                  onChange(
+                    id,
+                    name,
+                    +formInput.elementaryScoreText.value > 100 ? 100 : +formInput.elementaryScoreText.value,
+                    advancedScore,
+                    subjectsType
+                  )
                 }
               }}
               className='subject-input-text'
@@ -85,9 +89,13 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
               ref={node => { formInput.advancedScoreText = node }}
               onChange={() => {
                 if (!isNaN(formInput.advancedScoreText.value)) {
-                  onChange(id, name, elementaryScore, +formInput.advancedScoreText.value > 100
-                    ? 100
-                    : +formInput.advancedScoreText.value)
+                  onChange(
+                    id,
+                    name,
+                    elementaryScore,
+                    +formInput.advancedScoreText.value > 100 ? 100 : +formInput.advancedScoreText.value,
+                    subjectsType
+                  )
                 }
               }}
               className='subject-input-text'
