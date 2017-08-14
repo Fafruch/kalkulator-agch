@@ -1,3 +1,4 @@
+import getSubjectScore from '../../utils/getSubjectScore'
 import { ADD_SUBJECT, TOGGLE_SUBJECT, REMOVE_SUBJECT, UPDATE_SUBJECT } from '../../constants/ActionTypes'
 
 const subjects = (state = { primary: [], lingual: [] }, action) => {
@@ -12,6 +13,10 @@ const subjects = (state = { primary: [], lingual: [] }, action) => {
             name: '',
             elementaryScore: 0,
             advancedScore: 0,
+            maxScore: {
+              computedScore: 0,
+              formula: ''
+            },
             active: true
           }
         ]
@@ -48,7 +53,7 @@ const subjects = (state = { primary: [], lingual: [] }, action) => {
               maxScore: getSubjectScore({
                 elementaryScore: action.payload.elementaryScore,
                 advancedScore: action.payload.advancedScore
-              }, action.payload.subjectsType)
+              })
             }
             : subject
         )

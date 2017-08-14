@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const MaxScore = ({ maxPrimaryScore, maxLingualScore }) => {
-  const maxScore = maxPrimaryScore + maxLingualScore
+  const maxScore = maxPrimaryScore * 4 + maxLingualScore
   return (
     <div>
       <h3>

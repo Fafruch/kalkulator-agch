@@ -6,23 +6,23 @@ import MaxScore from './MaxScore'
 import ScoreTableContainer from '../../containers/ScoreTableContainer'
 import { PRIMARY_SUBJECTS, LINGUAL_SUBJECTS } from '../../constants/SubjectTypes'
 
-const Calculator = ({ maxPrimaryScoreWrapper, maxLingualScoreWrapper, isScoreTableOpened, onToggleClick }) => {
-  const maxPrimaryScore = maxPrimaryScoreWrapper.computedScore
-  const maxLingualScore = maxLingualScoreWrapper.computedScore
+const Calculator = ({ subjects, maxScoreWrapper, isScoreTableOpened, onToggleClick }) => {
+  const maxPrimaryScore = maxScoreWrapper.primary.maxScore.computedScore
+  const maxLingualScore = maxScoreWrapper.lingual.maxScore.computedScore
 
-  if (maxPrimaryScoreWrapper.isEmpty && maxLingualScoreWrapper.isEmpty) return null
+  if (!subjects.primary.length && !subjects.lingual.length) return null
   return (
     <div className='m-4'>
       <h3>Wynik</h3>
       <hr />
       {!!maxPrimaryScore &&
       <BestSubject
-        maxScoreWrapper={maxPrimaryScoreWrapper}
+        maxScoreWrapper={maxScoreWrapper}
         subjectType={PRIMARY_SUBJECTS}
       />}
       {!!maxLingualScore &&
       <BestSubject
-        maxScoreWrapper={maxLingualScoreWrapper}
+        maxScoreWrapper={maxScoreWrapper}
         subjectType={LINGUAL_SUBJECTS}
       />}
       <br />
@@ -45,30 +45,8 @@ const Calculator = ({ maxPrimaryScoreWrapper, maxLingualScoreWrapper, isScoreTab
 }
 
 Calculator.propTypes = {
-  maxPrimaryScoreWrapper: PropTypes.shape({
-    subject: PropTypes.shape({
-      id: PropTypes.string,
-      name: PropTypes.string,
-      elementaryScore: PropTypes.number,
-      advancedScore: PropTypes.number,
-      active: PropTypes.bool
-    }).isRequired,
-    computedScore: PropTypes.number.isRequired,
-    formula: PropTypes.string.isRequired,
-    isEmpty: PropTypes.bool.isRequired
-  }).isRequired,
-  maxLingualScoreWrapper: PropTypes.shape({
-    subject: PropTypes.shape({
-      id: PropTypes.string,
-      name: PropTypes.string,
-      elementaryScore: PropTypes.number,
-      advancedScore: PropTypes.number,
-      active: PropTypes.bool
-    }).isRequired,
-    computedScore: PropTypes.number.isRequired,
-    formula: PropTypes.string.isRequired,
-    isEmpty: PropTypes.bool.isRequired
-  }).isRequired,
+  subjects: PropTypes.object.isRequired,
+  maxScoreWrapper: PropTypes.object.isRequired,
   isScoreTableOpened: PropTypes.bool.isRequired,
   onToggleClick: PropTypes.func.isRequired
 }

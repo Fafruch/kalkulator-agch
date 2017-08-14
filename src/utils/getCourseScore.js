@@ -20,20 +20,19 @@ const getCourseScore = ({ subjects: courseSubjects, faculty: courseFaculty }, { 
   })
 
   if (courseFaculty === 'Humanistyczny' && maxLingualScore * 4 > maxPrimaryScore) {
-    maxPrimaryScore = maxLingualScore * 4
     maxLingualScore = 0
 
-    const newLingual = lingual.filter(subject => subject !== maxLingualSubject)
+    const newLingual = lingual.filter(subject => subject !== maxLingualSubject && subject.active)
 
     newLingual.forEach((subject) => {
-      if (subject.maxScore.computedScore > maxLingualScore && subject.active) {
+      if (subject.maxScore.computedScore > maxLingualScore) {
         maxLingualSubject = subject
         maxLingualScore = subject.maxScore.computedScore
       }
     })
   }
 
-  return maxPrimaryScore + maxLingualScore
+  return maxPrimaryScore * 4 + maxLingualScore
 }
 
 export default getCourseScore

@@ -3,20 +3,23 @@ import PropTypes from 'prop-types'
 
 import { PRIMARY_SUBJECTS } from '../../constants/SubjectTypes'
 
-const BestSubject = ({ maxScoreWrapper, subjectType }) => (
-  <div>
-    <p>
-      Maksymalny wynik dla {subjectType === PRIMARY_SUBJECTS ? 'przedmiotu głównego' : 'języka'} to
-      &nbsp;<b>{maxScoreWrapper.computedScore}</b> pkt. dla przedmiotu
-      &nbsp;<b>{maxScoreWrapper.subject.name || 'bez nazwy'}</b>
-      &nbsp;obliczony zgodnie z formułą
-      &nbsp;{maxScoreWrapper.formula === 'A/B' ? 'A lub B' : maxScoreWrapper.formula}.
-    </p>
-  </div>
-)
+const BestSubject = ({ maxScoreWrapper, subjectType }) => {
+  const subject = subjectType === PRIMARY_SUBJECTS ? maxScoreWrapper.primary : maxScoreWrapper.lingual
+  return (
+    <div>
+      <p>
+        Maksymalny wynik dla {subjectType === PRIMARY_SUBJECTS ? 'przedmiotu głównego' : 'języka'} to
+        &nbsp;<b>{subject.maxScore.computedScore}</b> pkt. dla przedmiotu
+        &nbsp;<b>{subject.name || 'bez nazwy'}</b>
+        &nbsp;obliczony zgodnie z formułą
+        &nbsp;{subject.maxScore.formula === 'A/B' ? 'A lub B' : subject.maxScore.formula}.
+      </p>
+    </div>
+  )
+}
 
 BestSubject.propTypes = {
-  maxScoreWrapper: PropTypes.object,
+  maxScoreWrapper: PropTypes.object.isRequired,
   subjectType: PropTypes.string.isRequired
 }
 
