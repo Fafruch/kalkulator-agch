@@ -1,26 +1,38 @@
 import { v4 } from 'uuid'
+
 import { ADD_SUBJECT, REMOVE_SUBJECT, TOGGLE_SUBJECT, UPDATE_SUBJECT } from '../constants/ActionTypes'
 
 export const addSubject = (subjectsType) => ({
   type: ADD_SUBJECT,
-  id: v4(),
-  subjectsType
+  payload: {
+    id: v4(),
+    subjectsType
+  }
 })
 
-export const updateSubject = (id, name, elementaryScore, advancedScore) => ({
+export const updateSubject = (id, name, elementaryScore, advancedScore, subjectsType) => ({
   type: UPDATE_SUBJECT,
-  id,
-  name,
-  elementaryScore,
-  advancedScore
+  payload: {
+    id,
+    name,
+    elementaryScore,
+    advancedScore,
+    subjectsType
+  }
 })
 
-export const removeSubject = (id) => ({
+export const removeSubject = (id, subjectsType) => ({
   type: REMOVE_SUBJECT,
-  id
+  payload: {
+    id,
+    subjectsType
+  }
 })
 
-export const toggleSubject = (id) => ({
+export const toggleSubject = (id, subjectsType) => ({
   type: TOGGLE_SUBJECT,
-  id
+  payload: {
+    id,
+    subjectsType
+  }
 })

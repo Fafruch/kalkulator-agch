@@ -1,10 +1,35 @@
+.formulas-info {
+  background: #eee;
+  font-size: 0.66rem;
+}
+
+.formulas-info:before {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #ccc;
+}
+.formulas-info-content {
+  padding: 0.75rem;
+}
+
 .footer {
-  height: 6.1rem;
-  background: #eeeeee;
+  background: #ddd;
   text-align: center;
   font-size: 0.75rem;
 }
 
-.formulas-info {
-  font-size: 0.66rem;
+.footer:before {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #bbb;
+}
+
+.footer:after {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #bbb;
+}
+
+.footer-content {
+  padding: 0.75rem;
 }

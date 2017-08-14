@@ -1,7 +1,7 @@
 export const loadState = () => {
   try {
     const serializedState = localStorage.getItem('state')
-    if (serializedState === null) {
+    if (!serializedState) {
       return undefined
     }
     console.log('State loaded from Local Storage.')
@@ -9,7 +9,6 @@ export const loadState = () => {
   } catch (err) {
     console.error(err)
     console.warn('State couldn\'t be loaded from Local Storage.')
-    return undefined
   }
 }
 

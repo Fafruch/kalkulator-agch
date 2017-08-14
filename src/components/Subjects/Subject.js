@@ -1,12 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import ToggleSubject from './ToggleSubject'
 import DeleteSubject from './DeleteSubject'
-import PrimarySubjectsDatalist from './PrimarySubjectsDatalist'
-import LingualSubjectsDatalist from './LingualSubjectsDatalist'
-import { primarySubjects } from '../../constants/SubjectTypes'
+import Datalist from './Datalist'
 
-let Subject = ({ id, name, elementaryScore, advancedScore, active,
+const Subject = ({ id, name, elementaryScore, advancedScore, active,
                  onChange, onToggleClick, onDelete, subjectsType, iterator }) => {
   const formInput = {
     name,
@@ -25,7 +24,7 @@ let Subject = ({ id, name, elementaryScore, advancedScore, active,
           <th>Wynik z matury podstawowej</th>
           <th>Wynik z matury rozszerzonej</th>
           <th>{/* {active ? 'Nie bierz pod uwagę': 'Bierz pod uwagę'} */}</th>
-          <th>{/* Usuń {subjectsType === primarySubjects ? 'przedmiot' : 'język'} */}</th>
+          <th>{/* Usuń {subjectsType === PRIMARY_SUBJECTS ? 'przedmiot' : 'język'} */}</th>
         </tr>
         <tr>
           <td>
@@ -37,14 +36,11 @@ let Subject = ({ id, name, elementaryScore, advancedScore, active,
               list={subjectsType}
               ref={node => { formInput.name = node }}
               defaultValue={name}
-              onChange={() => onChange(id, formInput.name.value, elementaryScore, advancedScore)}
+              onChange={() => onChange(id, formInput.name.value, elementaryScore, advancedScore, subjectsType)}
               className={active ? 'subject-active subject-input-name' : 'subject-not-active subject-input-name'}
             />
 
-            {subjectsType === primarySubjects
-              ? <PrimarySubjectsDatalist subjectsType={subjectsType} />
-              : <LingualSubjectsDatalist subjectsType={subjectsType} />
-            }
+            <Datalist subjectsType={subjectsType} />
           </td>
           <td>
             <input
@@ -102,12 +98,14 @@ let Subject = ({ id, name, elementaryScore, advancedScore, active,
             <ToggleSubject
               id={id}
               active={active}
+              subjectsType={subjectsType}
               onToggleClick={onToggleClick}
             />
           </td>
           <td>
             <DeleteSubject
               id={id}
+              subjectsType={subjectsType}
               onDelete={onDelete}
             />
           </td>

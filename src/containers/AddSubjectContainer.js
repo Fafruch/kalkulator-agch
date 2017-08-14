@@ -1,21 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+
 import { addSubject } from '../actions'
-import { primarySubjects } from '../constants/SubjectTypes'
+import AddSubject from '../components/Subjects/AddSubject'
 
-let AddSubjectContainer = ({ dispatch, subjectsType }) => (
-  <button
-    onClick={() => dispatch(addSubject(subjectsType))}
-    className={subjectsType === primarySubjects ? 'btn btn-outline-danger' : 'btn btn-outline-success'}
-  >
-    Dodaj {subjectsType === primarySubjects ? 'przedmiot główny' : 'język'}
-  </button>
-)
-AddSubjectContainer.propTypes = {
-  subjectsType: PropTypes.string.isRequired
-}
+const mapDispatchToProps = (dispatch) => ({
+  onAdd: bindActionCreators(addSubject, dispatch)
+})
 
-AddSubjectContainer = connect()(AddSubjectContainer)
+const AddSubjectContainer = connect(null, mapDispatchToProps)(AddSubject)
 
 export default AddSubjectContainer
