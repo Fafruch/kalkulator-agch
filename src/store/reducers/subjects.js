@@ -42,7 +42,13 @@ const subjects = (state = { primary: [], lingual: [] }, action) => {
           subject => (subject.id === action.payload.id)
             ? {
               ...subject,
-              [action.payload.whatsUpdated]: action.payload.newValue
+              name: action.payload.name,
+              elementaryScore: action.payload.elementaryScore,
+              advancedScore: action.payload.advancedScore,
+              maxScore: getSubjectScore({
+                elementaryScore: action.payload.elementaryScore,
+                advancedScore: action.payload.advancedScore
+              }, action.payload.subjectsType)
             }
             : subject
         )

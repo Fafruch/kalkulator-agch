@@ -1,6 +1,7 @@
 import { v4 } from 'uuid'
 
-import { ADD_SUBJECT, REMOVE_SUBJECT, TOGGLE_SUBJECT, UPDATE_SUBJECT } from '../constants/ActionTypes'
+import { ADD_SUBJECT, REMOVE_SUBJECT, TOGGLE_SUBJECT, UPDATE_SUBJECT,
+  TOGGLE_SCORE_TABLE } from '../constants/ActionTypes'
 
 export const addSubject = (subjectsType) => ({
   type: ADD_SUBJECT,
@@ -34,4 +35,9 @@ export const toggleSubject = (id, subjectsType) => ({
     id,
     subjectsType
   }
+})
+
+export const toggleScoreTable = () => ({
+  type: TOGGLE_SCORE_TABLE,
+  payload: {}
 })

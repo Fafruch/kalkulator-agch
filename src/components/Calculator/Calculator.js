@@ -3,9 +3,10 @@ import PropTypes from 'prop-types'
 
 import BestSubject from './BestSubject'
 import MaxScore from './MaxScore'
+import ScoreTableContainer from '../../containers/ScoreTableContainer'
 import { PRIMARY_SUBJECTS, LINGUAL_SUBJECTS } from '../../constants/SubjectTypes'
 
-const Calculator = ({ maxPrimaryScoreWrapper, maxLingualScoreWrapper }) => {
+const Calculator = ({ maxPrimaryScoreWrapper, maxLingualScoreWrapper, isScoreTableOpened, onToggleClick }) => {
   const maxPrimaryScore = maxPrimaryScoreWrapper.computedScore
   const maxLingualScore = maxLingualScoreWrapper.computedScore
 
@@ -29,6 +30,16 @@ const Calculator = ({ maxPrimaryScoreWrapper, maxLingualScoreWrapper }) => {
         maxPrimaryScore={maxPrimaryScore}
         maxLingualScore={maxLingualScore}
       />
+      <br />
+      {isScoreTableOpened
+        ? <ScoreTableContainer />
+        : <button
+          className='btn btn-secondary'
+          onClick={onToggleClick}
+        >
+          Pokaż tabelę wyników
+        </button>
+      }
     </div>
   )
 }
@@ -57,7 +68,9 @@ Calculator.propTypes = {
     computedScore: PropTypes.number.isRequired,
     formula: PropTypes.string.isRequired,
     isEmpty: PropTypes.bool.isRequired
-  }).isRequired
+  }).isRequired,
+  isScoreTableOpened: PropTypes.bool.isRequired,
+  onToggleClick: PropTypes.func.isRequired
 }
 
 export default Calculator
