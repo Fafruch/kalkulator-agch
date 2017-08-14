@@ -58,7 +58,8 @@ let Subject = ({ id, name, elementaryScore, advancedScore, active,
             />
             <input
               type='text'
-              value={elementaryScore}
+              value={elementaryScore || ''}
+              placeholder='Brak'
               ref={node => { formInput.elementaryScoreText = node }}
               onChange={() => {
                 if (!isNaN(formInput.elementaryScoreText.value)) {
@@ -69,7 +70,7 @@ let Subject = ({ id, name, elementaryScore, advancedScore, active,
               }}
               className='subject-input-text'
             />
-            %
+            { elementaryScore ? '%' : null }
           </td>
           <td>
             <input
@@ -83,7 +84,8 @@ let Subject = ({ id, name, elementaryScore, advancedScore, active,
             />
             <input
               type='text'
-              value={advancedScore}
+              value={advancedScore || ''}
+              placeholder='Brak'
               ref={node => { formInput.advancedScoreText = node }}
               onChange={() => {
                 if (!isNaN(formInput.advancedScoreText.value)) {
@@ -94,7 +96,7 @@ let Subject = ({ id, name, elementaryScore, advancedScore, active,
               }}
               className='subject-input-text'
             />
-            %
+            { advancedScore ? '%' : null }
           </td>
           <td>
             <ToggleSubject
