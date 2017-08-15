@@ -1,3 +1,27 @@
+$scoreTable-height: 3056px;
+$scoreTable-transition-enter-time: 300ms;
+$scoreTable-transition-leave-time: 300ms;
+
 .score-table th {
   font-size: 1.25rem;
+}
+
+.scoreTable-enter {
+  opacity: 0.01;
+}
+
+.scoreTable-enter.scoreTable-enter-active {
+  opacity: 1;
+  transition: opacity $scoreTable-transition-enter-time ease-in;
+}
+
+.scoreTable-leave {
+  height: $scoreTable-height;
+  opacity: 1;
+}
+
+.scoreTable-leave.scoreTable-leave-active {
+  height: 0;
+  opacity: 0.01;
+  transition: height $scoreTable-transition-leave-time ease, opacity 200ms;
 }

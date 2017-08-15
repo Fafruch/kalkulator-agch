@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { CSSTransitionGroup } from 'react-transition-group'
 
 import BestSubject from './BestSubject'
 import MaxScore from './MaxScore'
@@ -31,15 +32,18 @@ const Calculator = ({ subjects, maxScoreWrapper, isScoreTableOpened, onToggleCli
         maxLingualScore={maxLingualScore}
       />
       <br />
-      {isScoreTableOpened
-        ? <ScoreTableContainer />
-        : <button
-          className='btn btn-secondary'
-          onClick={onToggleClick}
-        >
-          Pokaż tabelę wyników
-        </button>
-      }
+      <button
+        className='btn btn-secondary'
+        onClick={onToggleClick}
+      >
+        {isScoreTableOpened ? 'Ukryj tabelę wyników' : 'Pokaż tabelę wyników'}
+      </button>
+      <CSSTransitionGroup transitionName='scoreTable' transitionEnterTimeout={300} transitionLeaveTimeout={300}>
+        {isScoreTableOpened
+          ? <ScoreTableContainer key='1' />
+          : <div key='2' />
+        }
+      </CSSTransitionGroup>
     </div>
   )
 }

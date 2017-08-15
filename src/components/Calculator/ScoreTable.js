@@ -7,12 +7,6 @@ import coursesArray from '../../courses.json'
 
 const ScoreTable = ({ subjects, onToggleClick }) => (
   <div>
-    <button
-      className='btn btn-secondary'
-      onClick={onToggleClick}
-    >
-      Ukryj tabelę wyników
-    </button>
     <br />
     <br />
     <table className='table table-bordered score-table'>
