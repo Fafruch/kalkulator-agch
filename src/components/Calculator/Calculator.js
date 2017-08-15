@@ -49,8 +49,14 @@ const Calculator = ({ subjects, maxScoreWrapper, isScoreTableOpened, onToggleCli
 }
 
 Calculator.propTypes = {
-  subjects: PropTypes.object.isRequired,
-  maxScoreWrapper: PropTypes.object.isRequired,
+  subjects: PropTypes.shape({
+    primary: PropTypes.array.isRequired,
+    lingual: PropTypes.array.isRequired
+  }).isRequired,
+  maxScoreWrapper: PropTypes.shape({
+    primary: PropTypes.object.isRequired,
+    lingual: PropTypes.object.isRequired
+  }).isRequired,
   isScoreTableOpened: PropTypes.bool.isRequired,
   onToggleClick: PropTypes.func.isRequired
 }
