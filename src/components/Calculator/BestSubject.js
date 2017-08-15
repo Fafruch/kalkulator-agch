@@ -9,10 +9,10 @@ const BestSubject = ({ maxScoreWrapper, subjectType }) => {
     <div>
       <p>
         Maksymalny wynik dla {subjectType === PRIMARY_SUBJECTS ? 'przedmiotu głównego' : 'języka'} to
-        &nbsp;<b>{subject.maxScore.computedScore}</b> pkt. dla przedmiotu
+        &nbsp;<b>{subject.max.score}</b> pkt. dla przedmiotu
         &nbsp;<b>{subject.name || 'bez nazwy'}</b>
         &nbsp;obliczony zgodnie z formułą
-        &nbsp;{subject.maxScore.formula === 'A/B' ? 'A lub B' : subject.maxScore.formula}.
+        &nbsp;{subject.max.formula === 'A/B' ? 'A lub B' : subject.max.formula}.
       </p>
     </div>
   )

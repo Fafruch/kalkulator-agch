@@ -1,6 +1,6 @@
 const getSubjectScore = ({ elementaryScore, advancedScore }) => {
   const scoreObj = {
-    computedScore: 0,
+    score: 0,
     formula: ''
   }
 
@@ -16,13 +16,13 @@ const getSubjectScore = ({ elementaryScore, advancedScore }) => {
   }
 
   if (scoreA > scoreB) {
-    scoreObj.computedScore = scoreA
+    scoreObj.score = scoreA
     scoreObj.formula = 'A'
   } else if (scoreA === scoreB) {
-    scoreObj.computedScore = scoreA // moze byc tez scoreB, bez znaczenia
+    scoreObj.score = scoreA // moze byc tez scoreB, bez znaczenia
     scoreObj.formula = 'A/B'
   } else {
-    scoreObj.computedScore = scoreB
+    scoreObj.score = scoreB
     scoreObj.formula = 'B'
   }
 

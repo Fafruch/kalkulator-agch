@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import Calculator from '../components/Calculator/Calculator'
-import subjectPicker from '../store/selectors/subjectPicker'
+import subjectPicker from '../store/selectors/subjectsPicker'
 import { toggleScoreTable } from '../actions/index'
 
 const mapStateToProps = (state) => ({

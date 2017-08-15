@@ -7,8 +7,8 @@ import ScoreTableContainer from '../../containers/ScoreTableContainer'
 import { PRIMARY_SUBJECTS, LINGUAL_SUBJECTS } from '../../constants/SubjectTypes'
 
 const Calculator = ({ subjects, maxScoreWrapper, isScoreTableOpened, onToggleClick }) => {
-  const maxPrimaryScore = maxScoreWrapper.primary.maxScore.computedScore
-  const maxLingualScore = maxScoreWrapper.lingual.maxScore.computedScore
+  const maxPrimaryScore = maxScoreWrapper.primary.max.score
+  const maxLingualScore = maxScoreWrapper.lingual.max.score
 
   if (!subjects.primary.length && !subjects.lingual.length) return null
   return (

@@ -42,7 +42,7 @@ const ScoreTable = ({ subjects, onToggleClick }) => (
               {course.name}
             </td>
             {/* <td>
-              {course.subjects}
+              {course.subjects.join(', ')}
             </td> */}
             <td>
               <strong>
