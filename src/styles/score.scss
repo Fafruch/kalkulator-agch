@@ -6,6 +6,22 @@ $scoreTable-transition-leave-time: 300ms;
   font-size: 1.25rem;
 }
 
+.score-table td:nth-child(3), td:nth-child(4), td:nth-child(5), td:nth-child(6), td:nth-child(7) {
+  text-align: center
+}
+
+.score-under {
+  color: #5cb85c;
+}
+
+.score-above {
+  color: #d9534f;
+}
+
+.thresholds-title {
+  text-align: center;
+}
+
 .scoreTable-enter {
   opacity: 0.01;
 }
