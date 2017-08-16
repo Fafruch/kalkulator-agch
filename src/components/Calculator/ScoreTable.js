@@ -72,7 +72,7 @@ const ScoreTable = ({ subjects }) => {
                 </strong>
               </td>
               <td>
-                {coursesArrayScores[i] > thresholdsArray[i]['2013']
+                {coursesArrayScores[i] >= thresholdsArray[i]['2013']
                   ? <div className='score-under'>
                     {thresholdsArray[i]['2013']}
                   </div>
@@ -82,7 +82,7 @@ const ScoreTable = ({ subjects }) => {
                 }
               </td>
               <td>
-                {coursesArrayScores[i] > thresholdsArray[i]['2014']
+                {coursesArrayScores[i] >= thresholdsArray[i]['2014']
                   ? <div className='score-under'>
                     {thresholdsArray[i]['2014']}
                   </div>
@@ -92,7 +92,7 @@ const ScoreTable = ({ subjects }) => {
                 }
               </td>
               <td>
-                {coursesArrayScores[i] > thresholdsArray[i]['2015']
+                {coursesArrayScores[i] >= thresholdsArray[i]['2015']
                   ? <div className='score-under'>
                     {thresholdsArray[i]['2015']}
                   </div>
@@ -102,7 +102,7 @@ const ScoreTable = ({ subjects }) => {
                 }
               </td>
               <td>
-                {coursesArrayScores[i] > thresholdsArray[i]['2016']
+                {coursesArrayScores[i] >= thresholdsArray[i]['2016']
                   ? <div className='score-under'>
                     {thresholdsArray[i]['2016']}
                   </div>
