@@ -10,7 +10,7 @@ const ScoreRangeInput = ({ subject: { id, elementaryScore, advancedScore }, exam
     onChange={(event) => onChange(
       id,
       examType === 'elementary' ? 'elementaryScore' : 'advancedScore',
-      event.target.value,
+      +event.target.value,
       subjectsType)}
     className='subject-input-range'
   />

@@ -7,12 +7,12 @@ const ScoreTextInput = ({ subject: { id, elementaryScore, advancedScore }, examT
     value={(examType === 'elementary' ? elementaryScore : advancedScore) || ''}
     placeholder='Brak'
     onChange={(event) => {
-      const inputScore = event.target.value
+      const inputScore = +event.target.value
       if (!isNaN(inputScore)) {
         onChange(
           id,
           examType === 'elementary' ? 'elementaryScore' : 'advancedScore',
-          +inputScore > 100 ? 100 : +inputScore,
+          inputScore > 100 ? 100 : inputScore,
           subjectsType
         )
       }
