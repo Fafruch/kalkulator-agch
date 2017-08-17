@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import ScoreRangeInput from './ScoreRangeInput'
 import ToggleSubject from './ToggleSubject'
 import DeleteSubject from './DeleteSubject'
-import Datalist from './Datalist'
+import ScoreTextInput from './ScoreTextInput'
+import NameInput from './NameInput'
 
-const Subject = ({ id, name, elementaryScore, advancedScore, active,
-                 onChange, onToggleClick, onDelete, subjectsType, iterator }) => {
+const Subject = ({ subject, onChange, onToggleClick, onDelete, subjectsType, iterator }) => {
   return (
     <table className='table mb-0'>
       <tbody>
@@ -23,83 +24,29 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
             {iterator}
           </td>
           <td>
-            <input
-              type='text'
-              value={name}
-              list={subjectsType}
-              onChange={(event) => onChange(id, 'name', event.target.value, subjectsType)}
-              className={active ? 'subject-active subject-input-name' : 'subject-not-active subject-input-name'}
-            />
-
-            <Datalist subjectsType={subjectsType} />
+            <NameInput subject={subject} subjectsType={subjectsType} onChange={onChange} />
           </td>
           <td>
-            <input
-              type='range'
-              value={elementaryScore}
-              min='0'
-              max='100'
-              onChange={(event) => onChange(id, 'elementaryScore', event.target.value, subjectsType)}
-              className='subject-input-range'
-            />
-            <input
-              type='text'
-              value={elementaryScore || ''}
-              placeholder='Brak'
-              onChange={(event) => {
-                const inputScore = event.target.value
-                if (!isNaN(inputScore)) {
-                  onChange(
-                    id,
-                    'elementaryScore',
-                    +inputScore > 100 ? 100 : +inputScore,
-                    subjectsType
-                  )
-                }
-              }}
-              className='subject-input-text'
-            />
-            { elementaryScore ? '%' : null }
+            <ScoreRangeInput subject={subject} examType='elementary' subjectsType={subjectsType} onChange={onChange} />
+            <ScoreTextInput subject={subject} examType='elementary' subjectsType={subjectsType} onChange={onChange} />
+            { subject.elementaryScore ? '%' : null }
           </td>
           <td>
-            <input
-              type='range'
-              value={advancedScore}
-              min='0'
-              max='100'
-              onChange={(event) => onChange(id, 'advancedScore', event.target.value, subjectsType)}
-              className='subject-input-range'
-            />
-            <input
-              type='text'
-              value={advancedScore || ''}
-              placeholder='Brak'
-              onChange={(event) => {
-                const inputScore = event.target.value
-                if (!isNaN(inputScore)) {
-                  onChange(
-                    id,
-                    'advancedScore',
-                    +inputScore > 100 ? 100 : +inputScore,
-                    subjectsType
-                  )
-                }
-              }}
-              className='subject-input-text'
-            />
-            { advancedScore ? '%' : null }
+            <ScoreRangeInput subject={subject} examType='advanced' subjectsType={subjectsType} onChange={onChange} />
+            <ScoreTextInput subject={subject} examType='advanced' subjectsType={subjectsType} onChange={onChange} />
+            { subject.advancedScore ? '%' : null }
           </td>
           <td>
             <ToggleSubject
-              id={id}
-              active={active}
+              id={subject.id}
+              active={subject.active}
               subjectsType={subjectsType}
               onToggleClick={onToggleClick}
             />
           </td>
           <td>
             <DeleteSubject
-              id={id}
+              id={subject.id}
               subjectsType={subjectsType}
               onDelete={onDelete}
             />
@@ -111,11 +58,7 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
 }
 
 Subject.propTypes = {
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  elementaryScore: PropTypes.number.isRequired,
-  advancedScore: PropTypes.number.isRequired,
-  active: PropTypes.bool.isRequired,
+  subject: PropTypes.object.isRequired,
   onChange: PropTypes.func.isRequired,
   onToggleClick: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
