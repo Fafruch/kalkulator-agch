@@ -6,9 +6,9 @@ import subjectPicker from '../store/selectors/subjectsPicker'
 import { toggleScoreTable } from '../actions/index'
 
 const mapStateToProps = (state) => ({
-  subjects: state.subjects,
   maxScoreWrapper: subjectPicker(state.subjects),
-  isScoreTableOpened: state.scoreTable.isOpened
+  isScoreTableOpened: state.scoreTable.isOpened,
+  isAnySubjectPresent: state.subjects.primary.length || state.subjects.lingual.length
 })
 
 const mapDispatchToProps = (dispatch) => ({
