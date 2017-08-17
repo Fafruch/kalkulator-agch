@@ -7,14 +7,6 @@ import Datalist from './Datalist'
 
 const Subject = ({ id, name, elementaryScore, advancedScore, active,
                  onChange, onToggleClick, onDelete, subjectsType, iterator }) => {
-  const formInput = {
-    name,
-    elementaryScoreRange: elementaryScore,
-    elementaryScoreText: elementaryScore,
-    advancedScoreRange: advancedScore,
-    advancedScoreText: advancedScore
-  }
-
   return (
     <table className='table mb-0'>
       <tbody>
@@ -33,10 +25,9 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
           <td>
             <input
               type='text'
+              value={name}
               list={subjectsType}
-              ref={node => { formInput.name = node }}
-              defaultValue={name}
-              onChange={() => onChange(id, formInput.name.value, elementaryScore, advancedScore, subjectsType)}
+              onChange={(event) => onChange(id, event.target.value, elementaryScore, advancedScore, subjectsType)}
               className={active ? 'subject-active subject-input-name' : 'subject-not-active subject-input-name'}
             />
 
@@ -48,21 +39,20 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
               value={elementaryScore}
               min='0'
               max='100'
-              ref={node => { formInput.elementaryScoreRange = node }}
-              onChange={() => onChange(id, name, +formInput.elementaryScoreRange.value, advancedScore, subjectsType)}
+              onChange={(event) => onChange(id, name, event.target.value, advancedScore, subjectsType)}
               className='subject-input-range'
             />
             <input
               type='text'
               value={elementaryScore || ''}
               placeholder='Brak'
-              ref={node => { formInput.elementaryScoreText = node }}
-              onChange={() => {
-                if (!isNaN(formInput.elementaryScoreText.value)) {
+              onChange={(event) => {
+                const inputScore = event.target.value
+                if (!isNaN(inputScore)) {
                   onChange(
                     id,
                     name,
-                    +formInput.elementaryScoreText.value > 100 ? 100 : +formInput.elementaryScoreText.value,
+                    +inputScore > 100 ? 100 : +inputScore,
                     advancedScore,
                     subjectsType
                   )
@@ -78,22 +68,21 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
               value={advancedScore}
               min='0'
               max='100'
-              ref={node => { formInput.advancedScoreRange = node }}
-              onChange={() => onChange(id, name, elementaryScore, +formInput.advancedScoreRange.value, subjectsType)}
+              onChange={(event) => onChange(id, name, elementaryScore, event.target.value, subjectsType)}
               className='subject-input-range'
             />
             <input
               type='text'
               value={advancedScore || ''}
               placeholder='Brak'
-              ref={node => { formInput.advancedScoreText = node }}
-              onChange={() => {
-                if (!isNaN(formInput.advancedScoreText.value)) {
+              onChange={(event) => {
+                const inputScore = event.target.value
+                if (!isNaN(inputScore)) {
                   onChange(
                     id,
                     name,
                     elementaryScore,
-                    +formInput.advancedScoreText.value > 100 ? 100 : +formInput.advancedScoreText.value,
+                    +inputScore > 100 ? 100 : +inputScore,
                     subjectsType
                   )
                 }
