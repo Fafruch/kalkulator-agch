@@ -10,13 +10,12 @@ export const addSubject = (subjectsType) => ({
   }
 })
 
-export const updateSubject = (id, name, elementaryScore, advancedScore, subjectsType) => ({
+export const updateSubject = (id, whatsUpdated, newValue, subjectsType) => ({
   type: UPDATE_SUBJECT,
   payload: {
     id,
-    name,
-    elementaryScore,
-    advancedScore,
+    whatsUpdated,
+    newValue,
     subjectsType
   }
 })

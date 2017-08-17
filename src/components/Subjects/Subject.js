@@ -1,18 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import ScoreRangeInput from './ScoreRangeInput'
 import ToggleSubject from './ToggleSubject'
 import DeleteSubject from './DeleteSubject'
-import Datalist from './Datalist'
+import ScoreTextInput from './ScoreTextInput'
+import NameInput from './NameInput'
 
-const Subject = ({ id, name, elementaryScore, advancedScore, active,
-                 onChange, onToggleClick, onDelete, subjectsType, iterator }) => {
-  const formInput = {
-    name,
-    elementaryScore,
-    advancedScore
-  }
-
+const Subject = ({ subject, onChange, onToggleClick, onDelete, subjectsType, iterator }) => {
   return (
     <table className='table mb-0'>
       <tbody>
@@ -29,52 +24,29 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
             {iterator}
           </td>
           <td>
-            <input
-              type='text'
-              list={subjectsType}
-              ref={node => { formInput.name = node }}
-              defaultValue={name}
-              onChange={() => onChange(id, formInput.name.value, elementaryScore, advancedScore, subjectsType)}
-              className={active ? 'subject-active subject-input-field' : 'subject-not-active subject-input-field'}
-            />
-
-            <Datalist subjectsType={subjectsType} />
+            <NameInput subject={subject} subjectsType={subjectsType} onChange={onChange} />
           </td>
           <td>
-            <input
-              type='range'
-              defaultValue={elementaryScore}
-              min='0'
-              max='100'
-              ref={node => { formInput.elementaryScore = node }}
-              onChange={() => onChange(id, name, +formInput.elementaryScore.value, advancedScore, subjectsType)}
-            />
-
-            &nbsp; {elementaryScore ? `${elementaryScore}%` : 'Brak' }
+            <ScoreRangeInput subject={subject} examType='elementary' subjectsType={subjectsType} onChange={onChange} />
+            <ScoreTextInput subject={subject} examType='elementary' subjectsType={subjectsType} onChange={onChange} />
+            { subject.elementaryScore && '%' }
           </td>
           <td>
-            <input
-              type='range'
-              defaultValue={advancedScore}
-              min='0'
-              max='100'
-              ref={node => { formInput.advancedScore = node }}
-              onChange={() => onChange(id, name, elementaryScore, +formInput.advancedScore.value, subjectsType)}
-            />
-
-            &nbsp; {advancedScore ? `${advancedScore}%` : 'Brak' }
+            <ScoreRangeInput subject={subject} examType='advanced' subjectsType={subjectsType} onChange={onChange} />
+            <ScoreTextInput subject={subject} examType='advanced' subjectsType={subjectsType} onChange={onChange} />
+            { subject.advancedScore && '%' }
           </td>
           <td>
             <ToggleSubject
-              id={id}
-              active={active}
+              id={subject.id}
+              active={subject.active}
               subjectsType={subjectsType}
               onToggleClick={onToggleClick}
             />
           </td>
           <td>
             <DeleteSubject
-              id={id}
+              id={subject.id}
               subjectsType={subjectsType}
               onDelete={onDelete}
             />
@@ -86,11 +58,7 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
 }
 
 Subject.propTypes = {
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  elementaryScore: PropTypes.number.isRequired,
-  advancedScore: PropTypes.number.isRequired,
-  active: PropTypes.bool.isRequired,
+  subject: PropTypes.object.isRequired,
   onChange: PropTypes.func.isRequired,
   onToggleClick: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
