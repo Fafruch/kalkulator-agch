@@ -39,10 +39,7 @@ const Calculator = ({ maxScoreWrapper, isScoreTableOpened, isAnySubjectPresent, 
           {isScoreTableOpened ? 'Ukryj tabelę wyników' : 'Pokaż tabelę wyników'}
         </button>
         <CSSTransitionGroup transitionName='scoreTable' transitionEnterTimeout={300} transitionLeaveTimeout={300}>
-          {isScoreTableOpened
-            ? <ScoreTableContainer key='1' />
-            : <div key='2' />
-          }
+          {isScoreTableOpened && <ScoreTableContainer />}
         </CSSTransitionGroup>
       </div>
     )

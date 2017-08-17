@@ -27,13 +27,12 @@ const ScoreTable = ({ subjects, onToggleClick }) => (
         {facultiesArray.map((faculty) =>
           faculty.courses.map((course, courseIndex) =>
             <tr key={courseIndex}>
-              {!courseIndex
-                ? <td rowSpan={faculty.courses.length}>
-                  <strong>
-                    {faculty.name}
-                  </strong>
-                </td>
-                : null}
+              {!courseIndex &&
+              <td rowSpan={faculty.courses.length}>
+                <strong>
+                  {faculty.name}
+                </strong>
+              </td>}
               <td>
                 {course.name}
               </td>
