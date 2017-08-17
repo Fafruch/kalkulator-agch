@@ -2,8 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import getCourseScore from '../../utils/getCourseScore'
-
-import coursesArray from '../../courses.json'
+import facultiesArray from '../../faculties.json'
 
 const ScoreTable = ({ subjects, onToggleClick }) => (
   <div>
@@ -25,26 +24,31 @@ const ScoreTable = ({ subjects, onToggleClick }) => (
             Wynik
           </th>
         </tr>
-        {coursesArray.map((course, i, coursesArray2) =>
-          <tr key={i}>
-            <td>
-              <strong>
-                {(i !== 0 && coursesArray2[i - 1].faculty === course.faculty) ? null : course.faculty }
-              </strong>
-            </td>
-            <td>
-              {course.name}
-            </td>
-            {/* <td>
+        {facultiesArray.map((faculty) =>
+          faculty.courses.map((course, courseIndex) =>
+            <tr key={courseIndex}>
+              {!courseIndex
+                ? <td rowSpan={faculty.courses.length}>
+                  <strong>
+                    {faculty.name}
+                  </strong>
+                </td>
+                : null}
+              <td>
+                {course.name}
+              </td>
+              {/* <td>
               {course.subjects.join(', ')}
             </td> */}
-            <td>
-              <strong>
-                {getCourseScore(course, subjects)}
-              </strong>
-            </td>
-          </tr>
-        )}
+              <td>
+                <strong>
+                  {getCourseScore(course, subjects)}
+                </strong>
+              </td>
+            </tr>
+          )
+        )
+        }
       </tbody>
     </table>
   </div>

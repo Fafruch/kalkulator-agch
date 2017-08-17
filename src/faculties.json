@@ -1,0 +1,352 @@
+[
+  {
+    "name": "Górnictwa i Geoinżynierii",
+    "courses": [
+      {
+        "name": "Budownictwo",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka"]
+      },
+      {
+        "name": "Górnictwo i Geologia",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka"]
+      },
+      {
+        "name": "Inżynieria Środowiska",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka", "Biologia"]
+      },
+      {
+        "name": "Zarządzanie i Inżynieria Produkcji",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka"]
+      }
+    ]
+  },
+  {
+    "name": "Inżynierii Metali i Informatyki Przemysłowej",
+    "courses": [
+      {
+        "name": "Edukacja Techniczno-Informatyczna",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka", "Geografia"]
+      },
+      {
+        "name": "Inżynieria Ciepła",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka"]
+      },
+      {
+        "name": "Inżynieria Materiałowa",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka"]
+      },
+      {
+        "name": "Inżynieria Obliczeniowa",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka"]
+      },
+      {
+        "name": "Informatyka Stosowana",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka"]
+      },
+      {
+        "name": "Metalurgia",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka", "Geografia"]
+      }
+    ]
+  },
+  {
+    "name": "Elektrotechniki, Automatyki, Informatyki i Inżynierii Biomedycznej",
+    "courses": [
+      {
+        "name": "Automatyka i Robotyka",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka"]
+      },
+      {
+        "name": "Elektrotechnika",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka"]
+      },
+      {
+        "name": "Informatyka",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka"]
+      },
+      {
+        "name": "Inżynieria Biomedyczna",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka", "Biologia"]
+      },
+      {
+        "name": "Mikroelektronika w Technice i Medycynie",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka"]
+      }
+    ]
+  },
+  {
+    "name": "Informatyki, Elektroniki i Telekomunikacji",
+    "courses": [
+      {
+        "name": "Elektronika",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka"]
+      },
+      {
+        "name": "Elektronika i Telekomunikacja",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka"]
+      },
+      {
+        "name": "Elektronika i Telekomunikacja (w j. angielskim)",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka"]
+      },
+      {
+        "name": "Informatyka",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka"]
+      },
+      {
+        "name": "Teleinformatyka ",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka"]
+      }
+    ]
+  },
+  {
+    "name": "Inżynierii Mechanicznej i Robotyki",
+    "courses": [
+      {
+        "name": "Automatyka i Robotyka",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka"]
+      },
+      {
+        "name": "Inżynieria Akustyczna",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka"]
+      },
+      {
+        "name": "Inżynieria Mechaniczna i Materiałowa",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka"]
+      },
+      {
+        "name": "Mechanika i Budowa Maszyn",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka"]
+      },
+      {
+        "name": "Inżynieria Mechatroniczna",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka"]
+      },
+      {
+        "name": "Inżynieria Mechatroniczna (w j. angielskim)",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka"]
+      }
+    ]
+  },
+  {
+    "name": "Geologii, Geofizyki i Ochrony Środowiska",
+    "courses": [
+      {
+        "name": "Ekologiczne Źródła Energii",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka", "Biologia", "Geografia"]
+      },
+      {
+        "name": "Geofizyka",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka", "Biologia", "Geografia"]
+      },
+      {
+        "name": "Górnictwo i Geologia",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka", "Biologia", "Geografia"]
+      },
+      {
+        "name": "Informatyka Stosowana",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka", "Biologia", "Geografia"]
+      },
+      {
+        "name": "Inżynieria Środowiska",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka", "Biologia", "Geografia"]
+      },
+      {
+        "name": "Ochrona Środowiska",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka", "Biologia", "Geografia"]
+      },
+      {
+        "name": "Turystyka i Rekreacja",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka", "Biologia", "Geografia"]
+      }
+    ]
+  },
+  {
+    "name": "Geodezji Górniczej i Inżynierii Środowiska",
+    "courses": [
+      {
+        "name": "Geodezja i Kartografia",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka", "Geografia"]
+      },
+      {
+        "name": "Inżynieria Środowiska",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka", "Biologia", "Geografia"]
+      }
+    ]
+  },
+  {
+    "name": "Inżynierii Materiałowej i Ceramiki",
+    "courses": [
+      {
+        "name": "Ceramika",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Biologia"]
+      },
+      {
+        "name": "Chemia Budowlana",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Biologia"]
+      },
+      {
+        "name": "Inżynieria Materiałowa",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Biologia"]
+      },
+      {
+        "name": "Technologia Chemiczna",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Biologia"]
+      }
+    ]
+  },
+  {
+    "name": "Odlewnictwa",
+    "courses": [
+      {
+        "name": "Inżynieria Procesów Odlewniczych",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka", "Biologia"]
+      },
+      {
+        "name": "Komputerowe Wspomaganie Procesów Inżynierskich",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka"]
+      }
+    ]
+  },
+  {
+    "name": "Odlewnictwa",
+    "courses": [
+      {
+        "name": "Inżynieria Materiałowa",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka", "Biologia", "Geografia"]
+      },
+      {
+        "name": "Metalurgia",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka", "Biologia", "Geografia"]
+      },
+      {
+        "name": "Zarządzanie i Inżynieria Produkcji",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka"]
+      }
+    ]
+  },
+  {
+    "name": "Wiertnictwa, Nafty i Gazu",
+    "courses": [
+      {
+        "name": "Górnictwo i Geologia",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka"]
+      },
+      {
+        "name": "Inżynieria Naftowa i Gazownicza",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka"]
+      }
+    ]
+  },
+  {
+    "name": "Zarządzania",
+    "courses": [
+      {
+        "name": "Informatyka i Ekonometria",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka"]
+      },
+      {
+        "name": "Zarządzanie",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka", "Geografia"]
+      },
+      {
+        "name": "Zarządzanie i Inżynieria Produkcji",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka"]
+      }
+    ]
+  },
+  {
+    "name": "Energetyki i Paliw",
+    "courses": [
+      {
+        "name": "Energetyka",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka"]
+      },
+      {
+        "name": "Technologia Chemiczna",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka"]
+      }
+    ]
+  },
+  {
+    "name": "Fizyki i Informatyki Stosowanej",
+    "courses": [
+      {
+        "name": "Fizyka Medyczna",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka"]
+      },
+      {
+        "name": "Fizyka Techniczna",
+        "subjects": ["Matematyka", "Fizyka", "Chemia", "Informatyka"]
+      },
+      {
+        "name": "Informatyka Stosowana",
+        "subjects": ["Matematyka", "Fizyka", "Informatyka"]
+      }
+    ]
+  },
+  {
+    "name": "Matematyki Stosowanej",
+    "courses": [
+      {
+        "name": "Matematyka",
+        "subjects": ["Matematyka"]
+      }
+    ]
+  },
+  {
+    "name": "Humanistyczny",
+    "courses": [
+      {
+        "name": "Kulturoznawstwo",
+        "subjects": [
+          "Matematyka",
+          "Fizyka",
+          "Chemia",
+          "Informatyka",
+          "Biologia",
+          "Geografia",
+          "Filozofia",
+          "Historia",
+          "Historia sztuki",
+          "Język obcy nowożytny (inny niż uwzględniany w składniku J)",
+          "Język polski",
+          "Wiedza o społeczeństwie"
+        ]
+      },
+      {
+        "name": "Socjologia",
+        "subjects": [
+          "Matematyka",
+          "Fizyka",
+          "Chemia",
+          "Informatyka",
+          "Biologia",
+          "Geografia",
+          "Filozofia",
+          "Historia",
+          "Historia sztuki",
+          "Język obcy nowożytny (inny niż uwzględniany w składniku J)",
+          "Język polski",
+          "Wiedza o społeczeństwie"
+        ]
+      },
+      {
+        "name": "Informatyka Społeczna",
+        "subjects": [
+          "Matematyka",
+          "Fizyka",
+          "Chemia",
+          "Informatyka",
+          "Biologia",
+          "Geografia",
+          "Filozofia",
+          "Historia sztuki",
+          "Język obcy nowożytny (inny niż uwzględniany w składniku J)",
+          "Język polski",
+          "Wiedza o społeczeństwie"
+        ]
+      }
+    ]
+  }
+]
