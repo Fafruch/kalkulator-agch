@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import getSubjectScore from '../../utils/getSubjectScore'
+
 const ScoreTextInput = ({ subject: { id, elementaryScore, advancedScore }, examType, subjectsType, onChange }) => (
   <input
     type='text'
@@ -13,6 +15,7 @@ const ScoreTextInput = ({ subject: { id, elementaryScore, advancedScore }, examT
           id,
           examType === 'elementary' ? 'elementaryScore' : 'advancedScore',
           inputScore > 100 ? 100 : inputScore,
+          getSubjectScore(+event.target.value, elementaryScore, advancedScore, examType),
           subjectsType
         )
       }
@@ -26,6 +29,7 @@ ScoreTextInput.propTypes = {
     name: PropTypes.string.isRequired,
     elementaryScore: PropTypes.number.isRequired,
     advancedScore: PropTypes.number.isRequired,
+    max: PropTypes.object.isRequired,
     active: PropTypes.bool.isRequired
   }).isRequired,
   examType: PropTypes.string.isRequired,

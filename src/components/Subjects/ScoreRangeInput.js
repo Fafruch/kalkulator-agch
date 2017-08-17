@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import getSubjectScore from '../../utils/getSubjectScore'
+
 const ScoreRangeInput = ({ subject: { id, elementaryScore, advancedScore }, examType, subjectsType, onChange }) => (
   <input
     type='range'
@@ -11,6 +13,7 @@ const ScoreRangeInput = ({ subject: { id, elementaryScore, advancedScore }, exam
       id,
       examType === 'elementary' ? 'elementaryScore' : 'advancedScore',
       +event.target.value,
+      getSubjectScore(+event.target.value, elementaryScore, advancedScore, examType),
       subjectsType)}
     className='subject-input-range'
   />
@@ -21,6 +24,7 @@ ScoreRangeInput.propTypes = {
     name: PropTypes.string.isRequired,
     elementaryScore: PropTypes.number.isRequired,
     advancedScore: PropTypes.number.isRequired,
+    max: PropTypes.object.isRequired,
     active: PropTypes.bool.isRequired
   }).isRequired,
   examType: PropTypes.string.isRequired,

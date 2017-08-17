@@ -29,12 +29,12 @@ const Subject = ({ subject, onChange, onToggleClick, onDelete, subjectsType, ite
           <td>
             <ScoreRangeInput subject={subject} examType='elementary' subjectsType={subjectsType} onChange={onChange} />
             <ScoreTextInput subject={subject} examType='elementary' subjectsType={subjectsType} onChange={onChange} />
-            { subject.elementaryScore && '%' }
+            { !!subject.elementaryScore && '%' }
           </td>
           <td>
             <ScoreRangeInput subject={subject} examType='advanced' subjectsType={subjectsType} onChange={onChange} />
             <ScoreTextInput subject={subject} examType='advanced' subjectsType={subjectsType} onChange={onChange} />
-            { subject.advancedScore && '%' }
+            { !!subject.advancedScore && '%' }
           </td>
           <td>
             <ToggleSubject
