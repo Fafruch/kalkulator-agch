@@ -27,7 +27,7 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
               type='text'
               value={name}
               list={subjectsType}
-              onChange={(event) => onChange(id, event.target.value, elementaryScore, advancedScore, subjectsType)}
+              onChange={(event) => onChange(id, 'name', event.target.value, subjectsType)}
               className={active ? 'subject-active subject-input-name' : 'subject-not-active subject-input-name'}
             />
 
@@ -39,7 +39,7 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
               value={elementaryScore}
               min='0'
               max='100'
-              onChange={(event) => onChange(id, name, event.target.value, advancedScore, subjectsType)}
+              onChange={(event) => onChange(id, 'elementaryScore', event.target.value, subjectsType)}
               className='subject-input-range'
             />
             <input
@@ -51,9 +51,8 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
                 if (!isNaN(inputScore)) {
                   onChange(
                     id,
-                    name,
+                    'elementaryScore',
                     +inputScore > 100 ? 100 : +inputScore,
-                    advancedScore,
                     subjectsType
                   )
                 }
@@ -68,7 +67,7 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
               value={advancedScore}
               min='0'
               max='100'
-              onChange={(event) => onChange(id, name, elementaryScore, event.target.value, subjectsType)}
+              onChange={(event) => onChange(id, 'advancedScore', event.target.value, subjectsType)}
               className='subject-input-range'
             />
             <input
@@ -80,8 +79,7 @@ const Subject = ({ id, name, elementaryScore, advancedScore, active,
                 if (!isNaN(inputScore)) {
                   onChange(
                     id,
-                    name,
-                    elementaryScore,
+                    'advancedScore',
                     +inputScore > 100 ? 100 : +inputScore,
                     subjectsType
                   )
