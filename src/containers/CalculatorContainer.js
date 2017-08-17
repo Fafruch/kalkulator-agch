@@ -8,7 +8,7 @@ import { toggleScoreTable } from '../actions/index'
 const mapStateToProps = (state) => ({
   maxScoreWrapper: subjectPicker(state.subjects),
   isScoreTableOpened: state.scoreTable.isOpened,
-  isAnySubjectPresent: state.subjects.primary.length || state.subjects.lingual.length
+  isAnySubjectPresent: !!state.subjects.primary.length || !!state.subjects.lingual.length
 })
 
 const mapDispatchToProps = (dispatch) => ({
