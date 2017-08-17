@@ -2,11 +2,11 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import Calculator from '../components/Calculator/Calculator'
-import subjectPicker from '../store/selectors/subjectsPicker'
+import subjectsPicker from '../store/selectors/subjectsPicker'
 import { toggleScoreTable } from '../actions/index'
 
 const mapStateToProps = (state) => ({
-  maxScoreWrapper: subjectPicker(state.subjects),
+  maxScoreWrapper: subjectsPicker(state.subjects),
   isScoreTableOpened: state.scoreTable.isOpened,
   isAnySubjectPresent: !!state.subjects.primary.length || !!state.subjects.lingual.length
 })
