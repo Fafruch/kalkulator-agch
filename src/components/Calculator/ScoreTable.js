@@ -72,44 +72,24 @@ const ScoreTable = ({ subjects }) => {
                 </strong>
               </td>
               <td>
-                {coursesArrayScores[i] >= thresholdsArray[i]['2013']
-                  ? <div className='score-under'>
-                    {thresholdsArray[i]['2013']}
-                  </div>
-                  : <div className='score-above'>
-                    {thresholdsArray[i]['2013']}
-                  </div>
-                }
+                <div className={coursesArrayScores[i] >= thresholdsArray[i]['2013'] ? 'score-under' : 'score-above'}>
+                  {thresholdsArray[i]['2013']}
+                </div>
               </td>
               <td>
-                {coursesArrayScores[i] >= thresholdsArray[i]['2014']
-                  ? <div className='score-under'>
-                    {thresholdsArray[i]['2014']}
-                  </div>
-                  : <div className='score-above'>
-                    {thresholdsArray[i]['2014']}
-                  </div>
-                }
+                <div className={coursesArrayScores[i] >= thresholdsArray[i]['2014'] ? 'score-under' : 'score-above'}>
+                  {thresholdsArray[i]['2014']}
+                </div>
               </td>
               <td>
-                {coursesArrayScores[i] >= thresholdsArray[i]['2015']
-                  ? <div className='score-under'>
-                    {thresholdsArray[i]['2015']}
-                  </div>
-                  : <div className='score-above'>
-                    {thresholdsArray[i]['2015']}
-                  </div>
-                }
+                <div className={coursesArrayScores[i] >= thresholdsArray[i]['2015'] ? 'score-under' : 'score-above'}>
+                  {thresholdsArray[i]['2015']}
+                </div>
               </td>
               <td>
-                {coursesArrayScores[i] >= thresholdsArray[i]['2016']
-                  ? <div className='score-under'>
-                    {thresholdsArray[i]['2016']}
-                  </div>
-                  : <div className='score-above'>
-                    {thresholdsArray[i]['2016']}
-                  </div>
-                }
+                <div className={coursesArrayScores[i] >= thresholdsArray[i]['2016'] ? 'score-under' : 'score-above'}>
+                  {thresholdsArray[i]['2016']}
+                </div>
               </td>
             </tr>
           )}
