@@ -2,17 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import getCourseScore from '../../utils/getCourseScore'
-
-import coursesArray from '../../courses.json'
+import facultiesArray from '../../faculties.json'
 import thresholdsArray from '../../thresholds.json'
 
 const ScoreTable = ({ subjects }) => {
-  let coursesArrayScores = []
 
-  coursesArray.forEach((course) => {
-    coursesArrayScores.push(getCourseScore(course, subjects))
+  facultiesArray.forEach((faculty) => {
+    faculty.coursesScore = []
+    faculty.courses.forEach((course) => {
+      faculty.coursesScore.push(getCourseScore(course, subjects))
+    })
   })
-
   return (
     <div>
       <br />
@@ -53,46 +53,63 @@ const ScoreTable = ({ subjects }) => {
               2016
             </th>
           </tr>
-          {coursesArray.map((course, i, coursesArray2) =>
-            <tr key={i}>
-              <td>
-                <strong>
-                  {(i !== 0 && coursesArray2[i - 1].faculty === course.faculty) ? null : course.faculty }
-                </strong>
-              </td>
-              <td>
-                {course.name}
-              </td>
-              {/* <td>
+          {facultiesArray.map((faculty) =>
+            faculty.courses.map((course, i) =>
+              <tr key={i}>
+                {i
+                  ? <td style={{ display: 'none' }} />
+                  : <td rowSpan={faculty.courses.length}>
+                    <strong>
+                      {faculty.name}
+                    </strong>
+                  </td>}
+                <td>
+                  {course.name}
+                </td>
+                {/* <td>
                 {course.subjects.join(', ')}
               </td> */}
-              <td>
-                <strong>
-                  {coursesArrayScores[i]}
-                </strong>
-              </td>
-              <td>
-                <div className={coursesArrayScores[i] >= thresholdsArray[i]['2013'] ? 'score-under' : 'score-above'}>
-                  {thresholdsArray[i]['2013']}
-                </div>
-              </td>
-              <td>
-                <div className={coursesArrayScores[i] >= thresholdsArray[i]['2014'] ? 'score-under' : 'score-above'}>
-                  {thresholdsArray[i]['2014']}
-                </div>
-              </td>
-              <td>
-                <div className={coursesArrayScores[i] >= thresholdsArray[i]['2015'] ? 'score-under' : 'score-above'}>
-                  {thresholdsArray[i]['2015']}
-                </div>
-              </td>
-              <td>
-                <div className={coursesArrayScores[i] >= thresholdsArray[i]['2016'] ? 'score-under' : 'score-above'}>
-                  {thresholdsArray[i]['2016']}
-                </div>
-              </td>
-            </tr>
-          )}
+                <td>
+                  <strong>
+                    {faculty.coursesScore[i]}
+                  </strong>
+                </td>
+                <td>
+                  <div className={faculty.coursesScore[i] >= thresholdsArray[i]['2013']
+                    ? 'score-under'
+                    : 'score-above'}
+                  >
+                    {thresholdsArray[i]['2013']}
+                  </div>
+                </td>
+                <td>
+                  <div className={faculty.coursesScore[i] >= thresholdsArray[i]['2014']
+                    ? 'score-under'
+                    : 'score-above'}
+                  >
+                    {thresholdsArray[i]['2014']}
+                  </div>
+                </td>
+                <td>
+                  <div className={faculty.coursesScore[i] >= thresholdsArray[i]['2015']
+                    ? 'score-under'
+                    : 'score-above'}
+                  >
+                    {thresholdsArray[i]['2015']}
+                  </div>
+                </td>
+                <td>
+                  <div className={faculty.coursesScore[i] >= thresholdsArray[i]['2016']
+                    ? 'score-under'
+                    : 'score-above'}
+                  >
+                    {thresholdsArray[i]['2016']}
+                  </div>
+                </td>
+              </tr>
+            )
+          )
+          }
         </tbody>
       </table>
     </div>
