@@ -6,13 +6,16 @@ import facultiesArray from '../../faculties.json'
 import thresholdsArray from '../../thresholds.json'
 
 const ScoreTable = ({ subjects }) => {
-
+  let i = 0
   facultiesArray.forEach((faculty) => {
     faculty.coursesScore = []
+    faculty.thresholds = []
     faculty.courses.forEach((course) => {
       faculty.coursesScore.push(getCourseScore(course, subjects))
+      faculty.thresholds.push(thresholdsArray[i++])
     })
   })
+
   return (
     <div>
       <br />
@@ -75,35 +78,35 @@ const ScoreTable = ({ subjects }) => {
                   </strong>
                 </td>
                 <td>
-                  <div className={faculty.coursesScore[i] >= thresholdsArray[i]['2013']
+                  <div className={faculty.coursesScore[i] >= faculty.thresholds[i]['2013']
                     ? 'score-under'
                     : 'score-above'}
                   >
-                    {thresholdsArray[i]['2013']}
+                    {faculty.thresholds[i]['2013']}
                   </div>
                 </td>
                 <td>
-                  <div className={faculty.coursesScore[i] >= thresholdsArray[i]['2014']
+                  <div className={faculty.coursesScore[i] >= faculty.thresholds[i]['2014']
                     ? 'score-under'
                     : 'score-above'}
                   >
-                    {thresholdsArray[i]['2014']}
+                    {faculty.thresholds[i]['2014']}
                   </div>
                 </td>
                 <td>
-                  <div className={faculty.coursesScore[i] >= thresholdsArray[i]['2015']
+                  <div className={faculty.coursesScore[i] >= faculty.thresholds[i]['2015']
                     ? 'score-under'
                     : 'score-above'}
                   >
-                    {thresholdsArray[i]['2015']}
+                    {faculty.thresholds[i]['2015']}
                   </div>
                 </td>
                 <td>
-                  <div className={faculty.coursesScore[i] >= thresholdsArray[i]['2016']
+                  <div className={faculty.coursesScore[i] >= faculty.thresholds[i]['2016']
                     ? 'score-under'
                     : 'score-above'}
                   >
-                    {thresholdsArray[i]['2016']}
+                    {faculty.thresholds[i]['2016']}
                   </div>
                 </td>
               </tr>
