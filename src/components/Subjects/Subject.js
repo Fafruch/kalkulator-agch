@@ -7,7 +7,7 @@ import DeleteSubject from './DeleteSubject'
 import ScoreTextInput from './ScoreTextInput'
 import NameInput from './NameInput'
 
-const Subject = ({ subject, onChange, onToggleClick, onDelete, subjectsType, iterator }) => {
+const Subject = ({ subject, subjectsType, iterator, onNameChange, onScoreChange, onToggleClick, onDelete }) => {
   return (
     <table className='table mb-0'>
       <tbody>
@@ -24,16 +24,34 @@ const Subject = ({ subject, onChange, onToggleClick, onDelete, subjectsType, ite
             {iterator}
           </td>
           <td>
-            <NameInput subject={subject} subjectsType={subjectsType} onChange={onChange} />
+            <NameInput subject={subject} subjectsType={subjectsType} onChange={onNameChange} />
           </td>
           <td>
-            <ScoreRangeInput subject={subject} examType='elementary' subjectsType={subjectsType} onChange={onChange} />
-            <ScoreTextInput subject={subject} examType='elementary' subjectsType={subjectsType} onChange={onChange} />
+            <ScoreRangeInput
+              subject={subject}
+              examType='elementary'
+              subjectsType={subjectsType}
+              onChange={onScoreChange}
+            />
+            <ScoreTextInput
+              subject={subject}
+              examType='elementary'
+              subjectsType={subjectsType}
+              onChange={onScoreChange}
+            />
             { !!subject.elementaryScore && '%' }
           </td>
           <td>
-            <ScoreRangeInput subject={subject} examType='advanced' subjectsType={subjectsType} onChange={onChange} />
-            <ScoreTextInput subject={subject} examType='advanced' subjectsType={subjectsType} onChange={onChange} />
+            <ScoreRangeInput
+              subject={subject}
+              examType='advanced'
+              subjectsType={subjectsType}
+              onChange={onScoreChange} />
+            <ScoreTextInput
+              subject={subject}
+              examType='advanced'
+              subjectsType={subjectsType}
+              onChange={onScoreChange} />
             { !!subject.advancedScore && '%' }
           </td>
           <td>
@@ -59,11 +77,12 @@ const Subject = ({ subject, onChange, onToggleClick, onDelete, subjectsType, ite
 
 Subject.propTypes = {
   subject: PropTypes.object.isRequired,
-  onChange: PropTypes.func.isRequired,
+  subjectsType: PropTypes.string.isRequired,
+  iterator: PropTypes.number.isRequired,
+  onNameChange: PropTypes.func.isRequired,
+  onScoreChange: PropTypes.func.isRequired,
   onToggleClick: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
-  subjectsType: PropTypes.string.isRequired,
-  iterator: PropTypes.number.isRequired
 }
 
 export default Subject

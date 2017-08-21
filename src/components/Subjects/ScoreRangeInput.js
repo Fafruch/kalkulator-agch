@@ -1,23 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import getSubjectScore from '../../utils/getSubjectScore'
+const ScoreRangeInput = ({ subject: { id, elementaryScore, advancedScore }, examType, subjectsType, onChange }) => {
+  const isElementary = examType === 'elementary'
 
-const ScoreRangeInput = ({ subject: { id, elementaryScore, advancedScore }, examType, subjectsType, onChange }) => (
-  <input
-    type='range'
-    value={examType === 'elementary' ? elementaryScore : advancedScore}
-    min='0'
-    max='100'
-    onChange={(event) => onChange(
-      id,
-      examType === 'elementary' ? 'elementaryScore' : 'advancedScore',
-      +event.target.value,
-      getSubjectScore(+event.target.value, elementaryScore, advancedScore, examType),
-      subjectsType)}
-    className='subject-input-range'
-  />
-)
+  const handleChange = (event) => {
+    const inputScore = +event.target.value
+
+    if (isElementary) elementaryScore = inputScore
+    else advancedScore = inputScore
+
+    onChange(id, elementaryScore, advancedScore, subjectsType)
+  }
+
+  return (
+    <input
+      type='range'
+      value={isElementary ? elementaryScore : advancedScore}
+      min='0'
+      max='100'
+      onChange={handleChange}
+      className='subject-input-range'
+    />
+  )
+}
 ScoreRangeInput.propTypes = {
   subject: PropTypes.shape({
     id: PropTypes.string.isRequired,

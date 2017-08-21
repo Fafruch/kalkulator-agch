@@ -3,18 +3,22 @@ import PropTypes from 'prop-types'
 
 import Datalist from './Datalist'
 
-const NameInput = ({ subject: { id, name, max, active }, subjectsType, onChange }) => (
-  <div>
-    <input
-      type='text'
-      value={name}
-      list={subjectsType}
-      onChange={(event) => onChange(id, 'name', event.target.value, max, subjectsType)}
-      className={active ? 'subject-active subject-input-name' : 'subject-not-active subject-input-name'}
-    />
-    <Datalist subjectsType={subjectsType} />
-  </div>
-)
+const NameInput = ({ subject: { id, name, active }, subjectsType, onChange }) => {
+  const handleChange = (event) => onChange(id, event.target.value, subjectsType)
+
+  return (
+    <div>
+      <input
+        type='text'
+        value={name}
+        list={subjectsType}
+        onChange={handleChange}
+        className={active ? 'subject-active subject-input-name' : 'subject-not-active subject-input-name'}
+      />
+      <Datalist subjectsType={subjectsType} />
+    </div>
+  )
+}
 NameInput.propTypes = {
   subject: PropTypes.shape({
     id: PropTypes.string.isRequired,

@@ -1,5 +1,5 @@
-import getSubjectScore from '../../utils/getSubjectScore'
-import { ADD_SUBJECT, TOGGLE_SUBJECT, REMOVE_SUBJECT, UPDATE_SUBJECT } from '../../constants/ActionTypes'
+import { ADD_SUBJECT, TOGGLE_SUBJECT, REMOVE_SUBJECT,
+  UPDATE_SUBJECT_NAME, UPDATE_SUBJECT_SCORE } from '../../constants/ActionTypes'
 
 const subjects = (state = { primary: [], lingual: [] }, action) => {
   switch (action.type) {
@@ -40,7 +40,7 @@ const subjects = (state = { primary: [], lingual: [] }, action) => {
           subject => subject.id !== action.payload.id
         )
       }
-    case UPDATE_SUBJECT:
+    case UPDATE_SUBJECT_NAME:
       return {
         ...state,
         [action.payload.subjectsType]: state[action.payload.subjectsType].map(
@@ -48,12 +48,20 @@ const subjects = (state = { primary: [], lingual: [] }, action) => {
             ? {
               ...subject,
               name: action.payload.name,
+            }
+            : subject
+        )
+      }
+    case UPDATE_SUBJECT_SCORE:
+      return {
+        ...state,
+        [action.payload.subjectsType]: state[action.payload.subjectsType].map(
+          subject => (subject.id === action.payload.id)
+            ? {
+              ...subject,
               elementaryScore: action.payload.elementaryScore,
               advancedScore: action.payload.advancedScore,
-              max: getSubjectScore({
-                elementaryScore: action.payload.elementaryScore,
-                advancedScore: action.payload.advancedScore
-              })
+              max: action.payload.max
             }
             : subject
         )

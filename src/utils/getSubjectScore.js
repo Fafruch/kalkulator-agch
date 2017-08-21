@@ -1,10 +1,4 @@
-const getSubjectScore = (newScore, elementaryScore, advancedScore, examType) => {
-  if (examType === 'elementary') {
-    elementaryScore = newScore
-  } else {
-    advancedScore = newScore
-  }
-
+const getSubjectScore = (elementaryScore, advancedScore) => {
   const scoreObj = {
     score: 0,
     formula: ''
