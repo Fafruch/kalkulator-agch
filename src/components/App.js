@@ -4,17 +4,13 @@ import { Provider } from 'react-redux'
 
 import PageLayout from './PageLayout'
 
-class App extends React.Component {
-  static propTypes = {
-    store: PropTypes.object.isRequired,
-  }
-  render () {
-    return (
-      <Provider store={this.props.store}>
-        <PageLayout />
-      </Provider>
-    )
-  }
+const App = ({ store }) => (
+  <Provider store={store}>
+    <PageLayout />
+  </Provider>
+)
+App.propTypes = {
+  store: PropTypes.object.isRequired
 }
 
 export default App
