@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-starter-kit",
-  "version": "3.0.1",
-  "description": "Get started with React, Redux, and React-Router!",
+  "name": "kalkulator-agh",
+  "version": "1.0",
+  "description": "Kalkulator obliczajacy ilosc punktow na studia I stopnia na Akademii Gorniczo-Hutniczej w Krakowie",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
@@ -15,10 +15,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davezuko/react-redux-starter-kit.git"
+    "url": "git+https://github.com/Fafruch/kalkulator-agh.git"
   },
-  "author": "David Zukowski <david@zuko.me> (http://zuko.me)",
-  "license": "MIT",
+  "author": "Filip Duczyminski <fduczyminski@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha",
     "compression": "^1.7.0",
