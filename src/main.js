@@ -11,8 +11,7 @@ window.__INITIAL_STATE__ = loadState()
 
 // Store Initialization
 // ------------------------------------
-const store = createStore(window.__INITIAL_STATE__,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store = createStore(window.__INITIAL_STATE__)
 
 // Render Setup
 // ------------------------------------
