@@ -1,6 +1,6 @@
 {
   "name": "kalkulator-agh",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Kalkulator obliczajacy ilosc punktow na studia I stopnia na Akademii Gorniczo-Hutniczej w Krakowie",
   "main": "index.js",
   "scripts": {
