@@ -26,7 +26,7 @@ export const updateSubjectScore = (id, elementaryScore, advancedScore, subjectsT
     id,
     elementaryScore,
     advancedScore,
-    max: getSubjectScore(elementaryScore, advancedScore),
+    maxScore: getSubjectScore(elementaryScore, advancedScore),
     subjectsType
   }
 })

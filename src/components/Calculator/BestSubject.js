@@ -3,16 +3,16 @@ import PropTypes from 'prop-types'
 
 import { PRIMARY_SUBJECTS } from '../../constants/SubjectTypes'
 
-const BestSubject = ({ bestSubject: { name, max }, subjectType }) => {
+const BestSubject = ({ bestSubject: { name, maxScore }, subjectType }) => {
 
   return (
     <div>
       <p>
         Maksymalny wynik dla {subjectType === PRIMARY_SUBJECTS ? 'przedmiotu głównego' : 'języka'} to
-        &nbsp;<b>{max.score}</b> pkt. dla przedmiotu
+        &nbsp;<b>{maxScore.value}</b> pkt. dla przedmiotu
         &nbsp;<b>{name || 'bez nazwy'}</b>
         &nbsp;obliczony zgodnie z formułą
-        &nbsp;{max.formula === 'A/B' ? 'A lub B' : max.formula}.
+        &nbsp;{maxScore.formula === 'A/B' ? 'A lub B' : maxScore.formula}.
       </p>
     </div>
   )

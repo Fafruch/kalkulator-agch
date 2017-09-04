@@ -31,7 +31,7 @@ ScoreTextInput.propTypes = {
     name: PropTypes.string.isRequired,
     elementaryScore: PropTypes.number.isRequired,
     advancedScore: PropTypes.number.isRequired,
-    max: PropTypes.object.isRequired,
+    maxScore: PropTypes.object.isRequired,
     active: PropTypes.bool.isRequired
   }).isRequired,
   examType: PropTypes.string.isRequired,

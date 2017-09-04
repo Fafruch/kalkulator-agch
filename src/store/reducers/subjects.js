@@ -13,7 +13,7 @@ const subjects = (state = { primary: [], lingual: [] }, action) => {
             name: '',
             elementaryScore: 0,
             advancedScore: 0,
-            max: {
+            maxScore: {
               score: 0,
               formula: ''
             },
@@ -61,7 +61,7 @@ const subjects = (state = { primary: [], lingual: [] }, action) => {
               ...subject,
               elementaryScore: action.payload.elementaryScore,
               advancedScore: action.payload.advancedScore,
-              max: action.payload.max
+              maxScore: action.payload.maxScore
             }
             : subject
         )

@@ -6,14 +6,19 @@ const subjectsPicker = ({ primary, lingual }) => {
   let maxPrimarySubject = _findBestSubject(primaryArray)
   let maxLingualSubject = _findBestSubject(lingualArray)
 
-  if (maxLingualSubject.max.score * 4 > maxPrimarySubject.max.score) {               // This one is for humane formula
-    const filteredLingualArray = lingual.filter(subject => subject !== maxLingualSubject) // if it passes we remove it
-                                                                                     // from lingual subjects and treat
-    let maxPrimarySubject2 = maxLingualSubject                                       // as primary, then look for new
-    let maxLingualSubject2 = _findBestSubject(filteredLingualArray)                  // best lingual.
+  // This one is for humane formula only, if the best lingual score is better than primary score, we remove it
+  // from lingual subjects and treat as primary, then look for new (second) best lingual.
+  // If the lingual * 4 + second best lingual is better than primary * 4 + lingual, we got the highest possible score,
+  // else we return wrapper with regular primary and lingual as they provide better score
 
-    if (maxPrimarySubject2.max.score * 4 + maxLingualSubject2.max.score >            // If the score is better
-      maxPrimarySubject.max.score * 4 + maxLingualSubject.max.score) {               // we return this subject
+  if (maxLingualSubject.maxScore.value * 4 > maxPrimarySubject.maxScore.value) {
+    const filteredLingualArray = lingual.filter(subject => subject !== maxLingualSubject)
+
+    let maxPrimarySubject2 = maxLingualSubject
+    let maxLingualSubject2 = _findBestSubject(filteredLingualArray)
+
+    if (maxPrimarySubject2.maxScore.value * 4 + maxLingualSubject2.maxScore.value >
+      maxPrimarySubject.maxScore.value * 4 + maxLingualSubject.maxScore.value) {
       maxScoreWrapper.primary = maxPrimarySubject2
       maxScoreWrapper.lingual = maxLingualSubject2
 
@@ -24,20 +29,20 @@ const subjectsPicker = ({ primary, lingual }) => {
   maxScoreWrapper.primary = maxPrimarySubject
   maxScoreWrapper.lingual = maxLingualSubject
 
-  return maxScoreWrapper                                                             // else we return regular one
+  return maxScoreWrapper
 }
 
 const _findBestSubject = (subjectsArray) => {
   let bestSubject = {
     name: '',
-    max: {
-      score: 0,
+    maxScore: {
+      value: 0,
       formula: ''
     }
   }
 
   subjectsArray.forEach((subject) => {
-    if (subject.max.score > bestSubject.max.score) bestSubject = subject
+    if (subject.maxScore.value > bestSubject.maxScore.value) bestSubject = subject
   })
 
   return bestSubject
