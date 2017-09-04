@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import Threshold from './Threshold'
 import getCourseScore from '../../utils/getCourseScore'
 import facultiesArray from '../../faculties.json'
 import thresholdsArray from '../../thresholds.json'
 
-const ScoreTable = ({ subjects }) => {
+const setupFacultiesArray = (subjects) => {
   let i = 0
+
   facultiesArray.forEach((faculty) => {
     faculty.coursesScore = []
     faculty.thresholds = []
@@ -15,6 +17,10 @@ const ScoreTable = ({ subjects }) => {
       faculty.thresholds.push(thresholdsArray[i++])
     })
   })
+}
+
+const ScoreTable = ({ subjects }) => {
+  setupFacultiesArray(subjects)
 
   return (
     <div>
@@ -22,6 +28,7 @@ const ScoreTable = ({ subjects }) => {
       <br />
       <table className='table table-bordered score-table'>
         <tbody>
+
           <tr>
             <th />
             <th />
@@ -30,6 +37,7 @@ const ScoreTable = ({ subjects }) => {
               Progi z zeszłych lat
             </th>
           </tr>
+
           <tr>
             <th scope='row'>
               Wydział
@@ -56,6 +64,7 @@ const ScoreTable = ({ subjects }) => {
               2016
             </th>
           </tr>
+
           {facultiesArray.map((faculty) =>
             faculty.courses.map((course, i) =>
               <tr key={i}>
@@ -78,36 +87,16 @@ const ScoreTable = ({ subjects }) => {
                   </strong>
                 </td>
                 <td>
-                  <div className={faculty.coursesScore[i] >= faculty.thresholds[i]['2013']
-                    ? 'score-under'
-                    : 'score-above'}
-                  >
-                    {faculty.thresholds[i]['2013']}
-                  </div>
+                  <Threshold faculty={faculty} i={i} year={2013} />
                 </td>
                 <td>
-                  <div className={faculty.coursesScore[i] >= faculty.thresholds[i]['2014']
-                    ? 'score-under'
-                    : 'score-above'}
-                  >
-                    {faculty.thresholds[i]['2014']}
-                  </div>
+                  <Threshold faculty={faculty} i={i} year={2014} />
                 </td>
                 <td>
-                  <div className={faculty.coursesScore[i] >= faculty.thresholds[i]['2015']
-                    ? 'score-under'
-                    : 'score-above'}
-                  >
-                    {faculty.thresholds[i]['2015']}
-                  </div>
+                  <Threshold faculty={faculty} i={i} year={2015} />
                 </td>
                 <td>
-                  <div className={faculty.coursesScore[i] >= faculty.thresholds[i]['2016']
-                    ? 'score-under'
-                    : 'score-above'}
-                  >
-                    {faculty.thresholds[i]['2016']}
-                  </div>
+                  <Threshold faculty={faculty} i={i} year={2016} />
                 </td>
               </tr>
             )
