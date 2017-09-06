@@ -7,7 +7,7 @@ import DeleteSubject from './DeleteSubject'
 import ScoreTextInput from './ScoreTextInput'
 import NameInput from './NameInput'
 
-const Subject = ({ subject, subjectsType, iterator, onNameChange, onScoreChange, onToggleClick, onDelete }) => {
+const Subject = ({ subject, subjectsType, subjectNumber, onNameChange, onScoreChange, onToggleClick, onDelete }) => {
   return (
     <table className='table mb-0'>
       <tbody>
@@ -21,7 +21,7 @@ const Subject = ({ subject, subjectsType, iterator, onNameChange, onScoreChange,
         </tr>
         <tr>
           <td>
-            {iterator}
+            {subjectNumber}
           </td>
           <td>
             <NameInput subject={subject} subjectsType={subjectsType} onChange={onNameChange} />
@@ -78,7 +78,7 @@ const Subject = ({ subject, subjectsType, iterator, onNameChange, onScoreChange,
 Subject.propTypes = {
   subject: PropTypes.object.isRequired,
   subjectsType: PropTypes.string.isRequired,
-  iterator: PropTypes.number.isRequired,
+  subjectNumber: PropTypes.number.isRequired,
   onNameChange: PropTypes.func.isRequired,
   onScoreChange: PropTypes.func.isRequired,
   onToggleClick: PropTypes.func.isRequired,
