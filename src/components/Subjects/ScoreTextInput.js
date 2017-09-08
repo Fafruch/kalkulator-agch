@@ -12,7 +12,7 @@ const ScoreTextInput = ({ subject: { id, elementaryScore, advancedScore }, examT
     if (isElementary) elementaryScore = inputScore
     else advancedScore = inputScore
 
-    onChange(id, elementaryScore, advancedScore, subjectsType)
+    onChange({ id, elementaryScore, advancedScore, subjectsType })
   }
 
   return (

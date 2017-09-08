@@ -1,7 +1,7 @@
 import { v4 } from 'uuid'
 
-import { ADD_SUBJECT, REMOVE_SUBJECT, TOGGLE_SUBJECT, UPDATE_SUBJECT_NAME, UPDATE_SUBJECT_SCORE,
-  TOGGLE_SCORE_TABLE } from '../constants/ActionTypes'
+import { ADD_SUBJECT, REMOVE_SUBJECT, TOGGLE_SUBJECT,
+  UPDATE_SUBJECT, TOGGLE_SCORE_TABLE } from '../constants/ActionTypes'
 import getSubjectScore from '../utils/getSubjectScore'
 
 export const addSubject = (subjectsType) => ({
@@ -12,24 +12,20 @@ export const addSubject = (subjectsType) => ({
   }
 })
 
-export const updateSubjectName = (id, name, subjectsType) => ({
-  type: UPDATE_SUBJECT_NAME,
-  payload: {
-    id,
-    name,
-    subjectsType
+export const updateSubject = ({ id, subjectsType, ...updatedProperties }) => {
+  if (updatedProperties.elementaryScore && updatedProperties.advancedScore) {
+    updatedProperties.maxScore = getSubjectScore(updatedProperties.elementaryScore, updatedProperties.advancedScore)
   }
-})
-export const updateSubjectScore = (id, elementaryScore, advancedScore, subjectsType) => ({
-  type: UPDATE_SUBJECT_SCORE,
-  payload: {
-    id,
-    elementaryScore,
-    advancedScore,
-    maxScore: getSubjectScore(elementaryScore, advancedScore),
-    subjectsType
+
+  return {
+    type: UPDATE_SUBJECT,
+    payload: {
+      id,
+      subjectsType,
+      updatedProperties
+    }
   }
-})
+}
 
 export const removeSubject = (id, subjectsType) => ({
   type: REMOVE_SUBJECT,
@@ -48,6 +44,5 @@ export const toggleSubject = (id, subjectsType) => ({
 })
 
 export const toggleScoreTable = () => ({
-  type: TOGGLE_SCORE_TABLE,
-  payload: {}
+  type: TOGGLE_SCORE_TABLE
 })

@@ -10,7 +10,7 @@ const ScoreRangeInput = ({ subject: { id, elementaryScore, advancedScore }, exam
     if (isElementary) elementaryScore = inputScore
     else advancedScore = inputScore
 
-    onChange(id, elementaryScore, advancedScore, subjectsType)
+    onChange({ id, elementaryScore, advancedScore, subjectsType })
   }
 
   return (
