@@ -1,4 +1,4 @@
-const getCourseScore = ({ subjects: coursePrimary, faculty: courseFaculty }, { primary, lingual }) => {
+const getCourseScore = ({ subjects: coursePrimary }, { name: courseFaculty }, { primary, lingual }) => {
   const primaryArray = primary.filter(subject => coursePrimary.indexOf(subject.name) !== -1 && subject.active)
   const lingualArray = lingual.filter(subject => subject.active)
 

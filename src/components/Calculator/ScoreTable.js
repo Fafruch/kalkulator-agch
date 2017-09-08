@@ -41,7 +41,7 @@ const ScoreTable = ({ subjects, onToggleClick }) => (
             </td> */}
               <td>
                 <strong>
-                  {getCourseScore(course, subjects)}
+                  {getCourseScore(course, faculty, subjects)}
                 </strong>
               </td>
             </tr>
