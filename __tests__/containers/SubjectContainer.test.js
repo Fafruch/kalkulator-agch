@@ -8,7 +8,7 @@ const setup = (setupProps = {}) => {
   const defaultProps = {
     subject: {},
     subjectsType: 'primary',
-    iterator: 0,
+    subjectNumber: 0,
     store: createStore()
   }
   const props = { ...defaultProps, ...setupProps }
