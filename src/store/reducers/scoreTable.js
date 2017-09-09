@@ -1,6 +1,6 @@
 import { TOGGLE_SCORE_TABLE } from '../../constants/ActionTypes'
 
-const subjects = (state = { isOpened: false }, action) => {
+const scoreTable = (state = { isOpened: false }, action) => {
   switch (action.type) {
     case TOGGLE_SCORE_TABLE:
       return {
@@ -12,4 +12,4 @@ const subjects = (state = { isOpened: false }, action) => {
   }
 }
 
-export default subjects
+export default scoreTable
