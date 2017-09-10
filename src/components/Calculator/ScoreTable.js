@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import getCourseScore from '../../utils/getCourseScore'
 import facultiesArray from '../../faculties.json'
 
-const ScoreTable = ({ subjects, onToggleClick }) => (
+const ScoreTable = ({ subjects }) => (
   <div>
     <br />
     <br />
@@ -56,8 +56,7 @@ ScoreTable.propTypes = {
   subjects: PropTypes.shape({
     primary: PropTypes.array.isRequired,
     lingual: PropTypes.array.isRequired
-  }).isRequired,
-  onToggleClick: PropTypes.func.isRequired
+  }).isRequired
 }
 
 export default ScoreTable
