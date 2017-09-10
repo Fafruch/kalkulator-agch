@@ -13,7 +13,7 @@ const SubjectList = ({ subjects, subjectsType }) => {
             <SubjectContainer
               subject={subject}
               subjectsType={subjectsType}
-              iterator={i + 1}
+              subjectNumber={i + 1}
             />
           </li>
         )}

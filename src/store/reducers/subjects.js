@@ -1,5 +1,4 @@
-import { ADD_SUBJECT, TOGGLE_SUBJECT, REMOVE_SUBJECT,
-  UPDATE_SUBJECT_NAME, UPDATE_SUBJECT_SCORE } from '../../constants/ActionTypes'
+import { ADD_SUBJECT, TOGGLE_SUBJECT, REMOVE_SUBJECT, UPDATE_SUBJECT } from '../../constants/ActionTypes'
 
 const subjects = (state = { primary: [], lingual: [] }, action) => {
   switch (action.type) {
@@ -40,28 +39,14 @@ const subjects = (state = { primary: [], lingual: [] }, action) => {
           subject => subject.id !== action.payload.id
         )
       }
-    case UPDATE_SUBJECT_NAME:
+    case UPDATE_SUBJECT:
       return {
         ...state,
         [action.payload.subjectsType]: state[action.payload.subjectsType].map(
           subject => (subject.id === action.payload.id)
             ? {
               ...subject,
-              name: action.payload.name,
-            }
-            : subject
-        )
-      }
-    case UPDATE_SUBJECT_SCORE:
-      return {
-        ...state,
-        [action.payload.subjectsType]: state[action.payload.subjectsType].map(
-          subject => (subject.id === action.payload.id)
-            ? {
-              ...subject,
-              elementaryScore: action.payload.elementaryScore,
-              advancedScore: action.payload.advancedScore,
-              maxScore: action.payload.maxScore
+              ...action.payload.updatedProperties
             }
             : subject
         )

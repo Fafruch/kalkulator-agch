@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Datalist from './Datalist'
 
 const NameInput = ({ subject: { id, name, active }, subjectsType, onChange }) => {
-  const handleChange = (event) => onChange(id, event.target.value, subjectsType)
+  const handleChange = (event) => onChange({ id, name: event.target.value, subjectsType })
 
   return (
     <div>
