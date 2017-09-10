@@ -13,7 +13,7 @@ const setupFacultiesArray = (subjects) => {
     faculty.coursesScore = []
     faculty.thresholds = []
     faculty.courses.forEach((course) => {
-      faculty.coursesScore.push(getCourseScore(course, subjects))
+      faculty.coursesScore.push(getCourseScore(course, faculty, subjects))
       faculty.thresholds.push(thresholdsArray[i++])
     })
   })
