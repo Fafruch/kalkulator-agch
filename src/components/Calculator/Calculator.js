@@ -1,63 +1,60 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { CSSTransitionGroup } from 'react-transition-group'
 
 import BestSubject from './BestSubject'
 import MaxScore from './MaxScore'
+import ScoreTableContainer from '../../containers/ScoreTableContainer'
 import { PRIMARY_SUBJECTS, LINGUAL_SUBJECTS } from '../../constants/SubjectTypes'
 
-const Calculator = ({ maxPrimaryScoreWrapper, maxLingualScoreWrapper }) => {
-  const maxPrimaryScore = maxPrimaryScoreWrapper.computedScore
-  const maxLingualScore = maxLingualScoreWrapper.computedScore
+const Calculator = ({ maxScoreWrapper, isScoreTableOpened, isAnySubjectPresent, onToggleClick }) => {
+  const maxPrimaryScore = maxScoreWrapper.primary.maxScore.value
+  const maxLingualScore = maxScoreWrapper.lingual.maxScore.value
 
-  if (maxPrimaryScoreWrapper.isEmpty && maxLingualScoreWrapper.isEmpty) return null
-  return (
-    <div className='m-4'>
-      <h3>Wynik</h3>
-      <hr />
-      {!!maxPrimaryScore &&
-      <BestSubject
-        maxScoreWrapper={maxPrimaryScoreWrapper}
-        subjectType={PRIMARY_SUBJECTS}
-      />}
-      {!!maxLingualScore &&
-      <BestSubject
-        maxScoreWrapper={maxLingualScoreWrapper}
-        subjectType={LINGUAL_SUBJECTS}
-      />}
-      <br />
-      <MaxScore
-        maxPrimaryScore={maxPrimaryScore}
-        maxLingualScore={maxLingualScore}
-      />
-    </div>
-  )
+  if (isAnySubjectPresent) {
+    return (
+      <div className='m-4'>
+        <h3>Wynik</h3>
+        <hr />
+        {!!maxPrimaryScore &&
+        <BestSubject
+          bestSubject={maxScoreWrapper.primary}
+          subjectType={PRIMARY_SUBJECTS}
+        />}
+        {!!maxLingualScore &&
+        <BestSubject
+          bestSubject={maxScoreWrapper.lingual}
+          subjectType={LINGUAL_SUBJECTS}
+        />}
+        <br />
+        <MaxScore
+          maxPrimaryScore={maxPrimaryScore}
+          maxLingualScore={maxLingualScore}
+        />
+        <br />
+        <button
+          className='btn btn-secondary'
+          onClick={onToggleClick}
+        >
+          {isScoreTableOpened ? 'Ukryj tabelę wyników' : 'Pokaż tabelę wyników'}
+        </button>
+        <CSSTransitionGroup transitionName='scoreTable' transitionEnterTimeout={300} transitionLeaveTimeout={300}>
+          {isScoreTableOpened && <ScoreTableContainer />}
+        </CSSTransitionGroup>
+      </div>
+    )
+  }
+  return null
 }
 
 Calculator.propTypes = {
-  maxPrimaryScoreWrapper: PropTypes.shape({
-    subject: PropTypes.shape({
-      id: PropTypes.string,
-      name: PropTypes.string,
-      elementaryScore: PropTypes.number,
-      advancedScore: PropTypes.number,
-      active: PropTypes.bool
-    }).isRequired,
-    computedScore: PropTypes.number.isRequired,
-    formula: PropTypes.string.isRequired,
-    isEmpty: PropTypes.bool.isRequired
+  maxScoreWrapper: PropTypes.shape({
+    primary: PropTypes.object.isRequired,
+    lingual: PropTypes.object.isRequired
   }).isRequired,
-  maxLingualScoreWrapper: PropTypes.shape({
-    subject: PropTypes.shape({
-      id: PropTypes.string,
-      name: PropTypes.string,
-      elementaryScore: PropTypes.number,
-      advancedScore: PropTypes.number,
-      active: PropTypes.bool
-    }).isRequired,
-    computedScore: PropTypes.number.isRequired,
-    formula: PropTypes.string.isRequired,
-    isEmpty: PropTypes.bool.isRequired
-  }).isRequired
+  isScoreTableOpened: PropTypes.bool.isRequired,
+  isAnySubjectPresent: PropTypes.bool.isRequired,
+  onToggleClick: PropTypes.func.isRequired
 }
 
 export default Calculator

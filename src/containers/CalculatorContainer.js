@@ -1,14 +1,20 @@
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
 import Calculator from '../components/Calculator/Calculator'
-import subjectPicker from '../store/selectors/subjectPicker'
-import { PRIMARY_SUBJECTS, LINGUAL_SUBJECTS } from '../constants/SubjectTypes'
+import subjectsPicker from '../store/selectors/subjectsPicker'
+import { toggleScoreTable } from '../actions/index'
 
 const mapStateToProps = (state) => ({
-  maxPrimaryScoreWrapper: subjectPicker(state.subjects[PRIMARY_SUBJECTS], PRIMARY_SUBJECTS),
-  maxLingualScoreWrapper: subjectPicker(state.subjects[LINGUAL_SUBJECTS], LINGUAL_SUBJECTS)
+  maxScoreWrapper: subjectsPicker(state.subjects),
+  isScoreTableOpened: state.scoreTable.isOpened,
+  isAnySubjectPresent: !!state.subjects.primary.length || !!state.subjects.lingual.length
 })
 
-const CalculatorContainer = connect(mapStateToProps)(Calculator)
+const mapDispatchToProps = (dispatch) => ({
+  onToggleClick: bindActionCreators(toggleScoreTable, dispatch)
+})
+
+const CalculatorContainer = connect(mapStateToProps, mapDispatchToProps)(Calculator)
 
 export default CalculatorContainer

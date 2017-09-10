@@ -1,31 +1,37 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const ScoreTextInput = ({ subject: { id, elementaryScore, advancedScore }, examType, subjectsType, onChange }) => (
-  <input
-    type='text'
-    value={(examType === 'elementary' ? elementaryScore : advancedScore) || ''}
-    placeholder='Brak'
-    onChange={(event) => {
-      const inputScore = +event.target.value
-      if (!isNaN(inputScore)) {
-        onChange(
-          id,
-          examType === 'elementary' ? 'elementaryScore' : 'advancedScore',
-          inputScore > 100 ? 100 : inputScore,
-          subjectsType
-        )
-      }
-    }}
-    className='subject-input-text'
-  />
-)
+const ScoreTextInput = ({ subject: { id, elementaryScore, advancedScore }, examType, subjectsType, onChange }) => {
+  const isElementary = examType === 'elementary'
+
+  const handleChange = (event) => {
+    const inputScore = Math.min(+event.target.value, 100)
+
+    if (isNaN(inputScore)) return
+
+    if (isElementary) elementaryScore = inputScore
+    else advancedScore = inputScore
+
+    onChange({ id, elementaryScore, advancedScore, subjectsType })
+  }
+
+  return (
+    <input
+      type='text'
+      value={(isElementary ? elementaryScore : advancedScore) || ''}
+      placeholder='Brak'
+      onChange={handleChange}
+      className='subject-input-text'
+    />
+  )
+}
 ScoreTextInput.propTypes = {
   subject: PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     elementaryScore: PropTypes.number.isRequired,
     advancedScore: PropTypes.number.isRequired,
+    maxScore: PropTypes.object.isRequired,
     active: PropTypes.bool.isRequired
   }).isRequired,
   examType: PropTypes.string.isRequired,

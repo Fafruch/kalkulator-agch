@@ -1,8 +1,6 @@
-import { PRIMARY_SUBJECTS } from '../constants/SubjectTypes'
-
-const getSubjectScore = ({ elementaryScore, advancedScore }, subjectsType) => {
+const getSubjectScore = (elementaryScore, advancedScore) => {
   const scoreObj = {
-    computedScore: 0,
+    value: 0,
     formula: ''
   }
 
@@ -18,17 +16,15 @@ const getSubjectScore = ({ elementaryScore, advancedScore }, subjectsType) => {
   }
 
   if (scoreA > scoreB) {
-    scoreObj.computedScore = scoreA
+    scoreObj.value = scoreA
     scoreObj.formula = 'A'
   } else if (scoreA === scoreB) {
-    scoreObj.computedScore = scoreA // moze byc tez scoreB, bez znaczenia
+    scoreObj.value = scoreA // or scoreB, it doesn't matter
     scoreObj.formula = 'A/B'
   } else {
-    scoreObj.computedScore = scoreB
+    scoreObj.value = scoreB
     scoreObj.formula = 'B'
   }
-
-  if (subjectsType === PRIMARY_SUBJECTS) scoreObj.computedScore *= 4
 
   return scoreObj
 }

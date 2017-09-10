@@ -12,6 +12,10 @@ const subjects = (state = { primary: [], lingual: [] }, action) => {
             name: '',
             elementaryScore: 0,
             advancedScore: 0,
+            maxScore: {
+              score: 0,
+              formula: ''
+            },
             active: true
           }
         ]
@@ -42,7 +46,7 @@ const subjects = (state = { primary: [], lingual: [] }, action) => {
           subject => (subject.id === action.payload.id)
             ? {
               ...subject,
-              [action.payload.whatsUpdated]: action.payload.newValue
+              ...action.payload.updatedProperties
             }
             : subject
         )
