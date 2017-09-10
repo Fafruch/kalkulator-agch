@@ -23,9 +23,9 @@ NameInput.propTypes = {
   subject: PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    elementaryScore: PropTypes.number.isRequired,
-    advancedScore: PropTypes.number.isRequired,
-    maxScore: PropTypes.object.isRequired,
+    elementaryScore: PropTypes.number,
+    advancedScore: PropTypes.number,
+    maxScore: PropTypes.object,
     active: PropTypes.bool.isRequired
   }).isRequired,
   subjectsType: PropTypes.string.isRequired,
