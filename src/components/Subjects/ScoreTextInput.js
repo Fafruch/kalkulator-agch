@@ -5,14 +5,14 @@ const ScoreTextInput = ({ subject: { id, elementaryScore, advancedScore }, examT
   const isElementary = examType === 'elementary'
 
   const handleChange = (event) => {
-    const inputScore = +event.target.value > 100 ? 100 : +event.target.value
+    const inputScore = Math.min(+event.target.value, 100)
 
-    if (!isNaN(inputScore)) {
-      if (isElementary) elementaryScore = inputScore
-      else advancedScore = inputScore
+    if (isNaN(inputScore)) return
 
-      onChange(id, elementaryScore, advancedScore, subjectsType)
-    }
+    if (isElementary) elementaryScore = inputScore
+    else advancedScore = inputScore
+
+    onChange({ id, elementaryScore, advancedScore, subjectsType })
   }
 
   return (

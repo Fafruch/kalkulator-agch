@@ -3,31 +3,34 @@ const subjectsPicker = ({ primary, lingual }) => {
   const primaryArray = primary.filter(subject => subject.active)
   const lingualArray = lingual.filter(subject => subject.active)
 
-  let maxPrimarySubject = _findBestSubject(primaryArray)
-  let maxLingualSubject = _findBestSubject(lingualArray)
+  const bestPrimary = _findBestSubject(primaryArray)
+  const bestLingual = _findBestSubject(lingualArray)
+
+  const maxScore = bestPrimary.maxScore.value * 4 + bestLingual.maxScore.value
 
   // This one is for humane formula only, if the best lingual score is better than primary score, we remove it
   // from lingual subjects and treat as primary, then look for new (second) best lingual.
   // If the lingual * 4 + second best lingual is better than primary * 4 + lingual, we got the highest possible score,
   // else we return wrapper with regular primary and lingual as they provide better score
 
-  if (maxLingualSubject.maxScore.value * 4 > maxPrimarySubject.maxScore.value) {
-    const filteredLingualArray = lingual.filter(subject => subject !== maxLingualSubject)
+  if (bestLingual.maxScore.value * 4 > bestPrimary.maxScore.value) {
+    const filteredLingualArray = lingualArray.filter(subject => subject !== bestLingual)
 
-    let maxPrimarySubject2 = maxLingualSubject
-    let maxLingualSubject2 = _findBestSubject(filteredLingualArray)
+    const bestLingualAsPrimary = bestLingual
+    const secondBestLingual = _findBestSubject(filteredLingualArray)
 
-    if (maxPrimarySubject2.maxScore.value * 4 + maxLingualSubject2.maxScore.value >
-      maxPrimarySubject.maxScore.value * 4 + maxLingualSubject.maxScore.value) {
-      maxScoreWrapper.primary = maxPrimarySubject2
-      maxScoreWrapper.lingual = maxLingualSubject2
+    const humaneMaxScore = bestLingualAsPrimary.maxScore.value * 4 + secondBestLingual.maxScore.value
+
+    if (humaneMaxScore > maxScore) {
+      maxScoreWrapper.primary = bestLingualAsPrimary
+      maxScoreWrapper.lingual = secondBestLingual
 
       return maxScoreWrapper
     }
   }
 
-  maxScoreWrapper.primary = maxPrimarySubject
-  maxScoreWrapper.lingual = maxLingualSubject
+  maxScoreWrapper.primary = bestPrimary
+  maxScoreWrapper.lingual = bestLingual
 
   return maxScoreWrapper
 }

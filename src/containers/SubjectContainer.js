@@ -2,11 +2,10 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import Subject from '../components/Subjects/Subject'
-import { removeSubject, toggleSubject, updateSubjectName, updateSubjectScore } from '../actions'
+import { removeSubject, toggleSubject, updateSubject } from '../actions'
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  onNameChange: updateSubjectName,
-  onScoreChange: updateSubjectScore,
+  onChange: updateSubject,
   onToggleClick: toggleSubject,
   onDelete: removeSubject,
 }, dispatch)
