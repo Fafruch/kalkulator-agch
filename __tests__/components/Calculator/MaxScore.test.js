@@ -29,5 +29,4 @@ describe('MaxScore component', () => {
 
     expect(wrapper.find('b').text()).toEqual(` ${182 * 4 + 192} `)
   })
-
 })

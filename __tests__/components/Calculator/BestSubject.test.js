@@ -12,7 +12,7 @@ const setup = (setupProps = {}) => {
         formula: ''
       }
     },
-    subjectType: 'primary'
+    subjectsType: 'primary'
   }
   const props = { ...defaultProps, ...setupProps }
   const wrapper = shallow(<BestSubject {...props} />)
@@ -34,5 +34,17 @@ describe('BestSubject component', () => {
     const { wrapper } = setup()
 
     expect(wrapper.find('b').at(1).text()).toEqual('bez nazwy')
+  })
+
+  test('should render "języka" when subjectsType is "lingual"', () => {
+    const { wrapper } = setup({ subjectsType: 'lingual' })
+
+    expect(wrapper.contains('języka')).toEqual(true)
+  })
+
+  test('should render "A lub B" when formula is "A/B"', () => {
+    const { wrapper } = setup({ bestSubject: { maxScore: { formula: 'A/B' } } })
+
+    expect(wrapper.contains('A lub B')).toEqual(true)
   })
 })

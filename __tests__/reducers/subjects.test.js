@@ -163,6 +163,52 @@ describe('subjects reducer', () => {
     })
   })
 
+  expect(
+    subjects(
+      {
+        primary: [
+          {
+            id: '0',
+            name: 'Matematyka',
+            elementaryScore: 100,
+            advancedScore: 82,
+            maxScore: {
+              value: 182,
+              formula: 'A/B'
+            },
+            active: true
+          }
+        ],
+        lingual: []
+      },
+      {
+        type: UPDATE_SUBJECT,
+        payload: {
+          id: '42',
+          subjectsType: 'primary',
+          updatedProperties: {
+            name: 'Biologia'
+          }
+        }
+      }
+    )
+  ).toEqual({
+    primary: [
+      {
+        id: '0',
+        name: 'Matematyka',
+        elementaryScore: 100,
+        advancedScore: 82,
+        maxScore: {
+          value: 182,
+          formula: 'A/B'
+        },
+        active: true
+      }
+    ],
+    lingual: []
+  })
+
   it('should handle TOGGLE_SUBJECT', () => {
     expect(
       subjects(
@@ -206,6 +252,49 @@ describe('subjects reducer', () => {
       ],
       lingual: []
     })
+  })
+
+  expect(
+    subjects(
+      {
+        primary: [
+          {
+            id: '0',
+            name: 'Matematyka',
+            elementaryScore: 100,
+            advancedScore: 82,
+            maxScore: {
+              value: 182,
+              formula: 'A/B'
+            },
+            active: true
+          }
+        ],
+        lingual: []
+      },
+      {
+        type: TOGGLE_SUBJECT,
+        payload: {
+          id: '42',
+          subjectsType: 'primary'
+        }
+      }
+    )
+  ).toEqual({
+    primary: [
+      {
+        id: '0',
+        name: 'Matematyka',
+        elementaryScore: 100,
+        advancedScore: 82,
+        maxScore: {
+          value: 182,
+          formula: 'A/B'
+        },
+        active: true
+      }
+    ],
+    lingual: []
   })
 
   it('should handle REMOVE_SUBJECT', () => {

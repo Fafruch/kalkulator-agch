@@ -2,7 +2,6 @@ import React from 'react'
 import { shallow } from 'enzyme'
 
 import Subjects from '../../src/components/Subjects'
-import { PRIMARY_SUBJECTS } from '../../src/constants/SubjectTypes'
 
 const setup = (setupProps = {}) => {
   const defaultProps = { subjectsType: 'primary' }
@@ -23,8 +22,14 @@ describe('Subjects component', () => {
   })
 
   test('should use subjectsType prop', () => {
-    const { wrapper } = setup({ subjectsType: PRIMARY_SUBJECTS })
+    const { wrapper } = setup({ subjectsType: 'primary' })
 
     expect(wrapper.instance().props.subjectsType).toEqual('primary')
+  })
+
+  test('should render proper headline based on subjectsType prop', () => {
+    const { wrapper } = setup({ subjectsType: 'lingual' })
+
+    expect(wrapper.find('h2').text()).toEqual('Języki ')
   })
 })
