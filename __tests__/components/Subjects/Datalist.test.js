@@ -26,9 +26,9 @@ describe('Datalist component', () => {
   test('should render datalist with id attribute of the subjectsType', () => {
     let { wrapper } = setup()
 
-    expect(wrapper.prop('id')).toEqual('primary');
+    expect(wrapper.prop('id')).toEqual('primary')
 
-    ({ wrapper } = setup({ subjectsType: 'lingual' }))
+    ;({ wrapper } = setup({ subjectsType: 'lingual' }))
 
     expect(wrapper.prop('id')).toEqual('lingual')
   })

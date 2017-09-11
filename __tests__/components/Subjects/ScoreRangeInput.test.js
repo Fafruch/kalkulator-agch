@@ -35,9 +35,9 @@ describe('ScoreRangeInput component', () => {
     let { props, wrapper } = setup()
 
     wrapper.find('input').simulate('change', { target: { value: '10' } })
-    expect(props.onChange).toBeCalledWith({ id: '0', elementaryScore: 10, advancedScore: 82, subjectsType: 'primary' });
+    expect(props.onChange).toBeCalledWith({ id: '0', elementaryScore: 10, advancedScore: 82, subjectsType: 'primary' })
 
-    ({ props, wrapper } = setup({ examType: 'advanced' }))
+    ;({ props, wrapper } = setup({ examType: 'advanced' }))
 
     wrapper.find('input').simulate('change', { target: { value: '8' } })
     expect(props.onChange).toBeCalledWith({ id: '0', elementaryScore: 100, advancedScore: 8, subjectsType: 'primary' })

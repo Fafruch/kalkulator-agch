@@ -6,7 +6,17 @@ import createStore from '../../src/store/createStore'
 
 const setup = (setupProps = {}) => {
   const defaultProps = {
-    subject: {},
+    subject: {
+      id: '0',
+      name: 'Matematyka',
+      elementaryScore: 100,
+      advancedScore: 82,
+      maxScore: {
+        value: 182,
+        formula: 'A/B'
+      },
+      active: true
+    },
     subjectsType: 'primary',
     subjectNumber: 0,
     store: createStore()

@@ -49,9 +49,9 @@ describe('Calculator component', () => {
     let { wrapper } = setup({ isAnySubjectPresent: true, isScoreTableOpened: false })
     let buttonWrapper = wrapper.find('button').shallow()
 
-    expect(buttonWrapper.text()).toEqual('Pokaż tabelę wyników');
+    expect(buttonWrapper.text()).toEqual('Pokaż tabelę wyników')
 
-    ({ wrapper } = setup({ isAnySubjectPresent: true, isScoreTableOpened: true }))
+    ;({ wrapper } = setup({ isAnySubjectPresent: true, isScoreTableOpened: true }))
     buttonWrapper = wrapper.find('button').shallow()
 
     expect(buttonWrapper.text()).toEqual('Ukryj tabelę wyników')

@@ -1,5 +1,5 @@
-import subjects from '../../src/store/reducers/subjects'
-import { ADD_SUBJECT, UPDATE_SUBJECT, TOGGLE_SUBJECT, REMOVE_SUBJECT } from '../../src/constants/ActionTypes'
+import subjects from '../../../../src/store/reducers/subjects'
+import { ADD_SUBJECT, UPDATE_SUBJECT, TOGGLE_SUBJECT, REMOVE_SUBJECT } from '../../../../src/constants/ActionTypes'
 
 describe('subjects reducer', () => {
   it('should handle initial state', () => {
@@ -26,7 +26,7 @@ describe('subjects reducer', () => {
           elementaryScore: 0,
           advancedScore: 0,
           maxScore: {
-            score: 0,
+            value: 0,
             formula: ''
           },
           active: true
@@ -56,7 +56,7 @@ describe('subjects reducer', () => {
         elementaryScore: 0,
         advancedScore: 0,
         maxScore: {
-          score: 0,
+          value: 0,
           formula: ''
         },
         active: true

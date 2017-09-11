@@ -27,9 +27,9 @@ describe('Threshold component', () => {
   test('should has proper class depending on the threshold value', () => {
     let { wrapper } = setup()
 
-    expect(wrapper.is('.score-above')).toEqual(true);
+    expect(wrapper.is('.score-above')).toEqual(true)
 
-    ({ wrapper } = setup({ courseScore: 920, threshold: 1000 }))
+    ;({ wrapper } = setup({ courseScore: 920, threshold: 1000 }))
 
     expect(wrapper.is('.score-under')).toEqual(true)
   })
