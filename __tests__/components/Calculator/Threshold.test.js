@@ -5,9 +5,8 @@ import Threshold from '../../../src/components/Calculator/Threshold'
 
 const setup = (setupProps = {}) => {
   const defaultProps = {
-    faculty: { coursesScore: [920], thresholds: [{ '2016': 914 }] },
-    i: 0,
-    year: 2016
+    courseScore: 920,
+    threshold: 914
   }
   const props = { ...defaultProps, ...setupProps }
   const wrapper = shallow(<Threshold {...props} />)
@@ -30,7 +29,7 @@ describe('Threshold component', () => {
 
     expect(wrapper.is('.score-above')).toEqual(true);
 
-    ({ wrapper } = setup({ faculty: { coursesScore: [920], thresholds: [{ '2016': 1000 }] } }))
+    ({ wrapper } = setup({ courseScore: 920, threshold: 1000 }))
 
     expect(wrapper.is('.score-under')).toEqual(true)
   })
