@@ -56,7 +56,17 @@ const Subject = ({ subject, subjectsType, subjectNumber, onChange, onToggleClick
 )
 
 Subject.propTypes = {
-  subject: PropTypes.object.isRequired,
+  subject: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    elementaryScore: PropTypes.number.isRequired,
+    advancedScore: PropTypes.number.isRequired,
+    maxScore: PropTypes.shape({
+      value: PropTypes.number.isRequired,
+      formula: PropTypes.string.isRequired,
+    }).isRequired,
+    active: PropTypes.bool.isRequired
+  }).isRequired,
   subjectsType: PropTypes.string.isRequired,
   subjectNumber: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
