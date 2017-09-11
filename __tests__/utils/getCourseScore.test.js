@@ -112,6 +112,53 @@ describe('getCourseScore', () => {
     })
   })
 
+  describe('for mocked humane scores with second best subject not active', () => {
+    const scores = {
+      primary: [],
+      lingual: [
+        { name: 'Język angielski', maxScore: { value: 192, formula: 'A/B' }, active: false },
+        { name: 'Język francuski', maxScore: { value: 200, formula: 'A/B' }, active: true }
+      ]
+    }
+
+    const input = [
+      [
+        { name: 'Informatyka', subjects: ['Matematyka', 'Fizyka', 'Informatyka'] },
+        { name: 'Informatyki, Elektroniki i Telekomunikacji' },
+        scores
+      ],
+      [
+        {
+          name: 'Socjologia',
+          subjects: [
+            'Matematyka',
+            'Fizyka',
+            'Chemia',
+            'Informatyka',
+            'Biologia',
+            'Geografia',
+            'Filozofia',
+            'Historia',
+            'Historia sztuki',
+            'Język obcy nowożytny (inny niż uwzględniany w składniku J)',
+            'Język polski',
+            'Wiedza o społeczeństwie'
+          ]
+        },
+        { name: 'Humanistyczny' },
+        scores
+      ],
+    ]
+
+    const output = [200, 800]
+
+    input.forEach((test, i) => {
+      it(`should return correct courseScore for ${test[0].name} which is ${output[i]}`, () => {
+        expect(getCourseScore(...input[i])).toEqual(output[i])
+      })
+    })
+  })
+
   describe('for no scores', () => {
     const scores = {
       primary: [],
