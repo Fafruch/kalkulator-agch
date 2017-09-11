@@ -1,5 +1,5 @@
-import scoreTable from '../../../../src/store/reducers/scoreTable'
-import { TOGGLE_SCORE_TABLE } from '../../../../src/constants/ActionTypes'
+import scoreTable from '../../../src/store/reducers/scoreTable'
+import { TOGGLE_SCORE_TABLE } from '../../../src/constants/ActionTypes'
 
 describe('scoreTable reducer', () => {
   it('should handle initial state', () => {

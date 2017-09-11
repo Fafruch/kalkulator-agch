@@ -1,5 +1,5 @@
-import subjects from '../../../../src/store/reducers/subjects'
-import { ADD_SUBJECT, UPDATE_SUBJECT, TOGGLE_SUBJECT, REMOVE_SUBJECT } from '../../../../src/constants/ActionTypes'
+import subjects from '../../../src/store/reducers/subjects'
+import { ADD_SUBJECT, UPDATE_SUBJECT, TOGGLE_SUBJECT, REMOVE_SUBJECT } from '../../../src/constants/ActionTypes'
 
 describe('subjects reducer', () => {
   it('should handle initial state', () => {
