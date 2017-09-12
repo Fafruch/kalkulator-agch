@@ -1,0 +1,488 @@
+[
+  {
+    "name": "Górnictwa i Geoinżynierii",
+    "courses": [
+      {
+        "name": "Budownictwo",
+        "2013": 877,
+        "2014": 700,
+        "2015": 742,
+        "2016": 800
+      },
+      {
+        "name": "Górnictwo i Geologia",
+        "2013": 700,
+        "2014": 390,
+        "2015": 442,
+        "2016": 290
+      },
+      {
+        "name": "Inżynieria Środowiska",
+        "2013": 535,
+        "2014": 261,
+        "2015": 350,
+        "2016": 300
+      },
+      {
+        "name": "Zarządzanie i Inżynieria Produkcji",
+        "2013": 587,
+        "2014": 340,
+        "2015": 492,
+        "2016": 356
+      }
+    ]
+  },
+  {
+    "name": "Inżynierii Metali i Informatyki Przemysłowej",
+    "courses": [
+      {
+        "name": "Edukacja Techniczno-Informatyczna",
+        "2013": 252,
+        "2014": 282,
+        "2015": 328,
+        "2016": 328
+      },
+      {
+        "name": "Inżynieria Ciepła",
+        "2013": 600,
+        "2014": 600,
+        "2015": 700,
+        "2016": 700
+      },
+      {
+        "name": "Inżynieria Materiałowa",
+        "2013": null,
+        "2014": 352,
+        "2015": 486,
+        "2016": 450
+      },
+      {
+        "name": "Inżynieria Obliczeniowa",
+        "2013": 452,
+        "2014": 501,
+        "2015": 562,
+        "2016": 562
+      },
+      {
+        "name": "Informatyka Stosowana",
+        "2013": 350,
+        "2014": null,
+        "2015": 398,
+        "2016": 540
+      },
+      {
+        "name": "Metalurgia",
+        "2013": 250,
+        "2014": 280,
+        "2015": 355,
+        "2016": 356
+      }
+    ]
+  },
+  {
+    "name": "Elektrotechniki, Automatyki, Informatyki i Inżynierii Biomedycznej",
+    "courses": [
+      {
+        "name": "Automatyka i Robotyka",
+        "2013": 942,
+        "2014": 890,
+        "2015": 918,
+        "2016": 883
+      },
+      {
+        "name": "Elektrotechnika",
+        "2013": 740,
+        "2014": 711,
+        "2015": 776,
+        "2016": 718
+      },
+      {
+        "name": "Informatyka",
+        "2013": 920,
+        "2014": 875,
+        "2015": 934,
+        "2016": 902
+      },
+      {
+        "name": "Inżynieria Biomedyczna",
+        "2013": 888,
+        "2014": 820,
+        "2015": 860,
+        "2016": 800
+      },
+      {
+        "name": "Mikroelektronika w Technice i Medycynie",
+        "2013": null,
+        "2014": 800,
+        "2015": 848,
+        "2016": 800
+      }
+    ]
+  },
+  {
+    "name": "Informatyki, Elektroniki i Telekomunikacji",
+    "courses": [
+      {
+        "name": "Elektronika",
+        "2013": null,
+        "2014": 700,
+        "2015": 800,
+        "2016": 792
+      },
+      {
+        "name": "Elektronika i Telekomunikacja",
+        "2013": 750,
+        "2014": 780,
+        "2015": 810,
+        "2016": 798
+      },
+      {
+        "name": "Elektronika i Telekomunikacja (w j. angielskim)",
+        "2013": 751,
+        "2014": 700,
+        "2015": 800,
+        "2016": 761
+      },
+      {
+        "name": "Informatyka",
+        "2013": 932,
+        "2014": 890,
+        "2015": 918,
+        "2016": 912
+      },
+      {
+        "name": "Teleinformatyka ",
+        "2013": 908,
+        "2014": 852,
+        "2015": 900,
+        "2016": 880
+      }
+    ]
+  },
+  {
+    "name": "Inżynierii Mechanicznej i Robotyki",
+    "courses": [
+      {
+        "name": "Automatyka i Robotyka",
+        "2013": 880,
+        "2014": 871,
+        "2015": 890,
+        "2016": 854
+      },
+      {
+        "name": "Inżynieria Akustyczna",
+        "2013": 908,
+        "2014": 850,
+        "2015": 820,
+        "2016": 776
+      },
+      {
+        "name": "Inżynieria Mechaniczna i Materiałowa",
+        "2013": 659,
+        "2014": 650,
+        "2015": 736,
+        "2016": 522
+      },
+      {
+        "name": "Mechanika i Budowa Maszyn",
+        "2013": 912,
+        "2014": 706,
+        "2015": 862,
+        "2016": 782
+      },
+      {
+        "name": "Inżynieria Mechatroniczna",
+        "2013": 781,
+        "2014": 706,
+        "2015": 734,
+        "2016": 670
+      },
+      {
+        "name": "Inżynieria Mechatroniczna (w j. angielskim)",
+        "2013": 621,
+        "2014": 640,
+        "2015": 710,
+        "2016": 640
+      }
+    ]
+  },
+  {
+    "name": "Geologii, Geofizyki i Ochrony Środowiska",
+    "courses": [
+      {
+        "name": "Ekologiczne Źródła Energii",
+        "2013": 830,
+        "2014": 762,
+        "2015": 818,
+        "2016": 800
+      },
+      {
+        "name": "Geofizyka",
+        "2013": 818,
+        "2014": 754,
+        "2015": 730,
+        "2016": 508
+      },
+      {
+        "name": "Górnictwo i Geologia",
+        "2013": 602,
+        "2014": 580,
+        "2015": 500,
+        "2016": 456
+      },
+      {
+        "name": "Informatyka Stosowana",
+        "2013": 651,
+        "2014": 708,
+        "2015": 766,
+        "2016": 732
+      },
+      {
+        "name": "Inżynieria Środowiska",
+        "2013": 651,
+        "2014": 551,
+        "2015": 650,
+        "2016": 502
+      },
+      {
+        "name": "Ochrona Środowiska",
+        "2013": 450,
+        "2014": 450,
+        "2015": 402,
+        "2016": 404
+      },
+      {
+        "name": "Turystyka i Rekreacja",
+        "2013": 501,
+        "2014": 450,
+        "2015": 409,
+        "2016": 400
+      }
+    ]
+  },
+  {
+    "name": "Geodezji Górniczej i Inżynierii Środowiska",
+    "courses": [
+      {
+        "name": "Geodezja i Kartografia",
+        "2013": 856,
+        "2014": 742,
+        "2015": 742,
+        "2016": 680
+      },
+      {
+        "name": "Inżynieria Środowiska",
+        "2013": 434,
+        "2014": 371,
+        "2015": 382,
+        "2016": 360
+      }
+    ]
+  },
+  {
+    "name": "Inżynierii Materiałowej i Ceramiki",
+    "courses": [
+      {
+        "name": "Ceramika",
+        "2013": 420,
+        "2014": 405,
+        "2015": 334,
+        "2016": 354
+      },
+      {
+        "name": "Chemia Budowlana",
+        "2013": 619,
+        "2014": 416,
+        "2015": 464,
+        "2016": 450
+      },
+      {
+        "name": "Inżynieria Materiałowa",
+        "2013": 798,
+        "2014": 765,
+        "2015": 784,
+        "2016": 700
+      },
+      {
+        "name": "Technologia Chemiczna",
+        "2013": 685,
+        "2014": 522,
+        "2015": 518,
+        "2016": 472
+      }
+    ]
+  },
+  {
+    "name": "Odlewnictwa",
+    "courses": [
+      {
+        "name": "Inżynieria Procesów Odlewniczych",
+        "2013": 212,
+        "2014": 218,
+        "2015": 230,
+        "2016": 200
+      },
+      {
+        "name": "Komputerowe Wspomaganie Procesów Inżynierskich",
+        "2013": 209,
+        "2014": 264,
+        "2015": 230,
+        "2016": 220
+      }
+    ]
+  },
+  {
+    "name": "Odlewnictwa",
+    "courses": [
+      {
+        "name": "Inżynieria Materiałowa",
+        "2013": 321,
+        "2014": 321,
+        "2015": 451,
+        "2016": 340
+      },
+      {
+        "name": "Metalurgia",
+        "2013": 305,
+        "2014": 296,
+        "2015": 336,
+        "2016": 358
+      },
+      {
+        "name": "Zarządzanie i Inżynieria Produkcji",
+        "2013": 421,
+        "2014": 428,
+        "2015": 440,
+        "2016": 320
+      }
+    ]
+  },
+  {
+    "name": "Wiertnictwa, Nafty i Gazu",
+    "courses": [
+      {
+        "name": "Górnictwo i Geologia",
+        "2013": 395,
+        "2014": 504,
+        "2015": 352,
+        "2016": 240
+      },
+      {
+        "name": "Inżynieria Naftowa i Gazownicza",
+        "2013": 840,
+        "2014": 700,
+        "2015": 686,
+        "2016": 402
+      }
+    ]
+  },
+  {
+    "name": "Zarządzania",
+    "courses": [
+      {
+        "name": "Informatyka i Ekonometria",
+        "2013": 760,
+        "2014": 700,
+        "2015": 818,
+        "2016": 780
+      },
+      {
+        "name": "Zarządzanie",
+        "2013": 520,
+        "2014": 450,
+        "2015": 540,
+        "2016": 502
+      },
+      {
+        "name": "Zarządzanie i Inżynieria Produkcji",
+        "2013": 670,
+        "2014": 580,
+        "2015": 664,
+        "2016": 604
+      }
+    ]
+  },
+  {
+    "name": "Energetyki i Paliw",
+    "courses": [
+      {
+        "name": "Energetyka",
+        "2013": 848,
+        "2014": 700,
+        "2015": 770,
+        "2016": 600
+      },
+      {
+        "name": "Technologia Chemiczna",
+        "2013": 411,
+        "2014": 350,
+        "2015": 301,
+        "2016": 300
+      }
+    ]
+  },
+  {
+    "name": "Fizyki i Informatyki Stosowanej",
+    "courses": [
+      {
+        "name": "Fizyka Medyczna",
+        "2013": 624,
+        "2014": 606,
+        "2015": 736,
+        "2016": 564
+      },
+      {
+        "name": "Fizyka Techniczna",
+        "2013": 716,
+        "2014": 597,
+        "2015": 680,
+        "2016": 568
+      },
+      {
+        "name": "Informatyka Stosowana",
+        "2013": 840,
+        "2014": 829,
+        "2015": 860,
+        "2016": 842
+      }
+    ]
+  },
+  {
+    "name": "Matematyki Stosowanej",
+    "courses": [
+      {
+        "name": "Matematyka",
+        "2013": 765,
+        "2014": 680,
+        "2015": 771,
+        "2016": 744
+      }
+    ]
+  },
+  {
+    "name": "Humanistyczny",
+    "courses": [
+      {
+        "name": "Kulturoznawstwo",
+        "2013": 433,
+        "2014": 204,
+        "2015": 214,
+        "2016": 310
+      },
+      {
+        "name": "Socjologia",
+        "2013": 341,
+        "2014": 209,
+        "2015": 202,
+        "2016": 307
+      },
+      {
+        "name": "Informatyka Społeczna",
+        "2013": null,
+        "2014": null,
+        "2015": null,
+        "2016": 700
+      }
+    ]
+  }
+]

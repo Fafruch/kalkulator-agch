@@ -1,31 +1,43 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import Threshold from './Threshold'
 import getCourseScore from '../../utils/getCourseScore'
 import facultiesArray from '../../faculties.json'
+import thresholdsArray from '../../thresholds.json'
+
+const thresholdsYearsArray = [2013, 2014, 2015, 2016]
 
 const ScoreTable = ({ subjects }) => (
-  <div>
-    <br />
-    <br />
-    <table className='table table-bordered score-table'>
-      <tbody>
-        <tr>
-          <th scope='row'>
-            Wydział
-          </th>
-          <th scope='row'>
-            Kierunek
-          </th>
-          {/* <th scope='row'>
-            Przedmioty
-          </th> */}
-          <th scope='row'>
-            Wynik
-          </th>
-        </tr>
-        {facultiesArray.map((faculty) =>
-          faculty.courses.map((course, courseIndex) =>
+  <table className='table table-bordered score-table'>
+    <tbody>
+
+      <tr>
+        <th colSpan='3' />
+        <th colSpan={thresholdsYearsArray.length} className='thresholds-title'>
+          Progi z zeszłych lat
+        </th>
+      </tr>
+
+      <tr>
+        <th scope='row'>
+          Wydział
+        </th>
+        <th scope='row'>
+          Kierunek
+        </th>
+        <th scope='row'>
+          Wynik
+        </th>
+        {thresholdsYearsArray.map((year, yearIndex) => <th key={yearIndex}>{year}</th>)}
+      </tr>
+
+      {facultiesArray.map((faculty, facultyIndex) =>
+        faculty.courses.map((course, courseIndex) => {
+          const courseScore = getCourseScore(course, faculty, subjects)
+          const threshold = thresholdsArray[facultyIndex].courses[courseIndex]
+
+          return (
             <tr key={courseIndex}>
               {!courseIndex &&
               <td rowSpan={faculty.courses.length}>
@@ -36,21 +48,22 @@ const ScoreTable = ({ subjects }) => (
               <td>
                 {course.name}
               </td>
-              {/* <td>
-              {course.subjects.join(', ')}
-            </td> */}
-              <td>
+              <td className='score'>
                 <strong>
-                  {getCourseScore(course, faculty, subjects)}
+                  {courseScore}
                 </strong>
               </td>
+              {thresholdsYearsArray.map((year, yearIndex) =>
+                <td key={yearIndex} className='threshold'>
+                  <Threshold courseScore={courseScore} threshold={threshold[year]} />
+                </td>
+              )}
             </tr>
           )
-        )
-        }
-      </tbody>
-    </table>
-  </div>
+        })
+      )}
+    </tbody>
+  </table>
 )
 ScoreTable.propTypes = {
   subjects: PropTypes.shape({

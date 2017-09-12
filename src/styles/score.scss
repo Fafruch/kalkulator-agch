@@ -2,8 +2,29 @@ $scoreTable-height: 3056px;
 $scoreTable-transition-enter-time: 300ms;
 $scoreTable-transition-leave-time: 300ms;
 
+.score-table {
+  margin-top: 2rem;
+}
+
 .score-table th {
   font-size: 1.25rem;
+}
+
+.score-table .score,
+.score-table .threshold {
+  text-align: center
+}
+
+.score-above {
+  color: #5cb85c;
+}
+
+.score-under {
+  color: #d9534f;
+}
+
+.thresholds-title {
+  text-align: center;
 }
 
 .scoreTable-enter {
