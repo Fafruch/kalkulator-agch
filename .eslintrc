@@ -2,16 +2,19 @@
   "parser": "babel-eslint",
   "extends": [
     "standard",
-    "standard-react"
-    /* "airbnb" */
+    "standard-react",
+    /* "airbnb", */
+    "plugin:jest/recommended"
   ],
   "plugins": [
     "babel",
     "react",
-    "promise"
+    "promise",
+    "jest"
   ],
   "env": {
-    "browser" : true
+    "browser" : true,
+    "jest/globals" : true
   },
   "globals": {
     "__DEV__"      : false,
