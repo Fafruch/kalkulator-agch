@@ -13,7 +13,7 @@ const subjects = (state = { primary: [], lingual: [] }, action) => {
             elementaryScore: 0,
             advancedScore: 0,
             maxScore: {
-              score: 0,
+              value: 0,
               formula: ''
             },
             active: true

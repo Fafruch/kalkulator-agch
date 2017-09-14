@@ -19,12 +19,12 @@ const Calculator = ({ maxScoreWrapper, isScoreTableOpened, isAnySubjectPresent, 
         {!!maxPrimaryScore &&
         <BestSubject
           bestSubject={maxScoreWrapper.primary}
-          subjectType={PRIMARY_SUBJECTS}
+          subjectsType={PRIMARY_SUBJECTS}
         />}
         {!!maxLingualScore &&
         <BestSubject
           bestSubject={maxScoreWrapper.lingual}
-          subjectType={LINGUAL_SUBJECTS}
+          subjectsType={LINGUAL_SUBJECTS}
         />}
         <br />
         <MaxScore

@@ -13,7 +13,8 @@ export const addSubject = (subjectsType) => ({
 })
 
 export const updateSubject = ({ id, subjectsType, ...updatedProperties }) => {
-  if (updatedProperties.elementaryScore && updatedProperties.advancedScore) {
+  if (typeof updatedProperties.elementaryScore !== 'undefined' &&
+    typeof updatedProperties.advancedScore !== 'undefined') {
     updatedProperties.maxScore = getSubjectScore(updatedProperties.elementaryScore, updatedProperties.advancedScore)
   }
 

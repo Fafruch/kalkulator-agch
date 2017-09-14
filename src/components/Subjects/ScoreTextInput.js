@@ -28,10 +28,10 @@ const ScoreTextInput = ({ subject: { id, elementaryScore, advancedScore }, examT
 ScoreTextInput.propTypes = {
   subject: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
     elementaryScore: PropTypes.number.isRequired,
     advancedScore: PropTypes.number.isRequired,
-    maxScore: PropTypes.object.isRequired,
+    maxScore: PropTypes.object,
     active: PropTypes.bool.isRequired
   }).isRequired,
   examType: PropTypes.string.isRequired,

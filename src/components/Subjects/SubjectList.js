@@ -28,6 +28,10 @@ SubjectList.propTypes = {
     name: PropTypes.string.isRequired,
     elementaryScore: PropTypes.number.isRequired,
     advancedScore: PropTypes.number.isRequired,
+    maxScore: PropTypes.shape({
+      value: PropTypes.number.isRequired,
+      formula: PropTypes.string.isRequired,
+    }).isRequired,
     active: PropTypes.bool.isRequired
   }).isRequired).isRequired,
   subjectsType: PropTypes.string.isRequired
