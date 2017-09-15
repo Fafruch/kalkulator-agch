@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const DeleteSubject = ({ id, subjectsType, onDelete }) => (
   <img
-    src='https://png.icons8.com/delete-bin/ios7/100'
+    src='/icons/delete-bin-100.png'
     alt='Usuń przedmiot'
     onClick={() => onDelete(id, subjectsType)}
     className='subject-icon'
