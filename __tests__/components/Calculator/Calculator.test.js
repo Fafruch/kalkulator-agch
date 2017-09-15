@@ -47,13 +47,11 @@ describe('Calculator component', () => {
 
   test('should render button with corresponding name when scoreTable is opened', () => {
     let { wrapper } = setup({ isAnySubjectPresent: true, isScoreTableOpened: false })
-    let buttonWrapper = wrapper.find('button').shallow()
 
-    expect(buttonWrapper.text()).toEqual('Pokaż tabelę wyników')
+    expect(wrapper.find('button').text()).toEqual('Pokaż tabelę wyników')
 
     ;({ wrapper } = setup({ isAnySubjectPresent: true, isScoreTableOpened: true }))
-    buttonWrapper = wrapper.find('button').shallow()
 
-    expect(buttonWrapper.text()).toEqual('Ukryj tabelę wyników')
+    expect(wrapper.find('button').text()).toEqual('Ukryj tabelę wyników')
   })
 })

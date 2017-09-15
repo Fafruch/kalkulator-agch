@@ -21,12 +21,6 @@ describe('Subjects component', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  test('should use subjectsType prop', () => {
-    const { wrapper } = setup({ subjectsType: 'primary' })
-
-    expect(wrapper.instance().props.subjectsType).toEqual('primary')
-  })
-
   test('should render proper headline based on subjectsType prop', () => {
     const { wrapper } = setup({ subjectsType: 'lingual' })
 

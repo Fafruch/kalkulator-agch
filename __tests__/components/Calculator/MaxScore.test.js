@@ -25,8 +25,8 @@ describe('MaxScore component', () => {
   })
 
   test('should render total maxScore', () => {
-    const { wrapper } = setup()
+    const { props, wrapper } = setup()
 
-    expect(wrapper.find('b').text()).toEqual(` ${182 * 4 + 192} `)
+    expect(wrapper.find('b').text()).toEqual(` ${props.maxPrimaryScore * 4 + props.maxLingualScore} `)
   })
 })
