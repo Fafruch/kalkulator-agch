@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const ToggleSubject = ({ id, active, subjectsType, onToggleClick }) => (
   <img
-    src={active ? 'https://png.icons8.com/toggle-on/win10/96' : 'https://png.icons8.com/toggle-off/win10/96'}
+    src={active ? '/icons/toggle-on-96.png' : '/icons/toggle-off-96.png'}
     alt={active ? 'Nie bierz pod uwagę przedmiotu' : 'Bierz przedmiot pod uwagę'}
     onClick={() => onToggleClick(id, subjectsType)}
     className='subject-icon'
