@@ -13,34 +13,38 @@ const Calculator = ({ maxScoreWrapper, isScoreTableOpened, isAnySubjectPresent, 
 
   if (isAnySubjectPresent) {
     return (
-      <div className='m-4'>
-        <h3>Wynik</h3>
-        <hr />
-        {!!maxPrimaryScore &&
-        <BestSubject
-          bestSubject={maxScoreWrapper.primary}
-          subjectsType={PRIMARY_SUBJECTS}
-        />}
-        {!!maxLingualScore &&
-        <BestSubject
-          bestSubject={maxScoreWrapper.lingual}
-          subjectsType={LINGUAL_SUBJECTS}
-        />}
-        <br />
-        <MaxScore
-          maxPrimaryScore={maxPrimaryScore}
-          maxLingualScore={maxLingualScore}
-        />
-        <br />
-        <button
-          className='btn btn-secondary'
-          onClick={onToggleClick}
-        >
-          {isScoreTableOpened ? 'Ukryj tabelę wyników' : 'Pokaż tabelę wyników'}
-        </button>
-        <CSSTransitionGroup transitionName='scoreTable' transitionEnterTimeout={300} transitionLeaveTimeout={300}>
-          {isScoreTableOpened && <ScoreTableContainer />}
-        </CSSTransitionGroup>
+      <div>
+        <div className='m-4'>
+          <h3>Wynik</h3>
+          <hr />
+          {!!maxPrimaryScore &&
+          <BestSubject
+            bestSubject={maxScoreWrapper.primary}
+            subjectsType={PRIMARY_SUBJECTS}
+          />}
+          {!!maxLingualScore &&
+          <BestSubject
+            bestSubject={maxScoreWrapper.lingual}
+            subjectsType={LINGUAL_SUBJECTS}
+          />}
+          <br />
+          <MaxScore
+            maxPrimaryScore={maxPrimaryScore}
+            maxLingualScore={maxLingualScore}
+          />
+          <br />
+          <button
+            className='btn btn-secondary'
+            onClick={onToggleClick}
+          >
+            {isScoreTableOpened ? 'Ukryj tabelę wyników' : 'Pokaż tabelę wyników'}
+          </button>
+        </div>
+        <div className='m-0'>
+          <CSSTransitionGroup transitionName='scoreTable' transitionEnterTimeout={300} transitionLeaveTimeout={300}>
+            {isScoreTableOpened && <ScoreTableContainer />}
+          </CSSTransitionGroup>
+        </div>
       </div>
     )
   }
