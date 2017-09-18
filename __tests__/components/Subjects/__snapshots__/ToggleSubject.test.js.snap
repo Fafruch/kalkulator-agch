@@ -12,14 +12,14 @@ ShallowWrapper {
     alt="Nie bierz pod uwagę przedmiotu"
     className="subject-icon"
     onClick={[Function]}
-    src="https://png.icons8.com/toggle-on/win10/96"
+    src="/icons/toggle-on-96.png"
 />,
   "nodes": Array [
     <img
       alt="Nie bierz pod uwagę przedmiotu"
       className="subject-icon"
       onClick={[Function]}
-      src="https://png.icons8.com/toggle-on/win10/96"
+      src="/icons/toggle-on-96.png"
 />,
   ],
   "options": Object {},
@@ -70,14 +70,14 @@ ShallowWrapper {
           alt="Nie bierz pod uwagę przedmiotu"
           className="subject-icon"
           onClick={[Function]}
-          src="https://png.icons8.com/toggle-on/win10/96"
+          src="/icons/toggle-on-96.png"
 />,
         "_debugID": 2,
         "_renderedOutput": <img
           alt="Nie bierz pod uwagę przedmiotu"
           className="subject-icon"
           onClick={[Function]}
-          src="https://png.icons8.com/toggle-on/win10/96"
+          src="/icons/toggle-on-96.png"
 />,
       },
       "_renderedNodeType": 0,

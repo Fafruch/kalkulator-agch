@@ -29,7 +29,7 @@ describe('ToggleSubject component', () => {
   test('should render toggled-off icon when subject is not active', () => {
     const { wrapper } = setup({ active: false })
 
-    expect(wrapper.prop('src')).toEqual('https://png.icons8.com/toggle-off/win10/96')
+    expect(wrapper.prop('src')).toEqual('/icons/toggle-off-96.png')
   })
 
   test('should have proper alt attribute based on activeness', () => {
