@@ -12,14 +12,14 @@ ShallowWrapper {
     alt="Usuń przedmiot"
     className="subject-icon"
     onClick={[Function]}
-    src="https://png.icons8.com/delete-bin/ios7/100"
+    src="/icons/delete-bin-100.png"
 />,
   "nodes": Array [
     <img
       alt="Usuń przedmiot"
       className="subject-icon"
       onClick={[Function]}
-      src="https://png.icons8.com/delete-bin/ios7/100"
+      src="/icons/delete-bin-100.png"
 />,
   ],
   "options": Object {},
@@ -68,14 +68,14 @@ ShallowWrapper {
           alt="Usuń przedmiot"
           className="subject-icon"
           onClick={[Function]}
-          src="https://png.icons8.com/delete-bin/ios7/100"
+          src="/icons/delete-bin-100.png"
 />,
         "_debugID": 2,
         "_renderedOutput": <img
           alt="Usuń przedmiot"
           className="subject-icon"
           onClick={[Function]}
-          src="https://png.icons8.com/delete-bin/ios7/100"
+          src="/icons/delete-bin-100.png"
 />,
       },
       "_renderedNodeType": 0,
