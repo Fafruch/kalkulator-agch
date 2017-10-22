@@ -3,6 +3,9 @@ Aplikacja służąca do liczenia punktów rekrutacyjnych na studia I stopnia na 
 
 ![Screenshot](https://cdn.pbrd.co/images/GBNMd3q.png)
 
+## On-line demo
+https://fafruch.github.io/kalkulator-agh
+
  ## Instalacja
 
 1.  Sklonuj repozytorium: https://github.com/Fafruch/kalkulator-agh.git
@@ -14,7 +17,7 @@ Aplikacja służąca do liczenia punktów rekrutacyjnych na studia I stopnia na 
 ## Opis
 
 Projekt [ReactJS](http://facebook.github.io/react/index.html) + [React Redux](https://github.com/reactjs/react-redux)
-powstały w oparciu o [React React Redux Starter Kit](https://github.com/davezuko/react-redux-starter-kit).  
+powstały w oparciu o [Create React App](https://github.com/facebookincubator/create-react-app).  
 
 Dodatkowo wykorzystuje:
 * [React Transition Group](https://github.com/reactjs/react-transition-group/tree/v1-stable)
