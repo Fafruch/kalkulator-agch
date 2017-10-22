@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeleteSubject component should render 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DeleteSubject
+    id="0"
+    onDelete={[Function]}
+    subjectsType="primary"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "alt": "Usuń przedmiot",
+      "className": "subject-icon",
+      "onClick": [Function],
+      "src": "/icons/delete-bin-100.png",
+    },
+    "ref": null,
+    "rendered": null,
+    "type": "img",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "alt": "Usuń przedmiot",
+        "className": "subject-icon",
+        "onClick": [Function],
+        "src": "/icons/delete-bin-100.png",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": "img",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

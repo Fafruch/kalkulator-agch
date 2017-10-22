@@ -1,0 +1,255 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Introduction component should render 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Introduction />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <hr />,
+        <h4>
+          Kalkulator AGH policzy za Ciebie ile otrzymasz punktów podczas rekrutacji
+</h4>,
+        <br />,
+        <p>
+          1. Dodaj przedmioty główne (czyli np. matematyka, fizyka), które są liczone na wybranym przez Ciebie kierunku
+          <br />
+          2. Dodaj języki zdane na maturze
+          <br />
+          3. Sprawdź wynik!
+          <br />
+</p>,
+        <hr />,
+      ],
+      "className": "m-4",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Kalkulator AGH policzy za Ciebie ile otrzymasz punktów podczas rekrutacji",
+        },
+        "ref": null,
+        "rendered": "Kalkulator AGH policzy za Ciebie ile otrzymasz punktów podczas rekrutacji",
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "1. Dodaj przedmioty główne (czyli np. matematyka, fizyka), które są liczone na wybranym przez Ciebie kierunku",
+            <br />,
+            "2. Dodaj języki zdane na maturze",
+            <br />,
+            "3. Sprawdź wynik!",
+            <br />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "1. Dodaj przedmioty główne (czyli np. matematyka, fizyka), które są liczone na wybranym przez Ciebie kierunku",
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          "2. Dodaj języki zdane na maturze",
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          "3. Sprawdź wynik!",
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <hr />,
+          <h4>
+            Kalkulator AGH policzy za Ciebie ile otrzymasz punktów podczas rekrutacji
+</h4>,
+          <br />,
+          <p>
+            1. Dodaj przedmioty główne (czyli np. matematyka, fizyka), które są liczone na wybranym przez Ciebie kierunku
+            <br />
+            2. Dodaj języki zdane na maturze
+            <br />
+            3. Sprawdź wynik!
+            <br />
+</p>,
+          <hr />,
+        ],
+        "className": "m-4",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Kalkulator AGH policzy za Ciebie ile otrzymasz punktów podczas rekrutacji",
+          },
+          "ref": null,
+          "rendered": "Kalkulator AGH policzy za Ciebie ile otrzymasz punktów podczas rekrutacji",
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "1. Dodaj przedmioty główne (czyli np. matematyka, fizyka), które są liczone na wybranym przez Ciebie kierunku",
+              <br />,
+              "2. Dodaj języki zdane na maturze",
+              <br />,
+              "3. Sprawdź wynik!",
+              <br />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "1. Dodaj przedmioty główne (czyli np. matematyka, fizyka), które są liczone na wybranym przez Ciebie kierunku",
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            "2. Dodaj języki zdane na maturze",
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            "3. Sprawdź wynik!",
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

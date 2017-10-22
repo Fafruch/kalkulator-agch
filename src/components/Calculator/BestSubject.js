@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { PRIMARY_SUBJECTS } from '../../constants/SubjectTypes'
+import { PRIMARY_SUBJECTS } from '../../constants/subjectTypes'
 
 const BestSubject = ({ bestSubject: { name, maxScore }, subjectsType }) => (
   <div>

@@ -1,0 +1,363 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Datalist component should render 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Datalist
+    subjectsType="primary"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <option
+          value="Biologia"
+/>,
+        <option
+          value="Chemia"
+/>,
+        <option
+          value="Fizyka"
+/>,
+        <option
+          value="Geografia"
+/>,
+        <option
+          value="Informatyka"
+/>,
+        <option
+          value="Matematyka"
+/>,
+        <option
+          value="Filozofia"
+/>,
+        <option
+          value="Historia"
+/>,
+        <option
+          value="Historia sztuki"
+/>,
+        <option
+          value="Wiedza o społeczeństwie"
+/>,
+        <option
+          value="Język polski"
+/>,
+      ],
+      "id": "primary",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "value": "Biologia",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "option",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "value": "Chemia",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "option",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "value": "Fizyka",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "option",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "value": "Geografia",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "option",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "value": "Informatyka",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "option",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "value": "Matematyka",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "option",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "value": "Filozofia",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "option",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "value": "Historia",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "option",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "value": "Historia sztuki",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "option",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "value": "Wiedza o społeczeństwie",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "option",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "value": "Język polski",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "option",
+      },
+    ],
+    "type": "datalist",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <option
+            value="Biologia"
+/>,
+          <option
+            value="Chemia"
+/>,
+          <option
+            value="Fizyka"
+/>,
+          <option
+            value="Geografia"
+/>,
+          <option
+            value="Informatyka"
+/>,
+          <option
+            value="Matematyka"
+/>,
+          <option
+            value="Filozofia"
+/>,
+          <option
+            value="Historia"
+/>,
+          <option
+            value="Historia sztuki"
+/>,
+          <option
+            value="Wiedza o społeczeństwie"
+/>,
+          <option
+            value="Język polski"
+/>,
+        ],
+        "id": "primary",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "value": "Biologia",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "value": "Chemia",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "value": "Fizyka",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "value": "Geografia",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "value": "Informatyka",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "value": "Matematyka",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "value": "Filozofia",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "value": "Historia",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "value": "Historia sztuki",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "value": "Wiedza o społeczeństwie",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "value": "Język polski",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "option",
+        },
+      ],
+      "type": "datalist",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

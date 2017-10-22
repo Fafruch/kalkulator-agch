@@ -5,7 +5,9 @@ const Footer = () => (
     <div className='formulas-info'>
       <div className='formulas-info-content'>
         Sposób obliczania punktów znajdziesz na stronie:&nbsp;&nbsp;
-        <a target='_blank'
+        <a
+          target='_blank'
+          rel='noopener noreferrer'
           href='http://www.agh.edu.pl/rekrutacja/studia-pierwszego-stopnia/rekrutacja-20152016/nowa-matura/'
           alt='Link do strony AGH ze sposobem obliczania punktów'
         >

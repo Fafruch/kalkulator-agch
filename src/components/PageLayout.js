@@ -5,7 +5,7 @@ import Introduction from '../components/Introduction'
 import Subjects from './Subjects'
 import CalculatorContainer from '../containers/CalculatorContainer'
 import Footer from '../components/Footer'
-import { PRIMARY_SUBJECTS, LINGUAL_SUBJECTS } from '../constants/SubjectTypes'
+import { PRIMARY_SUBJECTS, LINGUAL_SUBJECTS } from '../constants/subjectTypes'
 
 const PageLayout = () => (
   <div>
@@ -16,9 +16,7 @@ const PageLayout = () => (
       <Subjects subjectsType={LINGUAL_SUBJECTS} />
       <CalculatorContainer />
     </div>
-    <div>
-      <Footer />
-    </div>
+    <Footer />
   </div>
 )
 

@@ -1,0 +1,242 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MaxScore component should render 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MaxScore
+    maxLingualScore={192}
+    maxPrimaryScore={182}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3>
+          <small>
+                     Twój maksymalny wynik wynosi 
+          </small>
+           
+          <b>
+                     
+                    920
+                     
+          </b>
+           
+          <small>
+                     pkt.
+          </small>
+</h3>,
+        <br />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <small>
+               Twój maksymalny wynik wynosi 
+</small>,
+            " ",
+            <b>
+               
+              920
+               
+</b>,
+            " ",
+            <small>
+               pkt.
+</small>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": " Twój maksymalny wynik wynosi ",
+            },
+            "ref": null,
+            "rendered": " Twój maksymalny wynik wynosi ",
+            "type": "small",
+          },
+          " ",
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                920,
+                " ",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              920,
+              " ",
+            ],
+            "type": "b",
+          },
+          " ",
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": " pkt.",
+            },
+            "ref": null,
+            "rendered": " pkt.",
+            "type": "small",
+          },
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            <small>
+                         Twój maksymalny wynik wynosi 
+            </small>
+             
+            <b>
+                         
+                        920
+                         
+            </b>
+             
+            <small>
+                         pkt.
+            </small>
+</h3>,
+          <br />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <small>
+                 Twój maksymalny wynik wynosi 
+</small>,
+              " ",
+              <b>
+                 
+                920
+                 
+</b>,
+              " ",
+              <small>
+                 pkt.
+</small>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": " Twój maksymalny wynik wynosi ",
+              },
+              "ref": null,
+              "rendered": " Twój maksymalny wynik wynosi ",
+              "type": "small",
+            },
+            " ",
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  920,
+                  " ",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                920,
+                " ",
+              ],
+              "type": "b",
+            },
+            " ",
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": " pkt.",
+              },
+              "ref": null,
+              "rendered": " pkt.",
+              "type": "small",
+            },
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
