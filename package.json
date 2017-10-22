@@ -8,6 +8,7 @@
     "url": "git+https://github.com/Fafruch/kalkulator-agh.git"
   },
   "author": "Filip Duczyminski <f.duczyminski@gmail.com>",
+  "homepage" : "http://fafruch.github.io/kalkulator-agh",
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
     "gh-pages": "^1.0.0",
@@ -47,6 +48,6 @@
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d build"
   }
 }
