@@ -20,7 +20,7 @@ ShallowWrapper {
       "children": Array [
         <img
           alt="Logo AGH"
-          src="/agh_logo.jpg"
+          src="agh_logo.jpg"
 />,
         <h1>
           Kalkulator
@@ -36,7 +36,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "alt": "Logo AGH",
-          "src": "/agh_logo.jpg",
+          "src": "agh_logo.jpg",
         },
         "ref": null,
         "rendered": null,
@@ -65,7 +65,7 @@ ShallowWrapper {
         "children": Array [
           <img
             alt="Logo AGH"
-            src="/agh_logo.jpg"
+            src="agh_logo.jpg"
 />,
           <h1>
             Kalkulator
@@ -81,7 +81,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "alt": "Logo AGH",
-            "src": "/agh_logo.jpg",
+            "src": "agh_logo.jpg",
           },
           "ref": null,
           "rendered": null,
