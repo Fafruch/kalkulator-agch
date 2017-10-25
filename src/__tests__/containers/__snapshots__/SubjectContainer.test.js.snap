@@ -2,19 +2,11 @@
 
 exports[`SubjectContainer component should render 1`] = `
 ShallowWrapper {
-  "complexSelector": ComplexSelector {
-    "buildPredicate": [Function],
-    "childrenOfNode": [Function],
-    "findWhereUnwrapped": [Function],
-  },
   "length": 1,
-  "node": <Subject
-    onChange={[Function]}
-    onDelete={[Function]}
-    onToggleClick={[Function]}
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Connect(Subject)
     store={
         Object {
-            "asyncReducers": Object {},
             "dispatch": [Function],
             "getState": [Function],
             "replaceReducer": [Function],
@@ -38,264 +30,87 @@ ShallowWrapper {
     subjectNumber={0}
     subjectsType="primary"
 />,
-  "nodes": Array [
-    <Subject
-      onChange={[Function]}
-      onDelete={[Function]}
-      onToggleClick={[Function]}
-      store={
-            Object {
-                  "asyncReducers": Object {},
-                  "dispatch": [Function],
-                  "getState": [Function],
-                  "replaceReducer": [Function],
-                  "subscribe": [Function],
-                  Symbol(observable): [Function],
-                }
-      }
-      subject={
-            Object {
-                  "active": true,
-                  "advancedScore": 82,
-                  "elementaryScore": 100,
-                  "id": "0",
-                  "maxScore": Object {
-                    "formula": "A/B",
-                    "value": 182,
-                  },
-                  "name": "Matematyka",
-                }
-      }
-      subjectNumber={0}
-      subjectsType="primary"
-/>,
-  ],
-  "options": Object {},
-  "renderer": ReactShallowRenderer {
-    "_instance": ShallowComponentWrapper {
-      "_calledComponentWillUnmount": false,
-      "_compositeType": 0,
-      "_context": Object {},
-      "_currentElement": <Connect(Subject)
-        store={
-                Object {
-                        "asyncReducers": Object {},
-                        "dispatch": [Function],
-                        "getState": [Function],
-                        "replaceReducer": [Function],
-                        "subscribe": [Function],
-                        Symbol(observable): [Function],
-                      }
-        }
-        subject={
-                Object {
-                        "active": true,
-                        "advancedScore": 82,
-                        "elementaryScore": 100,
-                        "id": "0",
-                        "maxScore": Object {
-                          "formula": "A/B",
-                          "value": 182,
-                        },
-                        "name": "Matematyka",
-                      }
-        }
-        subjectNumber={0}
-        subjectsType="primary"
-/>,
-      "_debugID": 1,
-      "_hostContainerInfo": null,
-      "_hostParent": null,
-      "_instance": Connect {
-        "_reactInternalInstance": [Circular],
-        "context": Object {
-          "store": undefined,
-          "storeSubscription": undefined,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "function",
+    "props": Object {
+      "onChange": [Function],
+      "onDelete": [Function],
+      "onToggleClick": [Function],
+      "store": Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      },
+      "subject": Object {
+        "active": true,
+        "advancedScore": 82,
+        "elementaryScore": 100,
+        "id": "0",
+        "maxScore": Object {
+          "formula": "A/B",
+          "value": 182,
         },
-        "props": Object {
-          "store": Object {
-            "asyncReducers": Object {},
-            "dispatch": [Function],
-            "getState": [Function],
-            "replaceReducer": [Function],
-            "subscribe": [Function],
-            Symbol(observable): [Function],
-          },
-          "subject": Object {
-            "active": true,
-            "advancedScore": 82,
-            "elementaryScore": 100,
-            "id": "0",
-            "maxScore": Object {
-              "formula": "A/B",
-              "value": 182,
-            },
-            "name": "Matematyka",
-          },
-          "subjectNumber": 0,
-          "subjectsType": "primary",
-        },
-        "propsMode": true,
-        "refs": Object {},
-        "renderCount": 0,
-        "selector": Object {
-          "error": null,
-          "props": Object {
-            "onChange": [Function],
-            "onDelete": [Function],
-            "onToggleClick": [Function],
-            "store": Object {
-              "asyncReducers": Object {},
-              "dispatch": [Function],
-              "getState": [Function],
-              "replaceReducer": [Function],
-              "subscribe": [Function],
-              Symbol(observable): [Function],
-            },
-            "subject": Object {
-              "active": true,
-              "advancedScore": 82,
-              "elementaryScore": 100,
-              "id": "0",
-              "maxScore": Object {
-                "formula": "A/B",
-                "value": 182,
-              },
-              "name": "Matematyka",
-            },
-            "subjectNumber": 0,
-            "subjectsType": "primary",
-          },
-          "run": [Function],
-          "shouldComponentUpdate": false,
-        },
-        "setWrappedInstance": [Function],
-        "state": Object {},
+        "name": "Matematyka",
+      },
+      "subjectNumber": 0,
+      "subjectsType": "primary",
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "function",
+      "props": Object {
+        "onChange": [Function],
+        "onDelete": [Function],
+        "onToggleClick": [Function],
         "store": Object {
-          "asyncReducers": Object {},
           "dispatch": [Function],
           "getState": [Function],
           "replaceReducer": [Function],
           "subscribe": [Function],
           Symbol(observable): [Function],
         },
-        "updater": Object {
-          "enqueueCallback": [Function],
-          "enqueueCallbackInternal": [Function],
-          "enqueueElementInternal": [Function],
-          "enqueueForceUpdate": [Function],
-          "enqueueReplaceState": [Function],
-          "enqueueSetState": [Function],
-          "isMounted": [Function],
-          "validateCallback": [Function],
+        "subject": Object {
+          "active": true,
+          "advancedScore": 82,
+          "elementaryScore": 100,
+          "id": "0",
+          "maxScore": Object {
+            "formula": "A/B",
+            "value": 182,
+          },
+          "name": "Matematyka",
         },
-        "version": 0,
+        "subjectNumber": 0,
+        "subjectsType": "primary",
       },
-      "_mountOrder": 1,
-      "_pendingCallbacks": null,
-      "_pendingElement": null,
-      "_pendingForceUpdate": false,
-      "_pendingReplaceState": false,
-      "_pendingStateQueue": null,
-      "_renderedComponent": NoopInternalComponent {
-        "_currentElement": <Subject
-          onChange={[Function]}
-          onDelete={[Function]}
-          onToggleClick={[Function]}
-          store={
-                    Object {
-                              "asyncReducers": Object {},
-                              "dispatch": [Function],
-                              "getState": [Function],
-                              "replaceReducer": [Function],
-                              "subscribe": [Function],
-                              Symbol(observable): [Function],
-                            }
-          }
-          subject={
-                    Object {
-                              "active": true,
-                              "advancedScore": 82,
-                              "elementaryScore": 100,
-                              "id": "0",
-                              "maxScore": Object {
-                                "formula": "A/B",
-                                "value": 182,
-                              },
-                              "name": "Matematyka",
-                            }
-          }
-          subjectNumber={0}
-          subjectsType="primary"
-/>,
-        "_debugID": 2,
-        "_renderedOutput": <Subject
-          onChange={[Function]}
-          onDelete={[Function]}
-          onToggleClick={[Function]}
-          store={
-                    Object {
-                              "asyncReducers": Object {},
-                              "dispatch": [Function],
-                              "getState": [Function],
-                              "replaceReducer": [Function],
-                              "subscribe": [Function],
-                              Symbol(observable): [Function],
-                            }
-          }
-          subject={
-                    Object {
-                              "active": true,
-                              "advancedScore": 82,
-                              "elementaryScore": 100,
-                              "id": "0",
-                              "maxScore": Object {
-                                "formula": "A/B",
-                                "value": 182,
-                              },
-                              "name": "Matematyka",
-                            }
-          }
-          subjectNumber={0}
-          subjectsType="primary"
-/>,
-      },
-      "_renderedNodeType": 1,
-      "_rootNodeID": 0,
-      "_topLevelWrapper": null,
-      "_updateBatchNumber": null,
-      "_warnedAboutRefsInRender": false,
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
     },
-    "getRenderOutput": [Function],
-    "render": [Function],
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
   },
-  "root": [Circular],
-  "unrendered": <Connect(Subject)
-    store={
-        Object {
-            "asyncReducers": Object {},
-            "dispatch": [Function],
-            "getState": [Function],
-            "replaceReducer": [Function],
-            "subscribe": [Function],
-            Symbol(observable): [Function],
-          }
-    }
-    subject={
-        Object {
-            "active": true,
-            "advancedScore": 82,
-            "elementaryScore": 100,
-            "id": "0",
-            "maxScore": Object {
-              "formula": "A/B",
-              "value": 182,
-            },
-            "name": "Matematyka",
-          }
-    }
-    subjectNumber={0}
-    subjectsType="primary"
-/>,
 }
 `;

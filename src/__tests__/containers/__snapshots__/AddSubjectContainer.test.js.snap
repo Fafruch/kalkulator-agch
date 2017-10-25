@@ -2,17 +2,11 @@
 
 exports[`AddSubjectContainer component should render 1`] = `
 ShallowWrapper {
-  "complexSelector": ComplexSelector {
-    "buildPredicate": [Function],
-    "childrenOfNode": [Function],
-    "findWhereUnwrapped": [Function],
-  },
   "length": 1,
-  "node": <AddSubject
-    onAdd={[Function]}
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Connect(AddSubject)
     store={
         Object {
-            "asyncReducers": Object {},
             "dispatch": [Function],
             "getState": [Function],
             "replaceReducer": [Function],
@@ -22,162 +16,59 @@ ShallowWrapper {
     }
     subjectsType="primary"
 />,
-  "nodes": Array [
-    <AddSubject
-      onAdd={[Function]}
-      store={
-            Object {
-                  "asyncReducers": Object {},
-                  "dispatch": [Function],
-                  "getState": [Function],
-                  "replaceReducer": [Function],
-                  "subscribe": [Function],
-                  Symbol(observable): [Function],
-                }
-      }
-      subjectsType="primary"
-/>,
-  ],
-  "options": Object {},
-  "renderer": ReactShallowRenderer {
-    "_instance": ShallowComponentWrapper {
-      "_calledComponentWillUnmount": false,
-      "_compositeType": 0,
-      "_context": Object {},
-      "_currentElement": <Connect(AddSubject)
-        store={
-                Object {
-                        "asyncReducers": Object {},
-                        "dispatch": [Function],
-                        "getState": [Function],
-                        "replaceReducer": [Function],
-                        "subscribe": [Function],
-                        Symbol(observable): [Function],
-                      }
-        }
-        subjectsType="primary"
-/>,
-      "_debugID": 1,
-      "_hostContainerInfo": null,
-      "_hostParent": null,
-      "_instance": Connect {
-        "_reactInternalInstance": [Circular],
-        "context": Object {
-          "store": undefined,
-          "storeSubscription": undefined,
-        },
-        "props": Object {
-          "store": Object {
-            "asyncReducers": Object {},
-            "dispatch": [Function],
-            "getState": [Function],
-            "replaceReducer": [Function],
-            "subscribe": [Function],
-            Symbol(observable): [Function],
-          },
-          "subjectsType": "primary",
-        },
-        "propsMode": true,
-        "refs": Object {},
-        "renderCount": 0,
-        "selector": Object {
-          "error": null,
-          "props": Object {
-            "onAdd": [Function],
-            "store": Object {
-              "asyncReducers": Object {},
-              "dispatch": [Function],
-              "getState": [Function],
-              "replaceReducer": [Function],
-              "subscribe": [Function],
-              Symbol(observable): [Function],
-            },
-            "subjectsType": "primary",
-          },
-          "run": [Function],
-          "shouldComponentUpdate": false,
-        },
-        "setWrappedInstance": [Function],
-        "state": Object {},
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "function",
+    "props": Object {
+      "onAdd": [Function],
+      "store": Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      },
+      "subjectsType": "primary",
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "function",
+      "props": Object {
+        "onAdd": [Function],
         "store": Object {
-          "asyncReducers": Object {},
           "dispatch": [Function],
           "getState": [Function],
           "replaceReducer": [Function],
           "subscribe": [Function],
           Symbol(observable): [Function],
         },
-        "updater": Object {
-          "enqueueCallback": [Function],
-          "enqueueCallbackInternal": [Function],
-          "enqueueElementInternal": [Function],
-          "enqueueForceUpdate": [Function],
-          "enqueueReplaceState": [Function],
-          "enqueueSetState": [Function],
-          "isMounted": [Function],
-          "validateCallback": [Function],
-        },
-        "version": 0,
+        "subjectsType": "primary",
       },
-      "_mountOrder": 1,
-      "_pendingCallbacks": null,
-      "_pendingElement": null,
-      "_pendingForceUpdate": false,
-      "_pendingReplaceState": false,
-      "_pendingStateQueue": null,
-      "_renderedComponent": NoopInternalComponent {
-        "_currentElement": <AddSubject
-          onAdd={[Function]}
-          store={
-                    Object {
-                              "asyncReducers": Object {},
-                              "dispatch": [Function],
-                              "getState": [Function],
-                              "replaceReducer": [Function],
-                              "subscribe": [Function],
-                              Symbol(observable): [Function],
-                            }
-          }
-          subjectsType="primary"
-/>,
-        "_debugID": 2,
-        "_renderedOutput": <AddSubject
-          onAdd={[Function]}
-          store={
-                    Object {
-                              "asyncReducers": Object {},
-                              "dispatch": [Function],
-                              "getState": [Function],
-                              "replaceReducer": [Function],
-                              "subscribe": [Function],
-                              Symbol(observable): [Function],
-                            }
-          }
-          subjectsType="primary"
-/>,
-      },
-      "_renderedNodeType": 1,
-      "_rootNodeID": 0,
-      "_topLevelWrapper": null,
-      "_updateBatchNumber": null,
-      "_warnedAboutRefsInRender": false,
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
     },
-    "getRenderOutput": [Function],
-    "render": [Function],
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
   },
-  "root": [Circular],
-  "unrendered": <Connect(AddSubject)
-    store={
-        Object {
-            "asyncReducers": Object {},
-            "dispatch": [Function],
-            "getState": [Function],
-            "replaceReducer": [Function],
-            "subscribe": [Function],
-            Symbol(observable): [Function],
-          }
-    }
-    subjectsType="primary"
-/>,
 }
 `;
