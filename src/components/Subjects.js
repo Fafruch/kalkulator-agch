@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import SubjectListContainer from '../containers/SubjectListContainer'
 import AddSubjectContainer from '../containers/AddSubjectContainer'
-import { PRIMARY_SUBJECTS } from '../constants/SubjectTypes'
+import { PRIMARY_SUBJECTS } from '../constants/subjectTypes'
 
 const Subjects = ({ subjectsType }) => (
   <div className='mt-5 mb-5'>

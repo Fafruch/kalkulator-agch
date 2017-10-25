@@ -1,7 +1,7 @@
 import { v4 } from 'uuid'
 
 import { ADD_SUBJECT, REMOVE_SUBJECT, TOGGLE_SUBJECT,
-  UPDATE_SUBJECT, TOGGLE_SCORE_TABLE } from '../constants/ActionTypes'
+  UPDATE_SUBJECT, TOGGLE_SCORE_TABLE } from '../constants/actionTypes'
 import getSubjectScore from '../utils/getSubjectScore'
 
 export const addSubject = (subjectsType) => ({

@@ -1,4 +1,4 @@
-import { TOGGLE_SCORE_TABLE } from '../../constants/ActionTypes'
+import { TOGGLE_SCORE_TABLE } from '../../constants/actionTypes'
 
 const scoreTable = (state = { isOpened: false }, action) => {
   switch (action.type) {

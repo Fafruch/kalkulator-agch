@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 import Threshold from './Threshold'
 import getCourseScore from '../../utils/getCourseScore'
-import facultiesArray from '../../faculties.json'
-import thresholdsArray from '../../thresholds.json'
+import facultiesArray from '../../data/faculties.json'
+import thresholdsArray from '../../data/thresholds.json'
 
 const thresholdsYearsArray = [2013, 2014, 2015, 2016]
 

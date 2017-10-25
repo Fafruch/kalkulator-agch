@@ -5,7 +5,7 @@ import { CSSTransitionGroup } from 'react-transition-group'
 import BestSubject from './BestSubject'
 import MaxScore from './MaxScore'
 import ScoreTableContainer from '../../containers/ScoreTableContainer'
-import { PRIMARY_SUBJECTS, LINGUAL_SUBJECTS } from '../../constants/SubjectTypes'
+import { PRIMARY_SUBJECTS, LINGUAL_SUBJECTS } from '../../constants/subjectTypes'
 
 const Calculator = ({ maxScoreWrapper, isScoreTableOpened, isAnySubjectPresent, onToggleClick }) => {
   const maxPrimaryScore = maxScoreWrapper.primary.maxScore.value
