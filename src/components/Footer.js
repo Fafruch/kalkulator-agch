@@ -8,16 +8,15 @@ const Footer = () => (
         <a
           target='_blank'
           rel='noopener noreferrer'
-          href='http://www.agh.edu.pl/rekrutacja/studia-pierwszego-stopnia/rekrutacja-20152016/nowa-matura/'
-          alt='Link do strony AGH ze sposobem obliczania punktów'
+          href='http://www.agh.edu.pl/rekrutacja/studia-pierwszego-stopnia/rekrutacja-20172018/nowa-matura-w-skali-0-100-pkt/'
         >
-          http://www.agh.edu.pl/rekrutacja/studia-pierwszego-stopnia/rekrutacja-20152016/nowa-matura/
+          http://www.agh.edu.pl/rekrutacja/studia-pierwszego-stopnia/rekrutacja-20172018/nowa-matura-w-skali-0-100-pkt/
         </a>
       </div>
     </div>
     <div className='footer'>
       <div className='footer-content'>
-        Kalkulator AGH by <a href='https://github.com/Fafruch'>Fafruch</a>. (2017)
+        Kalkulator AGH by <a href='https://github.com/Fafruch'>Fafruch</a>. (2018)
       </div>
     </div>
   </div>
