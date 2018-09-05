@@ -8,7 +8,7 @@
     "url": "git+https://github.com/Fafruch/kalkulator-agh.git"
   },
   "author": "Filip Duczyminski <f.duczyminski@gmail.com>",
-  "homepage": "http://fafruch.github.io/kalkulator-agh",
+  "homepage": "http://fafruch.github.io/kalkulator-agch",
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
     "gh-pages": "^1.0.0",

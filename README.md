@@ -5,12 +5,12 @@ Nie jest już aktualna z obecnymi zasadami rekrutacji, ale pozostaje jako pamią
 ![Screenshot](https://cdn.pbrd.co/images/HCvEOxg.png)
 
 ## On-line demo
-https://fafruch.github.io/kalkulator-agh
+https://fafruch.github.io/kalkulator-agch
 
  ## Instalacja
 
-1.  Sklonuj repozytorium: https://github.com/Fafruch/kalkulator-agh.git
-2.  `cd kalkulator-agh`
+1.  Sklonuj repozytorium: https://github.com/Fafruch/kalkulator-agch.git
+2.  `cd kalkulator-agch`
 3. `npm install`
 4. `npm start`
 5.  Wejdź na: http://localhost:3000
