@@ -7,12 +7,15 @@ const Introduction = () => (
     <br />
 
     <h5>
-      Kalkulator AGcH to projekt zrobiony w ramach hobby - liczy wskaźnik punktów
-      rekrutacyjnych, ale był pisany kilka lat temu, nie jest już wspierany i posługuje się danymi na temat kierunków
+      Kalkulator AGcH to nieoficjalny projekt zrobiony w ramach hobby - liczy wskaźnik punktów
+      rekrutacyjnych, ale był pisany kilka lat temu, nie jest już rozwijany i posługuje się danymi na temat kierunków
       sprzed kilku lat.
       <br />
       <br />
       Część wyników może się pokryć z obecnymi zasadami, ale na pewno nie wszystko - sorry ¯\_(ツ)_/¯
+      <br />
+      <br />
+      Można się nim sugerować, ale na własne ryzyko!!!!!!!!!!!1 Jak coś, to ostrzegałem
     </h5>
 
     <br />
