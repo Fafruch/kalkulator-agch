@@ -1,11 +1,11 @@
 {
-  "name": "kalkulator-agh",
+  "name": "kalkulator-agch",
   "version": "1.0.0",
   "description": "Kalkulator obliczajacy ilosc punktow na studia I stopnia na Akademii Gorniczo-Hutniczej w Krakowie",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Fafruch/kalkulator-agh.git"
+    "url": "git+https://github.com/Fafruch/kalkulator-agch.git"
   },
   "author": "Filip Duczyminski <f.duczyminski@gmail.com>",
   "homepage": "http://fafruch.github.io/kalkulator-agch",
