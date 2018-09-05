@@ -8,7 +8,7 @@
     "url": "git+https://github.com/Fafruch/kalkulator-agh.git"
   },
   "author": "Filip Duczyminski <f.duczyminski@gmail.com>",
-  "homepage" : "http://fafruch.github.io/kalkulator-agh",
+  "homepage": "http://fafruch.github.io/kalkulator-agh",
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
     "gh-pages": "^1.0.0",
@@ -36,6 +36,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.1.0",
     "eslint-plugin-standard": "^3.0.1",
+    "gh-pages": "^1.2.0",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.1.1",
     "react-test-renderer": "^16.0.0"
