@@ -2,7 +2,7 @@
 Aplikacja służąca do liczenia punktów rekrutacyjnych na studia I stopnia na Akedemii Górniczo-Hutniczej w Krakowie.
 Nie jest już aktualna z obecnymi zasadami rekrutacji, ale pozostaje jako pamiątka.
 
-![Screenshot](https://cdn.pbrd.co/images/HCvEOxg.png)
+![Screenshot](https://i.imgur.com/3brXkmI.png)
 
 ## On-line demo
 https://fafruch.github.io/kalkulator-agch
